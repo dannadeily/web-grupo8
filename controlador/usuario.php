@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8">
 
-      <link rel="stylesheet" href="registro_usuario.css">
+      <link rel="stylesheet" href="vista/registro_usuario.css">
       <?php include "Header.php"; ?>
 </head>
 <body>
