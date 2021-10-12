@@ -19,7 +19,7 @@
       </li>
     </ul>
     <form class="d-flex">
-        <button class="btn btn-primary" type="button">Iniciar sesion</button>
+        <a href="../modelo/userlogin.php"> <button class="btn btn-primary" type="button">Iniciar sesion</button> </a>
       </form>
   </div>
 </nav>

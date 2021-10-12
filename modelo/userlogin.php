@@ -13,7 +13,7 @@
     </header>
 
     <section class="form-login">
-    <form action="validar.php" method="post">
+    <form action="../controlador/validarloginuser.php" method="post">
       <h1>Premio al merito</h1>
     <p id="codigo">codigo <br> <input type="text" placeholder="ingrese su codigo" name="codigo"></p>
       <p id="contrasena">contraseña <br> <input type="password" placeholder="ingrese su contraseña" name="contrasena"></p>
