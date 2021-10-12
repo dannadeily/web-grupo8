@@ -1,5 +1,5 @@
 <?php
-  require_once 'usuario.php';
+  require_once '../modelo/registrousuario.php';
       if(!empty($_POST))
         {
           $alert='';
