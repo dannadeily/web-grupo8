@@ -9,16 +9,16 @@
 </head>
 <body>
     <header>
-      <?php require_once('Header.php');
+      <?php require_once('vista/Header.php');
        ?>
 
     </header>
     <body>
-      <?php require_once('Inicio.php');
+      <?php require_once('vista/Inicio.php');
        ?>
     </body>
     <footer>
-     <?php require_once('Footer.php');
+     <?php require_once('vista/Footer.php');
 
       ?>
     </footer>

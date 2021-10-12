@@ -2,7 +2,7 @@
   <header  style="background-color: #FF0000;">
     <nav class="navbar navbar-expand-sm  navbar-dark">
     <div class="container-fluid">
-   <img src="ingsistemas.jpeg" class="float-start" alt="ingsistemas" width="500" height="100">
+   <img src="vista\img\logo.png" class="float-start" alt="ingsistemas" width="500" height="100">
 
     <ul class="navbar-nav">
       <li class="nav-item">
