@@ -8,19 +8,19 @@ $_SESSION ['codigo']=$codigo;
 include 'bd.php';
 
 //if (strcmp($this->tipo,usuario )) {
-  $consulta="SELECT * FROM usuario where codigo_usuario='$codigo' and contrasena='$contrasena'";
+  $consulta="SELECT * FROM administrador where codigo_administrador='$codigo' and contrasena='$contrasena'";
 
   $resultado=mysqli_query($conexion,$consulta);
 
 
   $filas=mysqli_num_rows($resultado);
   if ($filas) {
-    header("location:../modelo/user.php");
+    header("location:administrador.php");
   }
 else{
  ?>
 <?php
-  include("../modelo/userlogin.php");
+  include("loginadmin.php");
  ?>
 <h3 class="bad" >error de autenticacion</h3>
 <?php

@@ -1,8 +1,8 @@
 
-  <header  style="background-color: #FF0000;">
+  <header  style="background-color: #aa1916;">
     <nav class="navbar navbar-expand-sm  navbar-dark">
     <div class="container-fluid">
-   <img src="vista\img\logo.png" class="float-start" alt="ingsistemas" width="500" height="100">
+   <img src="vista/img\logo.png" class="float-start" alt="ingsistemas" height="90">
 
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -19,7 +19,7 @@
       </li>
     </ul>
     <form class="d-flex">
-        <a href="../modelo/userlogin.php"> <button class="btn btn-primary" type="button">Iniciar sesion</button> </a>
+        <a href="modelo/userlogin.php"> <button class="btn btn-primary" type="button">Iniciar sesion</button> </a>
       </form>
   </div>
 </nav>
