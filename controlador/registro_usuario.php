@@ -32,7 +32,7 @@
 
                   if($query_insert){
                     $alert ='<p class="msg_save">Usuario creado correctamente.</p>';
-
+                    
                   }else{
                     $alert='<p class="msg_error">Error al crear usuario.</p>';
                   }
