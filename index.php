@@ -9,7 +9,8 @@
 </head>
 <body>
     <header>
-      <?php include ('vista/Header.php');
+      <?php
+      include ('vista/Header.php');
        ?>
 
     </header>

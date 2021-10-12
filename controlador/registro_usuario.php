@@ -9,7 +9,7 @@
             $alert='<p class="msg_error"> todos los campos son abligatorios.</p>';
 
           }else {
-            include "db.php";
+            include "bd.php";
 
             $codigo_usuario = $_POST['codigo_usuario'];
             $nombre = $_POST['nombre'];

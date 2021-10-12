@@ -15,7 +15,7 @@
                     <hr>
                     <div class="alert"><?php echo isset($alert) ? $alert : '';?> </div>
 
-                     <form action="registro_usuario.php" method="post">
+                     <form action="../controlador/registro_usuario.php" method="post">
                        <label for="codigo_usuario">Codigo usuario</label>
                        <input type="number" name="codigo_usuario" id="codigo_usuario" placeholder="codigo usuario" min="0" max="10000000">
                        <label for="nombre">Nombres</label>
