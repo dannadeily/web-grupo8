@@ -24,15 +24,24 @@
             $result =mysqli_fetch_array($query);
 
             if($result >0 ){
+              ?>
+
+              <?php
+
               $alert ='<p class="msg_error">el correo o el usuario ya existe.</p>';
+              ?>
+              <?php
+            //  header("location:../modelo/userlogin.php");
+            //  include("../modelo/userlogin.php");
+
             }else{
 
               $query_insert = mysqli_query($conexion,"INSERT INTO usuario(codigo_usuario,nombre,apellidos,email,contrasena,tipoDocumento,numero_documento)
                                                                    VALUES('$codigo_usuario','$nombre','$apellidos','$email','$email','$tipoDocumento','$numero_documento')");
 
                   if($query_insert){
-                    $alert ='<p class="msg_save">Usuario creado correctamente.</p>';
-                    
+                    $alert ='<p class="msg_save"> Usuario creado correctamente.</p>';
+                      header("location:../modelo/user.php");
                   }else{
                     $alert='<p class="msg_error">Error al crear usuario.</p>';
                   }
