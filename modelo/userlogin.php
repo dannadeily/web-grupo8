@@ -22,7 +22,7 @@
     <p id="ingresar"> <input  type="submit" value="ingresar"></p>  </br>
 
     <p id="link"> <a href="recuperarContraseña">¿olvido su contraseña?</a></p>  </br>
-    <p id="link"><a href="usuario.php">registrarse</a></p> <br>
+    <p id="link"><a href="registrousuario.php">registrarse</a></p> <br>
 
     <p id="link"><a  href="loginadmin.php">administrador</a></p>
     </form>
