@@ -11,13 +11,13 @@
   <!-- The slideshow/carousel -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="ufps1.jpg" alt="Los Angeles" class="d-block w-100">
+      <img src="vista/img/ufps1.jpg" alt="ufps 1" class="d-block w-100" width="100" height="400">
     </div>
     <div class="carousel-item">
-      <img src="ufps2.JFIF" alt="Chicago" class="d-block w-100">
+      <img src="vista/img/ufps2.png" alt="ufps 2" class="d-block w-100" width="100" height="400">
     </div>
     <div class="carousel-item">
-      <img src="ufps3.JFIF" alt="New York" class="d-block w-100">
+      <img src="vista/img/ufps3.jpg" alt="ufps 3" class="d-block w-100" width="100" height="400">
     </div>
   </div>
 
