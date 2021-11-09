@@ -17,10 +17,7 @@ require $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/config/config.php';
       <div class="container-fluid">
         <div class="navbar-header">
       <img id="logo" src=<?php ruta?>"/web-grupo8/vistas/img/logo.png"  alt=""  >
-          <a class="navbar-brand" href="#">
-
-          </a>
-        </div>
+                  </div>
 
         <ul class="nav navbar-nav">
           <?php

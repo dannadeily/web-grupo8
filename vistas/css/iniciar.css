@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+.role{
+margin: auto;
+text-align: center;
+}
+
+.rol{
+  width: 250px;
+  text-align: center;
+  font-size: 20px;
+}
+
 .form-login{
   margin: auto;
   border-radius: 20px;
