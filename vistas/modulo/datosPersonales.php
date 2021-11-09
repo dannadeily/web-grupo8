@@ -10,7 +10,6 @@
     <section class="caja" id="container"  >
                   <h2>Datos Personales</h1>
                   <hr>
-                  <form action="" method="post">
                         <table>
                               <tr>
                             <td>
