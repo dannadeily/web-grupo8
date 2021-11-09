@@ -12,50 +12,43 @@
                   <hr>
                         <table>
                               <tr>
-                            <td>
-                              <label for="codigo_usuario">Codigo usuario</label>
-                              <input type="number" name="codigo_usuario" id="codigo_usuario" placeholder="codigo usuario" min="0" max="10000000">
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label for="nombre">Nombres</label>
-                              <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                            </td>
-                            <td>
-                              <label for="apellidos">Apellidos</label>
-                              <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
-                            </td>
-                          </tr>
-                            <tr>
-                              <td>  <label for="numero_documento">Numero de documento</label>
-                                <input type="number" name="numero_documento" id="numero_documento" placeholder="numero documento" min="0" max="100000000000">
-                              </td>
-                              <td>
-                              <label for="tipoDocumento">Tipo de documento</label>
-                               <select class="select" name="tipoDocumento" id="tipoDocumento">
-                                        <option value="1"> Cedula de ciudadania</option>
-                                        <option value="2"> Tarjeta de identidad</option>
-                                        <option value="3"> Cedula de extranjeria</option>
-                                          </select>
-                                      </td>
-                            </tr>
-                          <tr>
-                            <td> <label for="email">Correo electronico</label>
-                             <input type="email" name="email" id="email" placeholder="Email">
-                           </td>
-                           <td>  <label for="contrasena">contraseña </label>
-                             <input type="password" name="contrasena" id="contrasena" placeholder="contraseña">
-                           </td>
+                                  <td>
+                                      <h4>Codigo usuario: </h4>
+                                      <p> codigo</p>
+                                  </td>
+                                  <td></td>
+                             </tr>
+                             <tr>
+                                  <td>
+                                      <h4>Nombres: </h4>
+                                      <p>Nombres</p>
+                                </td>
+                                 <td>
+                                   <h4>Apellidos: </h4>
+                                   <p>Apellidos</p>
+                                </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                 <h4>Numero de documento: </h4>
+                                 <p> #########</p>
+                               </td>
+                               <td>
+                                 <h4>Tipo de documento: </h4>
+                                 <p> cedula de ciudadania</p>
+                               </td>
+                             </tr>
+                             <tr>
+                                <td>
+                                    <h4>Correo electronico: </h4>
+                                    <p> @ufps.edu.co</p>
+                                  </td>
 
-                          </tr>
+              </tr>
 
+                </table>
 
-                                      </table>
-                      <button class="btn_save" type="button" onclick="location.href='editarUsuario.php'">Editar</button>
-
-
+                      <button class="button" onclick="location.href='editarDatos.php'">Editar</button>
 
     </section>
 

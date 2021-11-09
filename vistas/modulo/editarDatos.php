@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>editar datos</title>
-    <link rel="stylesheet" href="../css/editarUsuario.css">
+    <link rel="stylesheet" href="../css/editarDatos.css">
   </head>
   <body>
 
@@ -55,7 +55,7 @@
 
 
                                       </table>
-                      <input type="submit" value="Guardar" class="btn_save">
+                      <input type="submit" value="Guardar cambios" class="btn_save">
 
                    </form>
 
