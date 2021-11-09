@@ -7,6 +7,9 @@
   </head>
   <body>
 
+          <header>
+            <?php include '../HeaderLogin.php'?>
+          </header>
     <section id="container"  >
               <div class="form_register">
                   <h2>Datos Personales</h1>
@@ -64,5 +67,8 @@
 
     </section>
 
+        <footer>
+          <?php require '../footer.php'; ?>
+        </footer>
   </body>
 </html>

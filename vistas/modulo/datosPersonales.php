@@ -7,6 +7,10 @@
   </head>
   <body>
 
+          <header>
+            <?php include '../HeaderLogin.php'?>
+          </header>
+
     <section class="caja" id="container"  >
                   <h2>Datos Personales</h1>
                   <hr>
@@ -45,7 +49,7 @@
                                   </td>
 
               </tr>
-          
+
 
                 </table>
 
@@ -53,5 +57,8 @@
 
     </section>
 
+        <footer>
+          <?php require '../footer.php'; ?>
+        </footer>
   </body>
 </html>
