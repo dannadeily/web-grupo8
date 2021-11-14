@@ -66,7 +66,8 @@
 
 
     </section>
-
+<br>
+<br>
         <footer>
           <?php require '../footer.php'; ?>
         </footer>
