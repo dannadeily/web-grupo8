@@ -8,22 +8,26 @@
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
+.fila2{
+
+}
+.fila1{
+float: left;
+width: 300px;
+}
 
 .form_register{
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 7px 13px 37px black;
   margin-top: 123px solid red;
-  border-bottom:4px solid #aa1916;
-  width: 500px;
+  width: 700px;
   margin: auto;
 }
 .form_register h2{
   text-align: center;
 
 }
-.form_register{
-  color: ;
-}
+
 
 hr{
    border: 0;
@@ -47,12 +51,12 @@ label{
 }
 input,select{
 display: block;
-width: 100px;
+width: 270px;
 font-size: 11px;
 padding: 5px;
 border:1px solid #85929e;
 border-radius: 5px;
-
+}
 
 btn_save{
   font-size: 12px;
@@ -63,6 +67,8 @@ btn_save{
   border:0;
   cursor:  pointer;
   margin 15px auto;
+  padding-top: 5px;
+  margin-top: 15px;
 }
 btn_save{
   font-size: 12px;

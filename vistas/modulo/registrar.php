@@ -3,7 +3,7 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title> Registro</title>
     <link rel="stylesheet" href="../css/registrar.css">
   </head>
   <body>
@@ -18,25 +18,38 @@
 
 
                <form action="" method="post">
-                 <label for="codigo_usuario">Codigo usuario</label>
-                 <input type="number" name="codigo_usuario" id="codigo_usuario" placeholder="codigo usuario" min="0" max="10000000">
+                 <div class="fila1">
+                    <label for="codigo_usuario">Codigo usuario</label>
+                    <input type="number" name="codigo_usuario" id="codigo_usuario" placeholder="codigo usuario" required>
+                  </div>
+                  <div class="fila2">
                  <label for="nombre">Nombres</label>
-                 <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                 <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                 </div>
+                 <div class="fila1">
                  <label for="apellidos">Apellidos</label>
-                 <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
+                 <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required>
+               </div>
+               <div class="fila2">
                  <label for="email">Correo electronico</label>
-                 <input type="email" name="email" id="email" placeholder="Email">
+                 <input type="email" name="email" id="email" placeholder="Email" required>
+               </div>
+                 <div class="fila1">
                  <label for="tipoDocumento">Tipo de documento</label>
                  <select name="tipoDocumento" id="tipoDocumento">
                           <option value="1"> Cedula de ciudadania</option>
                           <option value="2"> Tarjeta de identidad</option>
                           <option value="3"> Cedula de extranjeria</option>
                   </select>
+                   </div>
+                   <div class="fila2">
                   <label for="numero_documento">Numero de documento</label>
-                  <input type="number" name="numero_documento" id="numero_documento" placeholder="numero documento" min="0" max="100000000000">
+                  <input type="number" name="numero_documento"  placeholder="numero documento" required>
+                  <div>
                   <label for="contrasena">contraseña </label>
-                  <input type="password" name="contrasena" id="contrasena" placeholder="contraseña">
-                  <input type="submit" value="Crear usuario" class="btn_save">
+                  <input type="password" name="contrasena"  placeholder="contraseña" required>
+                  <br>
+                  <input  type="submit" value="registrar" class="btn_save">
 
 
 
