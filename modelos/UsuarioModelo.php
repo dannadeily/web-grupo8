@@ -6,7 +6,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/modelos/Conexion.php';
  */
 class UsuarioModelo extends Conexion
 {
-  protected  $rows=array();
+
   function __construct()
   {
   }
@@ -37,8 +37,9 @@ class UsuarioModelo extends Conexion
     ":tipoDocumento"=>$tipoDocumento,
     ":numero_documento"=>$numero_documento));
     $datos->closeCursor();
-    return $datos->rowcount();
-
+    $count= $datos->rowcount();
+    $datos=null;
+    return $count;
   }
 
   public function listar($codigo_usuario='')
@@ -50,11 +51,12 @@ class UsuarioModelo extends Conexion
    }
     $datos=$this->conectar()->prepare($sql);
     $datos->execute(array(":codigo_usuario"=>$codigo_usuario));
-    while ($this->rows[]=$datos->fetch(PDO::FETCH_OBJ)) {
+    while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) {
 
       }
     $datos->closeCursor();
-    return $this->rows;
+    $datos=null;
+    return $filas;
   }
 
   public function recuperarContrasena($codigo_usuario,$contrasena,$email)
@@ -67,6 +69,10 @@ class UsuarioModelo extends Conexion
      $datos->closeCursor();
 
     return $datos->rowCount();
+  }
+  public function editarDatos($usuario=array())
+  {
+
   }
 }
 

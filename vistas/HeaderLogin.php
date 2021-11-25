@@ -35,7 +35,7 @@ require $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/config/config.php';
           <li><a href="<?php ruta?>/web-grupo8/vistas/modulo/registrar.php"  id="sign"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
           <li><a href="<?php ruta?>/web-grupo8/vistas/modulo/iniciar.php"  id="sign"><span class="glyphicon glyphicon-log-in"></span> Entrar</a></li>
           <?php }else{ ?>
-          <li><a href=""  id="sign"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+          <li><a href="<?php ruta?>/web-grupo8/controladores/?con=UsuarioControlador&fun=cerrarSesion"  id="sign"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
         <?php } ?>
         </ul>
       </div>
