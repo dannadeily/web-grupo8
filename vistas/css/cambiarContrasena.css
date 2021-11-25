@@ -2,10 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
-body{
-background-color: blue;
-}
+
 form{
   margin: auto;
   border-radius: 20px;
@@ -15,3 +14,11 @@ form{
   box-shadow: 7px 13px 37px black;
   margin-top: 123px solid red;
   border-bottom:4px solid #aa1916;
+}
+
+
+
+p{
+  
+  text-align: center;
+}
