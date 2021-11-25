@@ -108,6 +108,10 @@ class UsuarioControlador
     }
     header("location:../index.php");
   }
+  public function editarDatos()
+  {
+    
+  }
 }
 
 

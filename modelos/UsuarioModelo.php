@@ -72,8 +72,22 @@ class UsuarioModelo extends Conexion
   }
   public function editarDatos($usuario=array())
   {
-
+    foreach ($usuario as $key=>$datos) {
+      $$key=$datos;
+      }
+    $sql="update usuario set nombre=:nombre,
+    apellidos=:apellidos,
+    numero_documento=:numero_documento,
+    tipoDocumento=:tipoDocumento,
+    email=:email";
+    $datos->execute(array(":email"=>$email,
+    ":nombre"=>$nombre,
+    ":apellidos"=>$apellidos,
+    ":numero_documento"=>$numero_documento,
+    ":tipoDocumento"=>$tipoDocumento
+    ));
   }
+
 }
 
 
