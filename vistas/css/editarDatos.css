@@ -34,7 +34,7 @@ tr{
 }
 .btn_save{
   margin: auto;
-
+  width: auto;
 }
 input[type=text] {
   width: 90%;
@@ -59,6 +59,7 @@ input[type=email] {
   padding: 8px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  width:auto;
 }
 .select{
   width: 90%;

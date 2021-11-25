@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-#container{
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-}
 
 table{
   margin-left: 30px;
@@ -57,4 +52,9 @@ hr{
    margin:10px;
    display:block;
 
+}
+#container{
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }

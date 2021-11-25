@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -9,6 +11,9 @@
 <header>
 <?php include '../HeaderLogin.php'; ?>
 </header>
+  <aside class="">
+      <?php include 'BarraLateralUsuario.php'; ?>
+  </aside>
   <section>
     <form class="" action="" method="post">
     <p> contraseña actual  <input type="text" name="actual" placeholder="contraseña actual"> </p>

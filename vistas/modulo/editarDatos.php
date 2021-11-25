@@ -1,3 +1,16 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/controladores/UsuarioControlador.php';
+$usuario=new UsuarioControlador();
+  session_start();
+if (isset($_SESSION['usuario'])) {
+  $datos=$usuario->listar($_SESSION['usuario']);
+}
+else {
+  header("location:iniciar.php");
+}
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -10,32 +23,28 @@
           <header>
             <?php include '../HeaderLogin.php'?>
           </header>
+          <aside class="">
+              <?php include 'BarraLateralUsuario.php'; ?>
+          </aside>
     <section id="container"  >
               <div class="form_register">
                   <h2>Datos Personales</h1>
                   <hr>
                   <form action="" method="post">
                         <table>
-                              <tr>
-                            <td>
-                              <label for="codigo_usuario">Codigo usuario</label>
-                              <input type="number" name="codigo_usuario" id="codigo_usuario" placeholder="codigo usuario" min="0" max="10000000">
-                            </td>
-                            <td></td>
-                          </tr>
                           <tr>
                             <td>
                               <label for="nombre">Nombres</label>
-                              <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                              <input type="text" name="nombre" id="nombre" value="<?php echo $datos[0]->nombre; ?>">
                             </td>
                             <td>
                               <label for="apellidos">Apellidos</label>
-                              <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
+                              <input type="text" name="apellidos" id="apellidos" value="<?php echo $datos[0]->apellidos; ?>">
                             </td>
                           </tr>
                             <tr>
                               <td>  <label for="numero_documento">Numero de documento</label>
-                                <input type="number" name="numero_documento" id="numero_documento" placeholder="numero documento" min="0" max="100000000000">
+                                <input type="number" name="numero_documento" id="numero_documento" value="<?php echo $datos[0]->numero_documento; ?>" min="0" max="100000000000">
                               </td>
                               <td>
                               <label for="tipoDocumento">Tipo de documento</label>
@@ -48,12 +57,8 @@
                             </tr>
                           <tr>
                             <td> <label for="email">Correo electronico</label>
-                             <input type="email" name="email" id="email" placeholder="Email">
+                             <input type="email" name="email" id="email" value="<?php echo $datos[0]->email; ?>">
                            </td>
-                           <td>  <label for="contrasena">contraseña </label>
-                             <input type="password" name="contrasena" id="contrasena" placeholder="contraseña">
-                           </td>
-
                           </tr>
 
 
