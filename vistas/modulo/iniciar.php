@@ -10,9 +10,11 @@
       <header>
         <?php include '../HeaderLogin.php'?>
       </header>
-
+      <?php if (isset($_GET['msg'])): ?>
+        <h2>  <?php echo $_GET['msg'] ?> </h2>
+      <?php endif; ?>
       <section class="form-login">
-      <form action="" method="post">
+      <form action="../../controladores/?con=UsuarioControlador&fun=iniciarSesion" method="post">
         <h1>Premio al merito</h1>
         <p class="role"><select class="rol" name="rol"><option value="1">  usuario</option><option value="2">administrador</option></select>
         </p>

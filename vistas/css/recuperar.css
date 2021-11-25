@@ -7,13 +7,15 @@
   margin: auto;
   box-shadow: 2px 2px 2px 2px #aa1916;
   width: 500px;
-  height: 120px;
+  height: 300px;
   text-align: center;
 font-weight: bold;
 }
 #correo{
 font-size: 20px;
+
 }
 #ingresar{
   width: 350px;
+  text-align: center;
 }

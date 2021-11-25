@@ -12,12 +12,16 @@
     </header>
 
 <section id="container"  >
+  <?php  if(isset($_GET["msg"])) {  ?>
+    <h3><?php echo $_GET["msg"] ;?></h3>
+  <?php  } ?>
           <div class="form_register">
-              <h2>Registro usuario</h1>
+              <h2>Registro usuario</h2>
+
               <hr>
 
 
-               <form action="" method="post">
+               <form action="../../controladores/?con=UsuarioControlador&fun=agregarUsuario" method="post">
                  <div class="fila1">
                     <label for="codigo_usuario">Codigo usuario</label>
                     <input type="number" name="codigo_usuario" id="codigo_usuario" placeholder="codigo usuario" required>
@@ -49,7 +53,7 @@
                   <label for="contrasena">contraseña </label>
                   <input type="password" name="contrasena"  placeholder="contraseña" required>
                   <br>
-                  <input  type="submit" value="registrar" class="btn_save">
+                  <input  type="submit" value="registrar" name="registrar"class="btn_save">
 
 
 
