@@ -24,6 +24,9 @@ $datos=$usuario->listar($_SESSION['usuario']);
             <?php include '../HeaderLogin.php'?>
           </header>
 
+          <aside class="">
+            <?php include 'BarraLateralAdministrador.php'; ?>
+          </aside>
     <section class="caja" id="container"  >
                   <h2>Datos Personales</h1>
                   <hr>
@@ -31,34 +34,34 @@ $datos=$usuario->listar($_SESSION['usuario']);
                               <tr>
                                   <td>
                                       <h4>Codigo usuario: </h4>
-                                      <p> <?php echo $datos[0]->codigo_usuario ?></p>
+                                      <p class="datos"> <?php echo $datos[0]->codigo_usuario ?></p>
                                   </td>
                                   <td></td>
                              </tr>
                              <tr>
                                   <td>
                                       <h4>Nombres: </h4>
-                                      <p><?php echo $datos[0]->nombre ?></p>
+                                      <p class="datos"><?php echo $datos[0]->nombre ?></p>
                                 </td>
                                  <td>
                                    <h4>Apellidos: </h4>
-                                   <p><?php echo $datos[0]->apellidos ?></p>
+                                   <p class="datos"><?php echo $datos[0]->apellidos ?></p>
                                 </td>
                            </tr>
                            <tr>
                                <td>
                                  <h4>Numero de documento: </h4>
-                                 <p> <?php echo $datos[0]->numero_documento ?>  </p>
+                                 <p class="datos"> <?php echo $datos[0]->numero_documento ?>  </p>
                                </td>
                                <td>
                                  <h4>Tipo de documento: </h4>
-                                 <p> <?php echo $datos[0]->tipoDocumento ?> </p>
+                                 <p class="datos"> <?php echo $datos[0]->tipoDocumento ?> </p>
                                </td>
                              </tr>
                              <tr>
                                 <td>
                                     <h4>Correo electronico: </h4>
-                                    <p> <?php echo $datos[0]->email ?> </p>
+                                    <p class="datos"> <?php echo $datos[0]->email ?> </p>
                                   </td>
 
               </tr>

@@ -31,7 +31,7 @@ class UsuarioControlador
 
 
         if ($this->model->agregarUsuario($usuario)>0) {
-          header("location:../vistas/modulo/registrar.php?msg=usuario registrado");
+         header("location:../vistas/modulo/registrar.php?msg=usuario registrado");
         }else {
         header("location:../vistas/modulo/registrar.php?msg=usuario ya existe");
       }
@@ -78,8 +78,8 @@ class UsuarioControlador
 }
   public function iniciarSesion()
   {
-      if (!empty($_POST['codigo']) || !empty($_POST['$contrasena'])) {
-      $usuario=$this->listar();
+      if (!empty($_POST['codigo']) || !empty($_POST['contrasena'])) {
+      $usuario=$this->listar($_POST['codigo']);
       if(count($usuario)>1){
       echo count($usuario);
                 if (password_verify($_POST["contrasena"], $usuario[0]->contrasena)) {
@@ -87,7 +87,7 @@ class UsuarioControlador
                   $_SESSION['usuario']=$_POST['codigo'];
                   header("location:../vistas/modulo/datosPersonales.php");
                 } else {
-                    header("location:../vistas/modulo/iniciar.php?msg=datos incorrectos");
+                  header("location:../vistas/modulo/iniciar.php?msg=datos incorrectos");
                 }
       }
       else {
@@ -96,7 +96,7 @@ class UsuarioControlador
 
     }
     else {
-    header("location:../vistas/modulo/iniciar.php");
+   header("location:../vistas/modulo/iniciar.php");
     }
 
   }
