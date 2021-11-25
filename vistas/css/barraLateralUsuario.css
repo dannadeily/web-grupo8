@@ -3,12 +3,14 @@ body{
 }
 .sidebar{
   position: fixed;
-   top: 0%;
-   left: 0;
-   width: 18%;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom:  0px;
+   width: auto;
    height: 100%;
    background: #aa1916;
-
+   float: left;
 }
 ul{
   list-style-type: none;

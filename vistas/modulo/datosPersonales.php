@@ -25,7 +25,7 @@ $datos=$usuario->listar($_SESSION['usuario']);
           </header>
 
           <aside class="">
-            <?php include 'BarraLateralAdministrador.php'; ?>
+            <?php include 'BarraLateralUsuario.php'; ?>
           </aside>
     <section class="caja" id="container"  >
                   <h2>Datos Personales</h1>
