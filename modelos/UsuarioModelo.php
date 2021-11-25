@@ -1,5 +1,5 @@
 <?php
-require_once '../modelos/Conexion.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/modelos/Conexion.php';
 
 /**
  *

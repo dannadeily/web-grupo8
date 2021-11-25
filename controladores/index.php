@@ -11,6 +11,8 @@ if(isset($_GET["con"])){
      }
 
    }
+}else {
+  header("location:../index.php");
 }
 
  ?>

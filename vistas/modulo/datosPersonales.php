@@ -1,3 +1,12 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/controladores/UsuarioControlador.php';
+$usuario=new UsuarioControlador();
+session_start();
+
+$datos=$usuario->listar($_SESSION['usuario']);
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -6,6 +15,10 @@
     <link rel="stylesheet" href="../css/datosPersonales.css">
   </head>
   <body>
+  <?php if(!isset($_SESSION['usuario'])){
+      header("location:iniciar.php");
+        }
+        ?>
 
           <header>
             <?php include '../HeaderLogin.php'?>
@@ -18,34 +31,34 @@
                               <tr>
                                   <td>
                                       <h4>Codigo usuario: </h4>
-                                      <p> codigo</p>
+                                      <p> <?php echo $datos[0]->codigo_usuario ?></p>
                                   </td>
                                   <td></td>
                              </tr>
                              <tr>
                                   <td>
                                       <h4>Nombres: </h4>
-                                      <p>Nombres</p>
+                                      <p><?php echo $datos[0]->nombre ?></p>
                                 </td>
                                  <td>
                                    <h4>Apellidos: </h4>
-                                   <p>Apellidos</p>
+                                   <p><?php echo $datos[0]->apellidos ?></p>
                                 </td>
                            </tr>
                            <tr>
                                <td>
                                  <h4>Numero de documento: </h4>
-                                 <p> #########</p>
+                                 <p> <?php echo $datos[0]->numero_documento ?>  </p>
                                </td>
                                <td>
                                  <h4>Tipo de documento: </h4>
-                                 <p> cedula de ciudadania</p>
+                                 <p> <?php echo $datos[0]->tipoDocumento ?> </p>
                                </td>
                              </tr>
                              <tr>
                                 <td>
                                     <h4>Correo electronico: </h4>
-                                    <p> @ufps.edu.co</p>
+                                    <p> <?php echo $datos[0]->email ?> </p>
                                   </td>
 
               </tr>

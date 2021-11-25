@@ -41,9 +41,9 @@
                  <div class="fila1">
                  <label for="tipoDocumento">Tipo de documento</label>
                  <select name="tipoDocumento" id="tipoDocumento">
-                          <option value="1"> Cedula de ciudadania</option>
-                          <option value="2"> Tarjeta de identidad</option>
-                          <option value="3"> Cedula de extranjeria</option>
+                          <option value="Cedula de ciudadania"> Cedula de ciudadania</option>
+                          <option value="Tarjeta de identidad"> Tarjeta de identidad</option>
+                          <option value="Cedula de extranjeria"> Cedula de extranjeria</option>
                   </select>
                    </div>
                    <div class="fila2">
