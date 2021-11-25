@@ -13,14 +13,14 @@
           </div>
         </div>
 
-        <ul class="sidebar-menu ">
+
           <li class="">
             <a href="#">
               Informacion convocatoria
               <i class="fas fa-angle-down pull-right">
               </i>
             </a>
-            <ul class="treeview-menu menu-open" style="display:block;">
+            <ul class="treeview-menu">
               <li class="">
 
                   <a href="#">
