@@ -2,10 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
-body{
-background-color: blue;
-}
+
 form{
   margin: auto;
   border-radius: 20px;
@@ -16,6 +15,15 @@ form{
   margin-top: 123px solid red;
   border-bottom:4px solid #aa1916;
 }
+<<<<<<< HEAD
 .p{
   color: black;
+=======
+
+
+
+p{
+  
+  text-align: center;
+>>>>>>> 9ada63c101f8448325bc9eed7d036698c9be5b4e
 }
