@@ -9,28 +9,28 @@
       <div class="sidebar">
         <div class="toggle-btn">
           <div class="info">
-            <p>nombre del usuario</p>
+            <p id="lista"> <?php  echo $_SESSION['nombre']." ".$_SESSION['apellidos']; ?> </p>
           </div>
         </div>
 
             <ul>
               <li >
-                <a href="#">
+                <a id="lista" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/datosPersonales.php">
                   Datos Personales
                 </a>
               </li>
           <li >
-            <a href="#">
+            <a id="lista" href="#">
               Convocatoria
             </a>
           </li>
           <li>
-            <a href="#">
+            <a id="lista" href="#">
               Inscripciones
             </a>
           </li>
           <li >
-            <a href="#">
+            <a id="lista" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/cambiarContrasena.php">
               Cambiar Contraseña
             </a>
           </li>

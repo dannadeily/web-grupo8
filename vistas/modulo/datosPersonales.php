@@ -2,6 +2,9 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/controladores/UsuarioControlador.php';
 $usuario=new UsuarioControlador();
 session_start();
+ if(!isset($_SESSION['usuario'])){
+    header("location:iniciar.php");
+}
 
 $datos=$usuario->listar($_SESSION['usuario']);
  ?>
@@ -14,17 +17,11 @@ $datos=$usuario->listar($_SESSION['usuario']);
     <title>editar datos</title>
     <link rel="stylesheet" href="../css/datosPersonales.css">
   </head>
+  <header>
+    <?php include '../HeaderLogin.php'?>
+  </header>
   <body>
-  <?php if(!isset($_SESSION['usuario'])){
-      header("location:iniciar.php");
-        }
-        ?>
-
-          <header>
-            <?php include '../HeaderLogin.php'?>
-          </header>
-
-          <aside class="">
+            <aside class="">
             <?php include 'BarraLateralUsuario.php'; ?>
           </aside>
     <section class="caja" id="container"  >

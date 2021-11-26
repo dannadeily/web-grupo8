@@ -81,10 +81,11 @@ class UsuarioControlador
       if (!empty($_POST['codigo']) || !empty($_POST['contrasena'])) {
       $usuario=$this->listar($_POST['codigo']);
       if(count($usuario)>1){
-      echo count($usuario);
                 if (password_verify($_POST["contrasena"], $usuario[0]->contrasena)) {
                   session_start();
                   $_SESSION['usuario']=$_POST['codigo'];
+                  $_SESSION['nombre']=$usuario[0]->nombre;
+                  $_SESSION['apellidos']=$usuario[0]->apellidos;
                   header("location:../vistas/modulo/datosPersonales.php");
                 } else {
                   header("location:../vistas/modulo/iniciar.php?msg=datos incorrectos");
@@ -110,9 +111,25 @@ class UsuarioControlador
   }
   public function editarDatos()
   {
-    
-  }
+              $editar = array(
+              'codigo_usuario'=>$_POST['codigo_usuario'],
+              'nombre'=>$_POST['nombre'],
+              'apellidos'=>$_POST['apellidos'],
+              'email'=>$_POST['email'],
+              'numero_documento'=>$_POST['numero_documento'],
+              'tipoDocumento'=>$_POST['tipoDocumento']
+            );
+            $this->model->editarDatos($editar);
+            header("location:../vistas/modulo/datosPersonales.php");
 }
+public function cambiarContrasena($codigo_usuario)
+{
+
+}
+
+
+}
+
 
 
 ?>

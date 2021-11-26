@@ -10,7 +10,7 @@ require $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/config/config.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href=<?php ruta?>"/web-grupo8/vistas/css/header.css">
   </head>
-  <body>
+  <body id="body">
 
     <nav class="navbar navbar-inverse " id="navegacion" >
 

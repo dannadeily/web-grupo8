@@ -21,16 +21,17 @@ else {
   <body>
 
           <header>
-            <?php include '../HeaderLogin.php'?>
+            <?php require  '../HeaderLogin.php'?>
           </header>
           <aside class="">
-              <?php include 'BarraLateralUsuario.php'; ?>
+              <?php require  'BarraLateralUsuario.php'; ?>
           </aside>
     <section id="container"  >
               <div class="form_register">
                   <h2>Datos Personales</h1>
                   <hr>
-                  <form action="" method="post">
+                  <form action="../../controladores/?con=UsuarioControlador&fun=editarDatos" method="post">
+                        <input type="hidden" name="codigo_usuario" value="<?php echo $datos[0]->codigo_usuario; ?>">
                         <table>
                           <tr>
                             <td>
@@ -49,9 +50,9 @@ else {
                               <td>
                               <label for="tipoDocumento">Tipo de documento</label>
                                <select class="select" name="tipoDocumento" id="tipoDocumento">
-                                        <option value="1"> Cedula de ciudadania</option>
-                                        <option value="2"> Tarjeta de identidad</option>
-                                        <option value="3"> Cedula de extranjeria</option>
+                                        <option value="Cedula de ciudadania"> Cedula de ciudadania</option>
+                                        <option value="Tarjeta de identidad"> Tarjeta de identidad</option>
+                                        <option value="Cedula de extranjeria"> Cedula de extranjeria</option>
                                           </select>
                                       </td>
                             </tr>
@@ -63,7 +64,7 @@ else {
 
 
                                       </table>
-                      <input type="submit" value="Guardar cambios" class="btn_save">
+                      <input type="submit" value="Guardar cambios"  name="<?php$_SESSION['usuario']?>" class="btn_save">
 
                    </form>
 
