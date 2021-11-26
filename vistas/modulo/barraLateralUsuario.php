@@ -7,12 +7,11 @@
   </head>
   <body>
       <div class="sidebar">
-        <div class="toggle-btn">
+        <div class="">
           <div class="info">
             <p id="lista"> <?php  echo $_SESSION['nombre']." ".$_SESSION['apellidos']; ?> </p>
           </div>
         </div>
-
             <ul>
               <li >
                 <a id="lista" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/datosPersonales.php">
