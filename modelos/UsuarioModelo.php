@@ -93,9 +93,9 @@ class UsuarioModelo extends Conexion
   public function cambiarContrasena($codigo,$contrasena)
   {
   $sql="update usuario set contrasena=:contrasena where codigo_usuario=:codigo_usuario";
-//  $datos=$this->conectar()->prepare($sql);
-//$datos->execute(array(":contrasena"=>$contrasena,
-//":"))
+  $datos=$this->conectar()->prepare($sql);
+$datos->execute(array(":contrasena"=>$contrasena,
+":codigo_usuario"=>$codigo));
   }
 
 }

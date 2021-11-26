@@ -86,6 +86,7 @@ class UsuarioControlador
                   $_SESSION['usuario']=$_POST['codigo'];
                   $_SESSION['nombre']=$usuario[0]->nombre;
                   $_SESSION['apellidos']=$usuario[0]->apellidos;
+                  $_SESSION['contrasena']=$usuario[0]->contrasena;
                   header("location:../vistas/modulo/datosPersonales.php");
                 } else {
                   header("location:../vistas/modulo/iniciar.php?msg=datos incorrectos");
@@ -122,9 +123,16 @@ class UsuarioControlador
             $this->model->editarDatos($editar);
             header("location:../vistas/modulo/datosPersonales.php");
 }
-public function cambiarContrasena($codigo_usuario)
-{
-
+public function cambiarContrasena(){
+  session_start();
+  echo $_SESSION['usuario'];
+echo  $_SESSION['contrasena'];
+    if(password_verify($_POST['actual'],$_SESSION['contrasena']) && $_POST['nueva1']==$_POST['nueva2'] ){
+        $this->model->cambiarContrasena($_SESSION['usuario'],password_hash($_POST['nueva1'],PASSWORD_DEFAULT));
+        header("location:../vistas/modulo/cambiarContrasena.php?msg=cambio exitoso");
+    }else {
+      header("location:../vistas/modulo/cambiarContrasena.php?msg=datos incorrectos");
+    }
 }
 
 

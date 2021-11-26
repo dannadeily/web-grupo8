@@ -26,10 +26,10 @@ else {
       <?php include 'BarraLateralUsuario.php'; ?>
   </aside>
   <section>
-    <form class="form" action="" method="post">
-    <p class="p"> contraseña actual  <input type="text" name="actual" placeholder="contraseña actual"> </p>
-    <p class="p">  nueva contraseña <input type="text" name="nueva1" placeholder="contraseña nueva">  </p>
-    <p class="p"> repetir nueva contraseña <input type="text" name="nueva2" placeholder="contraseña nueva"></p>
+    <form class="form" action="../../controladores/?con=UsuarioControlador&fun=cambiarContrasena" method="post">
+    <p class="p"> contraseña actual  <input type="text" name="actual" placeholder="contraseña actual" required> </p>
+    <p class="p">  nueva contraseña <input type="text" name="nueva1" placeholder="contraseña nueva" required>  </p>
+    <p class="p"> repetir nueva contraseña <input type="text" name="nueva2" placeholder="contraseña nueva" required></p>
     <input type="submit" name="enviar" value="guardar">
     </form>
   </section>

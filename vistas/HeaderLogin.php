@@ -20,11 +20,7 @@ require $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/config/config.php';
                   </div>
 
         <ul class="nav navbar-nav">
-          <?php
-    //class active para resaltar la pesatñaen la que se encuentra
-           ?>
-
-          <li ><a href="<?php ruta?>/web-grupo8/index.php" id="index" > <u>Inicio</u> </a></li>
+                <li ><a href="<?php ruta?>/web-grupo8/index.php" id="index" > <u>Inicio</u> </a></li>
 
         </ul>
 
