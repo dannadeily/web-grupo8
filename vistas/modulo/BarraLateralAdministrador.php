@@ -23,7 +23,7 @@
             <ul class="treeview-menu">
               <li class="">
 
-                  <a href="#">
+                  <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/crearConvocatoria.php">
                       Crear Convocatoria
                   </a>
               </li>
@@ -68,7 +68,7 @@
             </a>
           </li>
           <li class="treeview">
-            <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/cambiarContrasenaAdmin.php"">
+            <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/cambiarContrasenaAdmin.php">
               Cambiar Contraseña
             </a>
           </li>
