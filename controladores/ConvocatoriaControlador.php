@@ -61,16 +61,16 @@ class ConvocatoriaControlador
       }
     }
     else {
-      echo "la fecha de inicio no puede ser mayor a la de fin";
+      header("location:../vistas/modulo/crearConvocatoria?msg=fecha de inicio debe ser mayor a la de fin");
     }
     }
     else {
-      // header("location:../vistas/modulo/crearConvocatoria.php");
+       header("location:../vistas/modulo/crearConvocatoria?msg=complete los datos.php");
     }
   }
 
-  public function editarConvocatoria()
+  public function historial()
   {
-
+    return $this->model->historial();
   }
 }

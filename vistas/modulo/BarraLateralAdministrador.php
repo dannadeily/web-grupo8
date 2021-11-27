@@ -36,7 +36,13 @@
               <li class="">
 
                   <a href="#">
-                      Historial de Calificacion
+                      Calificar
+                  </a>
+              </li>
+              <li class="">
+
+                  <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/historial.php">
+                      historial
                   </a>
               </li>
             </ul>
