@@ -24,7 +24,7 @@ else {
             <?php require  '../HeaderLogin.php'?>
           </header>
           <aside class="">
-              <?php require  'BarraLateralUsuario.php'; ?>
+              <?php// require  'BarraLateralUsuario.php'; ?>
           </aside>
     <section id="container"  >
               <div class="form_register">

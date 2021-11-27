@@ -30,16 +30,16 @@ class UsuarioModelo extends Conexion
       ";
       $datos=$this->conectar()->prepare($sql);
       $datos->execute(array(":codigo_usuario"=>$codigo_usuario,
-    ":nombre"=>$nombre,
-    ":apellidos"=>$apellidos,
-    ":email"=>$email,
-    ":contrasena"=>$contrasena,
-    ":tipoDocumento"=>$tipoDocumento,
-    ":numero_documento"=>$numero_documento));
-    $datos->closeCursor();
-    $count= $datos->rowcount();
-    $datos=null;
-    return $count;
+      ":nombre"=>$nombre,
+      ":apellidos"=>$apellidos,
+      ":email"=>$email,
+      ":contrasena"=>$contrasena,
+      ":tipoDocumento"=>$tipoDocumento,
+      ":numero_documento"=>$numero_documento));
+      $datos->closeCursor();
+      $count= $datos->rowcount();
+      $datos=null;
+      return $count;
   }
 
   public function listar($codigo_usuario='')

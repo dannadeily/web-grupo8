@@ -9,8 +9,9 @@
   position: static;
   left: 0px;
   top:68px;
-  right: 1050px;
+  width: auto;
   bottom: 0;
+
 }
 
 
@@ -37,7 +38,6 @@ ul{
 .sidebar{
   position: fixed;
   height: 100%;
-
-   background: #aa1916;
+  background: #aa1916;
    float: left;
  }

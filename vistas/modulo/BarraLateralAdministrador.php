@@ -68,7 +68,7 @@
             </a>
           </li>
           <li class="treeview">
-            <a href="#">
+            <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/cambiarContrasenaAdmin.php"">
               Cambiar Contraseña
             </a>
           </li>

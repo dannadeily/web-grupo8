@@ -22,7 +22,7 @@
 
       <p id="link"> <a href="recuperar.php">¿olvido su contraseña?</a></p>
       <p id="link"><a href="registrar.php">registrarse</a></p>
-      <p id="link"><a href="registrar.php">administrador</a></p> 
+      <p id="link"><a href="iniciarAdmin.php">administrador</a></p> 
       </form>
 
       </section>
