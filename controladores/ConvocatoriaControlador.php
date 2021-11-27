@@ -43,7 +43,7 @@ class ConvocatoriaControlador
             if (!file_exists($archivo)) {
               $resultado=@move_uploaded_file($_FILES["imagen"]["tmp_name"],$archivo);
               if ($resultado) {
-                echo "archivo guardado";
+
               }else {
                 echo "error al guardar";
               }
@@ -55,9 +55,9 @@ class ConvocatoriaControlador
           }
 
         }
-        // header("location:../vistas/modulo/crearConvocatoria.php?msg=creada con exito");
+         header("location:../vistas/modulo/historial.php?msg=creada con exito");
         }else {
-      //  header("location:../vistas/modulo/crearConvocatoria.php?msg=no se pudo crear");
+       header("location:../vistas/modulo/crearConvocatoria.php?msg=no se pudo crear");
       }
     }
     else {

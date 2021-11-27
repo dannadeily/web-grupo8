@@ -35,9 +35,11 @@ class ConvocatoriaModelo extends Conexion
 
   public function historial()
   {
-    $sql="selet * from convocatoria order by id_convocatoria desc";
+    $sql="select * from convocatoria order by id_convocatoria desc";
     $datos=$this->conectar()->prepare($sql);
-    while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) {}
+    $datos->execute();
+    while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) {
+    }
     $datos->closeCursor();
     $datos=null;
     return $filas;

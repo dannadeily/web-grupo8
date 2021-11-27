@@ -1,4 +1,9 @@
-
+<?php
+require_once '../../controladores/ConvocatoriaControlador.php';
+$convocatoria=new ConvocatoriaControlador();
+$historial=$convocatoria->historial();
+$count=count($historial);
+ ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -13,7 +18,34 @@
         <?php include 'BarraLateralAdministrador.php'; ?>
       </aside>
 
-      
+
+      <section>
+        <table>
+          <tr>
+            <th>titulo</th>
+            <th>descripcion</th>
+            <th>fecha_inicio</th>
+            <th>fecha_fin</th>
+          </tr>
+
+        <?php for ($i=0; $i < $count-1; $i++) { ?>
+          <tr>
+            <td> <?php echo $historial[$i]->titulo; ?> </td>
+            <td> <?php echo $historial[$i]->descripcion; ?> </td>
+            <td> <?php echo $historial[$i]->fecha_inicio; ?> </td>
+            <td> <?php echo $historial[$i]->fecha_fin; ?> </td>
+          </tr>
+
+
+        <?php } ?>
+        </table>
+
+
+
+
+
+      </section>
+
 
 
 
