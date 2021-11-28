@@ -33,9 +33,13 @@ class ConvocatoriaModelo extends Conexion
     return $id;
   }
 
-  public function historial()
+  public function historial($id="")
   {
+    if($id==""){
     $sql="select * from convocatoria order by id_convocatoria desc";
+  }else {
+    $sql="select * from convocatoria where id_convocatoria=$id";
+  }
     $datos=$this->conectar()->prepare($sql);
     $datos->execute();
     while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) {
@@ -60,14 +64,14 @@ class ConvocatoriaModelo extends Conexion
       ":fecha_inicio"=>$fecha_inicio,
       ":fecha_fin"=>$fecha_fin
       ));
-      $count=rowCount($datos);
+      $count=$datos->rowCount();
       $datos=null;
       return $count;
   }
 
   public function convocatoriaVigente($fecha)
   {
-    echo "<br> $fecha <br>";
+
     $sql="SELECT * FROM convocatoria WHERE '$fecha' BETWEEN fecha_inicio AND fecha_fin";
     $datos=$this->conectar()->prepare($sql);
     $datos->execute();

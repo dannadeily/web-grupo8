@@ -9,13 +9,13 @@
       <div class="sidebar">
         <div class="toggle-btn">
           <div class="info">
-            <p>nombre del administrador</p>
+            <p id="barra">nombre del administrador</p>
           </div>
         </div>
 
 
           <li class="">
-            <a href="#">
+            <a href="#" id="barra">
               Informacion convocatoria
               <i class="fas fa-angle-down pull-right">
               </i>
@@ -23,23 +23,24 @@
             <ul class="treeview-menu">
               <li class="">
 
-                  <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/crearConvocatoria.php">
-                      Crear Convocatoria
+
+                      <a id="barra" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/crearConvocatoria.php">
+                        Crear Convocatoria
                   </a>
               </li>
               <li class="">
 
-                  <a href="#">
+                  <a id="barra" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/convocatoriaVigente.php">
                       Editar Convocatoria
                   </a>
               </li>
               <li class="">
 
-                  <a href="#">
+                  <a id="barra" href="#">
                       Calificar
                   </a>
               </li>
-              <li class="">
+              <li id="barra" class="">
 
                   <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/historial.php">
                       historial
@@ -48,33 +49,33 @@
             </ul>
           </li>
           <li class="">
-            <a href="#">
+            <a id="barra" href="#">
               Categorias
               <i class="fa fa-angle-left pull-right">
 
               </i>
             </a>
             <ul class="treeview-menu menu open">
-              <li class="">
+              <li id="barra" class="">
                   <a href="#">
                       Crear Categoria
                   </a>
               </li>
               <li class="">
 
-                  <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/seleccionarCategoria.php">
+                  <a id="barra" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/seleccionarCategoria.php">
                       Editar Categoria
                   </a>
               </li>
             </ul>
           </li>
           <li class="treeview">
-            <a href="#">
+            <a id="barra" href="#">
               Gererar Informe
             </a>
           </li>
           <li class="treeview">
-            <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/cambiarContrasenaAdmin.php">
+            <a id="barra" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/cambiarContrasenaAdmin.php">
               Cambiar Contraseña
             </a>
           </li>

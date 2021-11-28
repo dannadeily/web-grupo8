@@ -42,6 +42,9 @@ $count=count($listar);
               <td> <a href=> <input type="submit" name="estado" value="activar"> </a> </td>
             <?php
           }  ?>
+          <td></td>
+          <td> <a href="#"> editar
+           </a> </td>
           </tr>
           </form>
         <?php } ?>

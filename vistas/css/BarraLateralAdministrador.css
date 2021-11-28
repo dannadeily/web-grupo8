@@ -10,7 +10,7 @@ body{
 }
 
 .treeview-menu{
-  
+
   list-style-type: none;
 }
 .sidebar ul li {
@@ -20,7 +20,7 @@ body{
   border-bottom: 2px solid rgba(100, 100, 100, .3);
 
 }
-a,p{
+#barra{
   color:white;
   text-decoration: none;
   display: inline-block;
