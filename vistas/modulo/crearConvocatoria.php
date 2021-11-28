@@ -25,7 +25,7 @@
                 <input type="text" id="titulo" name="titulo" required/>
                 <br><br>
             <label for="CargarImagen" class="form-label">Cargar Imagen</label>
-            <input name="imagen" type="file" id="CargarImagen" multiple  accept="image/*">
+            <input name="imagen" type="file" id="CargarImagen" multiple  accept="image/*" required>
             <br><br>
                 <label class="form-label" for="form4Example3">Descripcion</label>
                 <textarea name="descripcion"  required id="form4Example3" rows="4"></textarea>

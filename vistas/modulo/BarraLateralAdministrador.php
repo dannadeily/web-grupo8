@@ -62,7 +62,7 @@
               </li>
               <li class="">
 
-                  <a href="#">
+                  <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/seleccionarCategoria.php">
                       Editar Categoria
                   </a>
               </li>
