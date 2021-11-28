@@ -31,7 +31,7 @@ class AdministradorControlador
                   $_SESSION['nombre']=$administrador[0]->nombre;
                   $_SESSION['apellidos']=$administrador[0]->apellidos;
                   $_SESSION['contrasena']=$administrador[0]->contrasena;
-                  header("location:../vistas/modulo/cambiarContrasenaAdmin.php");
+                  header("location:../vistas/modulo/historial.php");
                 } else {
                   header("location:../vistas/modulo/iniciarAdmin.php?msg=datos incorrectos");
                 }

@@ -57,7 +57,7 @@
             </a>
             <ul class="treeview-menu menu open">
               <li id="barra" class="">
-                  <a href="#">
+                  <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/crearCategoria.php">
                       Crear Categoria
                   </a>
               </li>

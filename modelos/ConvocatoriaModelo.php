@@ -72,7 +72,7 @@ class ConvocatoriaModelo extends Conexion
   public function convocatoriaVigente($fecha)
   {
 
-    $sql="SELECT * FROM convocatoria WHERE '$fecha' BETWEEN fecha_inicio AND fecha_fin";
+    $sql="SELECT * FROM convocatoria WHERE '$fecha' < fecha_fin";
     $datos=$this->conectar()->prepare($sql);
     $datos->execute();
     while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) {

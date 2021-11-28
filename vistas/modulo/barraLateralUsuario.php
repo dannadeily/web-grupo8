@@ -19,7 +19,7 @@
                 </a>
               </li>
           <li >
-            <a id="lista" href="#">
+            <a id="lista" href="<?php $_SERVER["DOCUMENT_ROOT"]?>/web-grupo8/vistas/modulo/"">
               Convocatoria
             </a>
           </li>

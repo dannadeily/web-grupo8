@@ -32,7 +32,23 @@ public function estado($id,$estado)
       ":id"=>$id
     ));
 }
-
+public function crearCategoria($categoria=array())
+{
+  foreach ($categoria as $key=>$datos) {
+    $$key=$datos;
+    }
+    $sql="insert into categoria
+    (nombre,descripcion,estado)values
+    (:nombre,:descripcion,1)";
+    $datos=$this->conectar();
+    $resultado=$datos->prepare($sql);
+    $resultado->execute(array(":nombre"=>$nombre,
+    ":descripcion"=>$descripcion 
+  ));
+  $id=$datos->lastInsertId();
+  $datos=null;
+  return $id;
+}
 
 
 }
