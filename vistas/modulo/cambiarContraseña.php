@@ -11,10 +11,13 @@
 </header>
   <section>
     <form class="" action="" method="post">
+      <div class="box">
+
+
     <p> contraseña actual  <input type="text" name="actual" placeholder="contraseña actual"> </p>
     <p>  nueva contraseña <input type="text" name="nueva1" placeholder="contraseña nueva">  </p>
     <p> repetir nueva contraseña <input type="text" name="nueva2" placeholder="contraseña nueva"></p>
-
+      </div>
     </form>
   </section>
 <footer>

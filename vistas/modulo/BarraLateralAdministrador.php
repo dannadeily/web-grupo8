@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/barraLateralUsuario.css">
+    <link rel="stylesheet" href="../css/BarraLateralAdministrador.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title></title>
   </head>
@@ -81,7 +81,7 @@
                 </a>
                 </li>
 
-                  </ul>
+          </ul>
       </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

@@ -15,6 +15,17 @@ form{
   margin-top: 123px solid red;
   border-bottom:4px solid #aa1916;
 }
-.p{
+.box p{
   color: black;
+  text-align: center;
+  margin-top: 20px;
+
+}
+.box{
+  position: relative;
+top:100px;
+}
+
+.buton{
+  margin-left: 150px;
 }
