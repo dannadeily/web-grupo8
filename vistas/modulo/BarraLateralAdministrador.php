@@ -2,84 +2,95 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/BarraLateralAdministrador.css">
+    <link rel="stylesheet" href="../css/barraLateralUsuario.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title></title>
   </head>
   <body>
-      <div class="sidebar">
-        <div class="toggle-btn">
-          <div class="info">
-            <p id="barra">nombre del administrador</p>
-          </div>
-        </div>
+    <input type="checkbox" class="checkbox" id="check">
+    <label class="menu" for="check" ><i class="fas fa-bars"></i></label>
+      <div class="left-panel">
 
+                  <ul>
+                    <li class="info">
+                      NAVEGADOR PRINCIPAL
+                    </li>
 
-          <li class="">
-            <a href="#" id="barra">
-              Informacion convocatoria
-              <i class="fas fa-angle-down pull-right">
-              </i>
-            </a>
-            <ul class="treeview-menu">
-              <li class="">
-
-
-                      <a id="barra" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/crearConvocatoria.php">
-                        Crear Convocatoria
+                <li>
+                  <a id="lista" class="linea" href="#dashboard-items" data-toggle="collapse" >
+                    Informacion Convocatoria
                   </a>
-              </li>
-              <li class="">
+                </li>
 
-                  <a id="barra" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/convocatoriaVigente.php">
-                      Editar Convocatoria
-                  </a>
-              </li>
-              <li class="">
 
-                  <a id="barra" href="#">
-                      Calificar
-                  </a>
-              </li>
-              <li id="barra" class="">
+                    <div id="dashboard-items" class="collapse">
+                      <li>
+                        <a class="sub" id="lista" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/crearConvocatoria.php" >
+                          Crear Convocatoria
+                        </a>
+                      </li>
 
-                  <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/historial.php">
-                      historial
-                  </a>
-              </li>
-            </ul>
-          </li>
-          <li class="">
-            <a id="barra" href="#">
-              Categorias
-              <i class="fa fa-angle-left pull-right">
+                      <li>
+                        <a class="sub" id="lista" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/convocatoriaVigente.php" >
+                         Editar Convocatoria
+                        </a>
+                      </li>
 
-              </i>
-            </a>
-            <ul class="treeview-menu menu open">
-              <li id="barra" class="">
-                  <a href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/crearCategoria.php">
-                      Crear Categoria
-                  </a>
-              </li>
-              <li class="">
+                      <li>
+                        <a class="sub" id="lista" href="#" >
+                         Calificar
+                      </a>
+                      </li>
 
-                  <a id="barra" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/seleccionarCategoria.php">
-                      Editar Categoria
+                      <li>
+                        <a class="sub" id="lista" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/historial.php">
+                         Historial
+                      </a>
+                      </li>
+
+                    </div>
+
+
+                <li>
+                  <a id="lista" class="linea" href="#profile-items" data-toggle="collapse" >
+                    Categoria
                   </a>
-              </li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a id="barra" href="#">
-              Gererar Informe
-            </a>
-          </li>
-          <li class="treeview">
-            <a id="barra" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/cambiarContrasenaAdmin.php">
-              Cambiar Contraseña
-            </a>
-          </li>
-        </ul>
+                </li>
+
+                    <div id="profile-items" class="collapse" >
+
+                          <li>
+                            <a class="sub" id="lista" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/crearCategoria.php" >
+                              Crear Caterogia
+                            </a>
+                          </li>
+
+                          <li>
+                            <a class="sub" id="lista" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/seleccionarCategoria.php">
+                              Editar Categoria
+                            </a>
+                          </li>
+                    </div>
+                <li>   <i class="far fa-file-alt"></i> <a id="lista" class="linea" href="#">
+                  Generar Informe
+                </a>
+                </li>
+
+                <li><a id="lista" class="linea" id="barra" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/cambiarContrasenaAdmin.php">
+                  Cambiar Contraseña
+                </a>
+                </li>
+
+                  </ul>
       </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
 </html>

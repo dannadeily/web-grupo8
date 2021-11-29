@@ -3,23 +3,26 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/barraLateralUsuario.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title></title>
   </head>
   <body>
-      <div class="sidebar">
-        <div class="">
-          <div class="info">
-            <p id="lista"> <?php  echo $_SESSION['nombre']." ".$_SESSION['apellidos']; ?> </p>
-          </div>
-        </div>
-            <ul>
+    <input type="checkbox" class="checkbox" id="check">
+    <label class="menu" for="check" ><i class="fas fa-bars"></i></label>
+      <div class="left-panel">
+
+<ul>
+  <li class="info">
+    <a id="lista"> <?php  echo $_SESSION['nombre']." ".$_SESSION['apellidos']; ?> </a>
+  </li>
+
               <li >
                 <a id="lista" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/datosPersonales.php">
                   Datos Personales
                 </a>
               </li>
           <li >
-            <a id="lista" href="<?php $_SERVER["DOCUMENT_ROOT"]?>/web-grupo8/vistas/modulo/"">
+            <a id="lista" href="<?php $_SERVER["DOCUMENT_ROOT"]?>/web-grupo8/vistas/modulo/">
               Convocatoria
             </a>
           </li>
