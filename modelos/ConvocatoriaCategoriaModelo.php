@@ -33,4 +33,18 @@ class ConvocatoriaCategoriaModelo extends Conexion
     $datos=null;
     return $id;
   }
+  public function listar($id_convocatoria)
+  {
+    $sql="SELECT c.* FROM categoria as c JOIN  categoria_convocatoria as cc JOIN convocatoria as co
+    on c.id_categoria = cc.id_categoria and co.id_convocatoria=cc.id_convocatoria";
+
+    $datos=$this->conectar()->prepare($sql);
+    $datos->execute(array(":id_convocatoria"=>$id_convocatoria));
+    while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) {
+
+      }
+    $datos->closeCursor();
+    $datos=null;
+    return $filas;
+  }
 }

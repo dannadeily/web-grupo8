@@ -1,7 +1,7 @@
 <?php
 require_once '../../controladores/ConvocatoriaControlador.php';
 $convocatoria=new ConvocatoriaControlador();
-$historial=$convocatoria->convocatoriaVigente();
+$historial=$convocatoria->convocatoriasAbiertas();
 $count=count($historial);
  ?>
 
@@ -9,7 +9,7 @@ $count=count($historial);
  <html lang="es" dir="ltr">
    <head>
      <meta charset="utf-8">
-     <title>convocatorias vigentes</title>
+     <title>convocatorias</title>
    </head>
    <body>
      <header>
@@ -23,9 +23,8 @@ $count=count($historial);
          <tr>
            <th>titulo</th>
            <th>descripcion</th>
-           <th>fecha de inicio</th>
-           <th>fecha de fin</th>
-           <th>editar</th>
+           <th>fecha de cierre</th>
+
          </tr>
 
        <section>
@@ -33,11 +32,9 @@ $count=count($historial);
 
        <?php for ($i=0; $i <$count-1 ; $i++) {?>
          <tr>
-            <td> <?php echo $historial[$i]->titulo ?>  </td>
+            <td>   <a href="categoriasActivas.php?id=<?php echo $historial[$i]->id_convocatoria ?>"> <?php echo $historial[$i]->titulo ?> </a> </td>
             <td> <?php echo $historial[$i]->descripcion ?>  </td>
-            <td> <?php echo $historial[$i]->fecha_inicio ?>  </td>
             <td> <?php echo $historial[$i]->fecha_fin ?>  </td>
-            <td>   <button onclick="location.href='editarConvocatoria.php?id=<?php echo $historial[$i]->id_convocatoria; ?>'">editar</button>                 </td>
           </tr>
       <?php } ?>
        </table>

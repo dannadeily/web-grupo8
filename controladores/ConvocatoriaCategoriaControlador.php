@@ -18,5 +18,8 @@ class ConvocatoriaCategoriaControlador
   {
       return $this->model->agregar($id_categoria,$id_convocatoria);
     }
-
+public function listar($id)
+{
+  return $this->model->listar($id);
+}
   }

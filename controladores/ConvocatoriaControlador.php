@@ -148,11 +148,16 @@ public function editarConvocatoria()
    }
  }
 
-public function convocatoriaVigente()
-{
-  $hoy= date("Y-m-d");
-  return ($this->model->convocatoriaVigente($hoy));
-}
+  public function convocatoriasAbiertas()
+  {
+    $hoy= date("Y-m-d");
+    return ($this->model->convocatoriasAbiertas($hoy));
+  }
+  public function convocatoriaVigente()
+  {
+    $hoy= date("Y-m-d");
+    return ($this->model->convocatoriaVigente($hoy));
+  }
 
 
 }
