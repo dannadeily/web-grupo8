@@ -1,5 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/modelos/ConvocatoriaModelo.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/controladores/ConvocatoriaCategoriaControlador.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/controladores/CategoriaControlador.php';
 
 
 /**
@@ -55,6 +57,20 @@ class ConvocatoriaControlador
           }
 
         }
+        //crear convocatoria con las categorias activas
+        $categorias=new CategoriaControlador();
+        $lista=$categorias->listar();
+        $listaCount=count($lista);
+        echo "$listaCount";
+        $convocatoriacategoria=new ConvocatoriaCategoriaControlador();
+        for ($i=0; $i <$listaCount-1 ; $i++) {
+          if ($lista[$i]->estado==1) {
+            $convocatoriacategoria->agregar($id,$lista[$i]->id_categoria);
+            echo "no entra";
+          }
+
+
+        }
          header("location:../vistas/modulo/historial.php?msg=creada con exito");
         }else {
        header("location:../vistas/modulo/crearConvocatoria.php?msg=no se pudo crear");
@@ -65,7 +81,7 @@ class ConvocatoriaControlador
     }
     }
     else {
-       header("location:../vistas/modulo/crearConvocatoria?msg=complete los datos.php");
+    //   header("location:../vistas/modulo/crearConvocatoria?msg=complete los datos.php");
     }
   }
 

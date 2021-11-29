@@ -36,10 +36,10 @@ $count=count($listar);
           <form class="" action="../../controladores/?con=CategoriaControlador&fun=estado&id=<?php echo $listar[$i]->id_categoria?>&estado=<?php echo $listar[$i]->estado?>" method="post">
           <?php if ($listar[$i]->estado>0){ ?>
 
-            <td> <a href=> <input type="submit" name="estado" value="desactivar"> </a> </td>
+            <td> <a href=> <input type="submit" name="estado" value="activa"> </a> </td>
           <?php } else{
             ?>
-              <td> <a href=> <input type="submit" name="estado" value="activar"> </a> </td>
+              <td> <a href=> <input type="submit" name="estado" value="desactiva"> </a> </td>
             <?php
           }  ?>
           <td></td>
