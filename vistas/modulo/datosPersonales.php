@@ -71,6 +71,7 @@ $datos=$usuario->listar($_SESSION['usuario']);
     </section>
 <br>
 <br>
+<br>
         <footer>
           <?php require '../footer.php'; ?>
         </footer>
