@@ -8,6 +8,7 @@ $count=count($historial);
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/tabla.css">
     <title>Historial</title>
   </head>
   <body>

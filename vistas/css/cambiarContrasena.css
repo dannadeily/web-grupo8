@@ -6,26 +6,23 @@
 }
 
 form{
-  margin: auto;
-  border-radius: 20px;
-  background white;
-  width: 400px;
-  height: 350px;
-  box-shadow: 7px 13px 37px black;
-  margin-top: 123px solid red;
-  border-bottom:4px solid #aa1916;
-}
-.box p{
-  color: black;
-  text-align: center;
-  margin-top: 20px;
-
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #666666;
+    width: 500px;
+    box-shadow: 7px 13px 37px black;
 }
 .box{
-  position: relative;
-top:100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .buton{
-  margin-left: 150px;
+margin: auto;
+}
+
+.box p{
+  margin-top: 15px;
+
 }

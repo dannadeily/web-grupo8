@@ -9,6 +9,7 @@ $count=count($historial);
  <html lang="es" dir="ltr">
    <head>
      <meta charset="utf-8">
+     <link rel="stylesheet" href="../css/tabla.css">
      <title>convocatorias vigentes</title>
    </head>
    <body>

@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+table{
+  margin: auto;
+
+}
+
+
+label{
+  display: block;
+  font-size: 17px;
+  font-family: "GothanBook";
+  margin: 15px auto 5px auto;
+}
+.tamanio-border{
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+btn_save{
+  font-size: 12px;
+  background: 10px;
+  padding: 10px;
+  color: #FFF;
+  letter-spacing: 3px;
+  border:0;
+  cursor:  pointer;
+  margin 15px auto;
+  padding-top: 5px;
+  margin-top: 15px;
+}
+btn_save{
+  font-size: 12px;
+  background: 10px;
+  padding: 10px;
+  color: #FFF;
+  letter-spacing: 3px;
+  border:0;
+  cursor:  pointer;
+  margin 15px auto;
+}
+reset{
+  btn_save{
+    font-size: 12px;
+    background: 10px;
+    padding: 10px;
+    color: #FFF;
+    letter-spacing: 3px;
+    border:0;
+    cursor:  pointer;
+    margin 15px auto;
+
+}
+.alert{
+  width: 100%;
+  background: #66e07d66;
+  border-radius: 6px;
+  margin: 20px auto;
+
+}
+.msg_error{
+  color = #e65656;
+
+}
+.msg_save{
+  color = #126e68;
+}
+.alert p{
+  padding: 10px;
+}
