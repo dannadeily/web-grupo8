@@ -36,7 +36,7 @@ class ConvocatoriaControlador
           $limite_kb=5000;
 
           if(in_array($_FILES["imagen"]["type"],$permitidos) && $_FILES["imagen"]["size"]<$limite_kb*1024){
-            $ruta="../vistas/imgConvocatorias/".$id."/";
+            $ruta="../vistas/imgConvocatorias/";
             $extencion=strtolower(pathinfo($_FILES["imagen"]["name"],PATHINFO_EXTENSION));
             $archivo=$ruta.$id.".".$extencion;
             if (!file_exists($ruta)) {
@@ -114,7 +114,7 @@ public function editarConvocatoria()
         $limite_kb=5000;
 
         if(in_array($_FILES["imagen"]["type"],$permitidos) && $_FILES["imagen"]["size"]<$limite_kb*1024){
-          $ruta="../vistas/imgConvocatorias/".$_POST["id"]."/";
+          $ruta="../vistas/imgConvocatorias/";
           $extencion=strtolower(pathinfo($_FILES["imagen"]["name"],PATHINFO_EXTENSION));
           $archivo=$ruta.$_POST["id"].".".$extencion;
           if (!file_exists($ruta)) {

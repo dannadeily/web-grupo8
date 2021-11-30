@@ -1,3 +1,9 @@
+<?php
+require_once 'controladores/ConvocatoriaControlador.php';
+$convocatoria=new ConvocatoriaControlador();
+$historial=$convocatoria->convocatoriaVigente();
+$count=count($historial);
+ ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -15,17 +21,36 @@
     <section>
       <div class="tamaño">
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div  class="carousel-item active" data-bs-interval="10000">
+          <div class="carousel-inner">
+      <?php
+      $path="vistas/imgConvocatorias";
+      if(file_exists($path)){
+        $carpeta=opendir($path);
+        while ($archivo=readdir($carpeta)) {
+          if(!is_dir($archivo)){
+            ?>
+            <div class="carousel-item active" data-bs-interval="3000">
+              <img  src="<?php echo $path."/".$archivo ?>" class="d-block w-100" alt="tres">
+            </div>
+          <!--  '<?php  echo $path."/".$archivo ?>' </div>-->
+            <?php
+          }
+        }
+      }
+
+      ?>
+      </div>
+
+
+    <!--  <div  class="carousel-item active" data-bs-interval="3000">
         <img src="vistas/img/bancos_de_imagenes_gratis.jpg" class="d-block w-100" alt="uno">
       </div>
-      <div class="carousel-item" data-bs-interval="2000">
+      <div class="carousel-item" data-bs-interval="3000">
         <img  src="vistas/img/images.jfif" class="d-block w-100" alt="dos">
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item" data-bs-interval="3000">
         <img  src="vistas/img/tipos-de-archivos-de-imagen.png" class="d-block w-100" alt="tres">
-      </div>
-    </div>
+      </div>-->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
