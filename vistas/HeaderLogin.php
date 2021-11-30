@@ -34,7 +34,5 @@ require $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/config/config.php';
 	</nav><!-- / nav -->
 
 </header><!-- / #main-header -->
-
-
 </body>
 </html>

@@ -29,22 +29,18 @@
             <input type="text" id="titulo" name="titulo" required/>
           </td>
 
-        
-
           <td>
             <label for="CargarImagen" class="form-label">Cargar Imagen</label>
             <input name="imagen" type="file" id="CargarImagen" multiple  accept="image/*" required>
           </td>
         </tr>
-        <tr>
-          <td>
-            <label class="form-label" for="form4Example3">Descripcion</label>
-            <textarea name="descripcion"  required id="form4Example3" rows="4"></textarea>
+
+        <tr colspan="2">
+          <td >
+            <label  class="form-label" for="form4Example3">Descripcion</label>
+            <textarea width="auto" name="descripcion"  required id="form4Example3" rows="4"></textarea>
           </td>
-
-
           <td>
-                    <p>holaaaaaaaaaaa</p>
           </td>
         </tr>
 
@@ -52,8 +48,8 @@
           <td>
             <label for="FechaInicio">Fecha de Inicio:</label>
          <input type="date" id="FechaInicio" name="fecha_inicio" class="form-control">
-       </td>
-            <td class="tamanio-border"></td>
+         </td>
+
           <td>
             <label for="FechaCierre">Fecha de cierre:</label>
           <input type="date" id="FechaCierre" name="fecha_fin" class="form-control">

@@ -4,7 +4,7 @@
   background: #aa1916;
   border-radius: 0.3rem;
   position: absolute;
-  top: 12.2%;
+  top: auto;
   left: 0%;
   font-size: 2rem;
   color: white;
@@ -13,16 +13,15 @@
 }
 
 .checkbox:checked ~ .menu {
-  left: 17%;
+  left: auto;
   border-redius: 0 0.5ren 0.5rm 0;
 }
 
 
 .left-panel{
    width: auto;
-   height: 100%;
   position: absolute;
-  top: 69px;
+  top: auto;
   left: -40%;
   display: flex;
   justify-content: center;

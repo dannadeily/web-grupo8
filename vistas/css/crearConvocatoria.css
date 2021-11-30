@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-table{
-  margin: auto;
+table,td,tr,th{
 
+  border: 4px solid black;
 }
 
 
@@ -15,11 +15,6 @@ label{
   font-size: 17px;
   font-family: "GothanBook";
   margin: 15px auto 5px auto;
-}
-.tamanio-border{
-  margin-left: 5px;
-  margin-right: 5px;
-
 }
 
 btn_save{
