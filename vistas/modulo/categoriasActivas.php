@@ -24,9 +24,14 @@ $count=count($listar);
 
            <tr>
              <th>nombre</th>
-             <th>descripcion</th>
           </tr>
-         <?php for ($i=0; $i <$count-1 ; $i++) {
+         <?php
+         for ($i=0; $i <$count-1 ; $i++) {
+          ?>
+          <tr>
+            <td> <?php echo $listar[$i]->nombre; ?></td>
+          </tr>
+          <?php
 
          } ?>
 

@@ -65,7 +65,7 @@ class ConvocatoriaControlador
         $convocatoriacategoria=new ConvocatoriaCategoriaControlador();
         for ($i=0; $i <$listaCount-1 ; $i++) {
           if ($lista[$i]->estado==1) {
-            $convocatoriacategoria->agregar($id,$lista[$i]->id_categoria);
+            $convocatoriacategoria->agregar($lista[$i]->nombre,$id,$lista[$i]->id_categoria);
             echo "no entra";
           }
 
