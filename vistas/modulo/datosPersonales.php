@@ -16,14 +16,18 @@ $datos=$usuario->listar($_SESSION['usuario']);
     <meta charset="utf-8">
     <title>editar datos</title>
     <link rel="stylesheet" href="../css/datosPersonales.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </head>
   <header>
     <?php include '../HeaderLogin.php'?>
   </header>
   <body>
+
             <aside class="">
             <?php include 'BarraLateralUsuario.php'; ?>
           </aside>
+
     <section class="caja" id="container"  >
                   <h2>Datos Personales</h1>
                   <hr>
@@ -69,6 +73,7 @@ $datos=$usuario->listar($_SESSION['usuario']);
                       <button class="button" onclick="location.href='editarDatos.php'">Editar</button>
 
     </section>
+
 <br>
 <br>
 <br>

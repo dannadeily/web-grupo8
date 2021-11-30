@@ -1,8 +1,7 @@
 .menu{
   width: 2.7rem;
-  height: 2.7rem;
+  height: auto;
   background: #aa1916;
-  border-radius: 0.3rem;
   position: absolute;
   top: 12.2%;
   left: 0%;
@@ -13,7 +12,7 @@
 }
 
 .checkbox:checked ~ .menu {
-  left: 13%;
+  left: 0;
   border-redius: 0 0.5ren 0.5rm 0;
 }
 
@@ -22,7 +21,7 @@
    width: auto;
    height: 100%;
   position: absolute;
-  top: 69px;
+  top:auto;
   left: -40%;
   display: flex;
   justify-content: center;

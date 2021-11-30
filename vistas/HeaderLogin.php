@@ -1,45 +1,42 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/config/config.php';
  ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href=<?php ruta?>"/web-grupo8/vistas/css/header.css">
-  </head>
-  <body id="body">
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Cabecera fija</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href=<?php ruta?>"/web-grupo8/vistas/css/header.css">
+  <link rel="stylesheet" href="vistas/css/Header.css">
+</head>
 
-    <nav class="navbar navbar-inverse " id="navegacion" >
+<body id="body-header">
 
-      <div class="container-fluid">
-        <div class="navbar-header">
-      <img id="logo" src=<?php ruta?>"/web-grupo8/vistas/img/logo.png"  alt=""  >
-                  </div>
+  <header id="main-header">
 
-        <ul class="nav navbar-nav">
-          <?php if (!isset($_SESSION['usuario'])){ ?>
-                <li ><a href="<?php ruta?>/web-grupo8/index.php" id="index" > <u>Inicio</u> </a></li>
-                  <?php } ?>
-        </ul>
+	<a id="logo-header" href="#">
+		<span class="site-name"><img  width="200" id="logo" src=<?php ruta?>"/web-grupo8/vistas/img/logo.png"  alt=""  ></span>
+	</a> <!-- / #logo-header -->
 
-        <ul class="nav navbar-nav navbar-right">
+	<nav id="nav-header">
+		<ul>
+      <?php if (!isset($_SESSION['usuario'])){ ?>
+            <li ><a href="<?php ruta?>/web-grupo8/index.php" id="index" > <u>Inicio</u> </a></li>
+              <?php } ?>
+              <?php if (!isset($_SESSION['usuario'])){ ?>
 
-        <?php if (!isset($_SESSION['usuario'])){ ?>
+                <li><a href="<?php ruta?>/web-grupo8/vistas/modulo/registrar.php"  id="sign"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                <li><a href="<?php ruta?>/web-grupo8/vistas/modulo/iniciar.php"  id="sign"><span class="glyphicon glyphicon-log-in"></span> Entrar</a></li>
+                <?php }else{ ?>
+                <li><a href="<?php ruta?>/web-grupo8/controladores/?con=UsuarioControlador&fun=cerrarSesion"  id="sign"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+              <?php } ?>
+		</ul>
+	</nav><!-- / nav -->
 
-          <li><a href="<?php ruta?>/web-grupo8/vistas/modulo/registrar.php"  id="sign"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
-          <li><a href="<?php ruta?>/web-grupo8/vistas/modulo/iniciar.php"  id="sign"><span class="glyphicon glyphicon-log-in"></span> Entrar</a></li>
-          <?php }else{ ?>
-          <li><a href="<?php ruta?>/web-grupo8/controladores/?con=UsuarioControlador&fun=cerrarSesion"  id="sign"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
-        <?php } ?>
-        </ul>
-      </div>
+</header><!-- / #main-header -->
 
-    </nav>
-	 <section
 
-	</section>
-  </body>
+</body>
 </html>
