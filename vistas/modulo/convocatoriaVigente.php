@@ -9,6 +9,7 @@ $count=count($historial);
  <html lang="es" dir="ltr">
    <head>
      <meta charset="utf-8">
+     <link rel="stylesheet" href="../css/tabla.css">
      <title>convocatorias vigentes</title>
    </head>
    <body>
@@ -37,7 +38,7 @@ $count=count($historial);
             <td> <?php echo $historial[$i]->descripcion ?>  </td>
             <td> <?php echo $historial[$i]->fecha_inicio ?>  </td>
             <td> <?php echo $historial[$i]->fecha_fin ?>  </td>
-            <td>   <button onclick="location.href='editarConvocatoria.php?id=<?php echo $historial[$i]->id_convocatoria; ?>'">editar</button>                 </td>   
+            <td>   <button onclick="location.href='editarConvocatoria.php?id=<?php echo $historial[$i]->id_convocatoria; ?>'">editar</button>                 </td>
           </tr>
       <?php } ?>
        </table>

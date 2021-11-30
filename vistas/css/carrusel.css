@@ -1,0 +1,9 @@
+.tamaño{
+  width: 60%;
+  height: 70%;
+  margin: auto;
+}
+.tamaño  img {
+    border-radius: 8px;
+  }
+}
