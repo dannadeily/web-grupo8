@@ -56,6 +56,14 @@ width: 80%;
   text-align: center;
 }
 
+ input{
+
+  font-size: 13px;
+  padding: 5px;
+  border:1px solid #85929e;
+  border-radius: 5px;
+}
+
 .form-login  #contrasena input{
 text-align: center;
 width: 80%;
@@ -70,5 +78,5 @@ width: 80%;
   text-align: center;
 }
 #iniciar-admi{
-  
+
 }

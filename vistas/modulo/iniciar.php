@@ -18,13 +18,13 @@
       <section class="form-login">
       <form action="../../controladores/?con=UsuarioControlador&fun=iniciarSesion" method="post">
         <h1>Iniciar sesión</h1>
-        <p id="codigo">codigo <br> <input  type="text" placeholder="ingrese su codigo" name="codigo" required autocomplete ></p>
-        <p id="contrasena">contraseña <br> <input type="password" placeholder="ingrese su contraseña" name="contrasena" required autocomplete></p>
+        <p id="codigo">codigo <br> <input class="input-iniciar" type="text" placeholder="ingrese su codigo" name="codigo" required autocomplete ></p>
+        <p id="contrasena">contraseña <br> <input class="input-iniciar" type="password" placeholder="ingrese su contraseña" name="contrasena" required autocomplete></p>
       <p id="ingresar"> <input  type="submit" value="ingresar"></p>
 <br>
       <p id="link"> <a href="recuperar.php">¿olvido su contraseña?</a></p>
       <p id="link"><a href="registrar.php">registrarse</a></p>
-<br>
+
 
 
 
