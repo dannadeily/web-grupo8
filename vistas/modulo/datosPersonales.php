@@ -29,7 +29,7 @@ $datos=$usuario->listar($_SESSION['usuario']);
           </aside>
 
     <section class="caja" id="container"  >
-                  <h2>Datos Personales</h1>
+                  <h2>Datos Personales</h2>
                   <hr>
                         <table>
                               <tr>

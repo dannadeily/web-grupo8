@@ -1,31 +1,33 @@
 *{
-  margin: 0;
+  margin: auto;
   padding: 0;
   box-sizing: border-box;
 }
 
-.fila2{
 
+#container{
+  margin-bottom: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top:3%;
 }
-.fila1{
-float: left;
-width: 300px;
-}
+
 
 .form_register{
-  border-radius: 15px;
-  box-shadow: 7px 13px 37px black;
-  margin-top: 123px solid red;
+  margin:auto;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 7px 7px 27px gray;
   width: 700px;
   margin: auto;
+
 }
 .form_register h2{
   text-align: center;
-
 }
 
 
-hr{
+.form_registerhr{
    border: 0;
    background: #CCC;
    height: 1px;
@@ -33,21 +35,23 @@ hr{
    display:block;
 
 }
+table{
+  border-collapse: separate;
+	border-spacing: 70px 0px;
+  
+}
 form{
   background: #FFF;
-  margin: auto;
+
   padding: 20px 50px;
   border: 1px solid #d1d1d1;
 }
 label{
-  display: block;
   font-size: 17px;
-  font-family: "GothanBook";
   margin: 15px auto 5px auto;
 }
 input,select{
 display: block;
-width: 270px;
 font-size: 11px;
 padding: 5px;
 border:1px solid #85929e;
