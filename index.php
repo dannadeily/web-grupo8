@@ -19,7 +19,7 @@ $count=count($historial);
     </header>
 
     <section>
-      <div class="tamaño">
+      <div id="tamano-carrusel">
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
       <?php
@@ -30,7 +30,7 @@ $count=count($historial);
           if(!is_dir($archivo)){
             ?>
             <div class="carousel-item active" data-bs-interval="3000">
-              <img  src="<?php echo $path."/".$archivo ?>" class="d-block w-100" alt="tres">
+              <img id="img-carrusel" src="<?php echo $path."/".$archivo ?>" class="d-block w-100" alt="tres">
             </div>
           <!--  '<?php  echo $path."/".$archivo ?>' </div>-->
             <?php
@@ -62,9 +62,6 @@ $count=count($historial);
   </div>
     </div>
     </section>
-<br>
-<br>
-<br>
 
     <footer>
  <?php require_once 'vistas/footer.php'; ?>;

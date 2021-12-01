@@ -1,9 +1,14 @@
-.tamaño{
-  width: 60%;
-  height: 70%;
-  margin: auto;
+
+
+#tamano-carrusel{
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 5%;
+
 }
-.tamaño  img {
-    border-radius: 8px;
+#img-carrusel {
+    border-radius: 20px;
+    position: relative;
   }
 }
