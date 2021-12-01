@@ -5,7 +5,7 @@ require $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/config/config.php';
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>Cabecera fija</title>
+	<title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href=<?php ruta?>"/web-grupo8/vistas/css/header.css">
 </head>
@@ -14,9 +14,9 @@ require $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/config/config.php';
 
   <header id="main-header">
 
-	<a id="logo-header" href="#">
-		<span class="site-name"><img  width="200" id="logo" src=<?php ruta?>"/web-grupo8/vistas/img/logo.png"  alt=""  ></span>
-	</a> <!-- / #logo-header -->
+	<p id="logo-header" href="#">
+		<span class="site-name"><img width="200" id="logo" src=<?php ruta?>"/web-grupo8/vistas/img/logo.png"  alt=""  ></span>
+	</p> <!-- / #logo-header -->
 
 	<nav id="nav-header">
 		<ul>

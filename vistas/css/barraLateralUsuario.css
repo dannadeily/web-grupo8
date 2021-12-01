@@ -1,23 +1,23 @@
 .menu{
   width: 2.7rem;
-  height: auto;
+  height: 2.7rem;
   background: #aa1916;
-  position: absolute;
-  top: auto;
+  position:fixed;
+  top:0;
   left: 0%;
   font-size: 2rem;
   color: white;
-  text-align: center;
+  text-align:left;
   transition: left 0,7s;
 }
 
 .checkbox:checked ~ .menu {
-  left: auto;
+  left: 0;
   border-redius: 0 0.5ren 0.5rm 0;
 }
 
 .left-panel{
-   width: auto;
+  width: auto;
   position: absolute;
   top:auto;
   left: -40%;

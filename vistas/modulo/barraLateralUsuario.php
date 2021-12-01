@@ -8,7 +8,6 @@
     <title></title>
   </head>
   <body>
-    <section class="container">
 
     <input type="checkbox" class="checkbox" id="check">
     <label class="menu" for="check" ><i class="fas fa-bars"></i></label>
@@ -41,6 +40,6 @@
           </li>
         </ul>
       </div>
-      </section>
+
   </body>
 </html>
