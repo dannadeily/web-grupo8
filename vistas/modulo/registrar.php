@@ -65,7 +65,7 @@
                         </td>
                       </tr>
                  </table>
-                  <input  type="submit" value="registrar" name="registrar"class="btn_save">
+                 <button class="button-registrar" type="button" name="button">Registrar</button>
                </form>
 
              </div>
