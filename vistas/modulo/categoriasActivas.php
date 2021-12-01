@@ -16,7 +16,7 @@ $count=count($listar);
        <?php include '../headerLogin.php'; ?>
      </header>
        <aside class="">
-         <?php// include 'barraLateralUsuario.php'; ?>
+         <?php include 'barraLateralUsuario.php'; ?>
 
        </aside>
        <section>

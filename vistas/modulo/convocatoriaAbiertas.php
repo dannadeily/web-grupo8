@@ -16,12 +16,12 @@ $count=count($historial);
        <?php include '../headerLogin.php'; ?>
      </header>
        <aside class="">
-         <?php include 'BarraLateralAdministrador.php'; ?>
+         <?php include 'BarraLateralUsuario.php'; ?>
 
        </aside>
        <table>
          <tr>
-           <th>titulo</th>
+           <th>Categoria</th>
            <th>descripcion</th>
            <th>fecha de cierre</th>
 

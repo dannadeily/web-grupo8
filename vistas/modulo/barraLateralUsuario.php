@@ -15,7 +15,7 @@
 
 <ul>
   <li class="info">
-    <a id="lista"> <?php  echo $_SESSION['nombre']." ".$_SESSION['apellidos']; ?> </a>
+  NAVEGADOR PRINCIPAL
   </li>
 
               <li >
