@@ -14,9 +14,9 @@ class CategoriaControlador
     $this->model=new CategoriaModelo();
   }
 
-  public function listar()
+  public function listar($id="")
   {
-    return $this->model->listar();
+    return $this->model->listar($id);
   }
   public function estado()
   {

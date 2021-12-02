@@ -1,7 +1,10 @@
 <?php
 require_once '../../controladores/ConvocatoriaCategoriaControlador.php';
-$categorias=new ConvocatoriaCategoriaControlador();
-$listar=$categorias->listar($_GET["id"]);
+require_once '../../controladores/CategoriaControlador.php';
+$categoriascon=new ConvocatoriaCategoriaControlador();
+$categoria=new CategoriaControlador();
+$lista=$categoria->listar($_GET["cat"]);
+$listar=$categoriascon->listar($_GET["id"]);
 $count=count($listar);
  ?>
 
@@ -20,6 +23,8 @@ $count=count($listar);
 
        </aside>
        <section>
+         <br>
+         <legend>Seleccione categoria</legend>
          <table>
 
            <tr>
@@ -29,7 +34,9 @@ $count=count($listar);
          for ($i=0; $i <$count-1 ; $i++) {
           ?>
           <tr>
-            <td> <?php echo $listar[$i]->nombre; ?></td>
+            <td> <a
+              href="categoriasActivas.php?id=<?php echo $_GET["id"]; ?>&&cat=<?php echo $listar[$i]->id_categoria ?>">
+               <?php echo $listar[$i]->nombre; ?></a></td>
           </tr>
           <?php
 
@@ -37,6 +44,9 @@ $count=count($listar);
 
 
           </table>
+          <p>
+            <?php echo  $lista[0]->descripcion;?>
+          </p>
        </section>
        <footer>
          <?php include '../footer.php'; ?>

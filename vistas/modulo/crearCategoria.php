@@ -15,7 +15,7 @@
 
       <section>
          <legend>Crear Categoria:</legend>
-        <form class="" action="index.html" method="post">
+        <form class="" action="../../controladores/?con=CategoriaControlador&fun=crearCategoria" method="post">
         <p> nombre: <input type="text" name="nombre" value=""></p>
 
         <p> descripcion:  <textarea name="descripcion" rows="8" cols="80"></textarea> </p>

@@ -43,7 +43,7 @@ $count=count($listar);
             <?php
           }  ?>
           <td></td>
-          <td> <a href="#"> editar
+          <td> <a href="editarCategoria.php?id=<?php echo $listar[$i]->id_categoria ?>"> editar
            </a> </td>
           </tr>
           </form>
