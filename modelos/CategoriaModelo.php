@@ -58,7 +58,8 @@ public function crearCategoria($categoria=array())
 }
 
 public function editar($categoria=array())
-{foreach ($categoria as $key=>$datos) {
+{
+  foreach ($categoria as $key=>$datos) {
   $$key=$datos;
   }
   $sql="update categoria set nombre=:nombre, descripcion=:descripcion where id_categoria=:id";
@@ -69,6 +70,9 @@ public function editar($categoria=array())
   ":nombre"=>$nombre,
   ":descripcion"=>$descripcion
 ));
+  $afectadas=$resultado->rowCount();
+  $datos=null;
+  return $afectadas;
 }
 
 }

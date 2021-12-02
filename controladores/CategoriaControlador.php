@@ -50,16 +50,17 @@ class CategoriaControlador
   public function editar()
   {
     if (isset($_POST["continuar"])) {
-  $categoria=array(
-    'nombre' =>$_POST["nombre"]  ,
-    'descripcion' =>$_POST["descripcion"]
-  );
+      $categoria=array(
+        'id'=>$_POST["id"],
+        'nombre' =>$_POST["nombre"]  ,
+        'descripcion' =>$_POST["descripcion"]
+      );
 
 
-    if ($this->model->crearCategoria($categoria)>0) {
-     header("location:../vistas/modulo/seleccionarCategoria.php?msg=categoria registrada");
+    if ($this->model->editar($categoria)>0) {
+      header("location:../vistas/modulo/seleccionarCategoria.php?msg=categoria actualizada");
     }else {
-    header("location:../vistas/modulo/crearCategoria.php?msg=categoria ya existe");
+      header("location:../vistas/modulo/crearCategoria.php?msg=categoria ya existe");
   }
 }
 else {
