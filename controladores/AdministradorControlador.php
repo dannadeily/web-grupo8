@@ -23,7 +23,7 @@ class AdministradorControlador
   public function iniciarSesion()
   {
       if (!empty($_POST['codigo']) || !empty($_POST['contrasena'])) {
-      $administrador   =$this->listar($_POST['codigo']);
+      $administrador=$this->listar($_POST['codigo']);
                   if (count($administrador)>1 &&  password_verify($_POST["contrasena"], $administrador[0]->contrasena)) {
                   session_start();
                   echo "entra";

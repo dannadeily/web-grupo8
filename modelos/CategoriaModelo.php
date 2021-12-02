@@ -57,9 +57,18 @@ public function crearCategoria($categoria=array())
   return $id;
 }
 
-public function editar($id_categoria='')
-{
-  $sql="";
+public function editar($categoria=array())
+{foreach ($categoria as $key=>$datos) {
+  $$key=$datos;
+  }
+  $sql="update categoria set nombre=:nombre, descripcion=:descripcion where id_categoria=:id";
+  $datos=$this->conectar();
+  $resultado=$datos->prepare($sql);
+  $resultado->execute(array(
+  ":id"=>$id,
+  ":nombre"=>$nombre,
+  ":descripcion"=>$descripcion
+));
 }
 
 }

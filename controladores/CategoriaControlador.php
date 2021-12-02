@@ -47,5 +47,24 @@ class CategoriaControlador
       header("location:../vistas/modulo/crearCategoria.php");
     }
   }
+  public function editar()
+  {
+    if (isset($_POST["continuar"])) {
+  $categoria=array(
+    'nombre' =>$_POST["nombre"]  ,
+    'descripcion' =>$_POST["descripcion"]
+  );
+
+
+    if ($this->model->crearCategoria($categoria)>0) {
+     header("location:../vistas/modulo/seleccionarCategoria.php?msg=categoria registrada");
+    }else {
+    header("location:../vistas/modulo/crearCategoria.php?msg=categoria ya existe");
+  }
+}
+else {
+  header("location:../vistas/modulo/crearCategoria.php");
+}
+  }
 
 }
