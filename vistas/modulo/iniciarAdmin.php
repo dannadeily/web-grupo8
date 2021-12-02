@@ -12,12 +12,13 @@
       <?php if (isset($_GET['msg'])): ?>
         <h2>  <?php echo $_GET['msg'] ?> </h2>
       <?php endif; ?>
-      <section class="form-login">
+      <section class="form-login" id="container">
       <form action="../../controladores/?con=AdministradorControlador&fun=iniciarSesion" method="post">
-       <h1>Iniciar sesión: Administrador</h1>
+        <h1>Iniciar sesión: Administrador</h1>
         <p id="codigo">codigo <br> <input  type="text" placeholder="ingrese su codigo" name="codigo" required autocomplete ></p>
         <p id="contrasena">contraseña <br> <input type="password" placeholder="ingrese su contraseña" name="contrasena" required autocomplete></p>
-        <p id="ingresar"> <input  type="submit" value="ingresar"></p>
+<br>
+        <p id="ingresar">  <input id="button-iniciar" type="submit" value="ingresar"></p>
 
       <p id="link"> <a href="recuperarAdmin.php">¿olvido su contraseña?</a></p>
       </form>
