@@ -35,10 +35,10 @@
           </td>
         </tr>
 
-        <tr colspan="2">
+        <tr colspan="2"  >
           <td >
             <label  class="form-label" for="form4Example3">Descripcion</label>
-            <textarea width="auto" name="descripcion"  required id="form4Example3" rows="4"></textarea>
+            <textarea style="resize: none" cols="50" width="auto" name="descripcion"  required id="form4Example3" rows="4"></textarea>
           </td>
           <td></td>
 
