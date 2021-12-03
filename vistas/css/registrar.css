@@ -45,10 +45,14 @@ form{
   padding: 20px 20px;
 
 }
-.button-registrar {
-  position: relative;
-  left: 45%;
+
+.form_register #button-registrar{
+  text-align: center;
+}
+
+.form_register #button-registrar input{
   background-color: #aa1916;
+  margin:auto;
   border-radius: 5px;
   color: white;
   padding: 5px 5px;
