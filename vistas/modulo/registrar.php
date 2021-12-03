@@ -65,7 +65,8 @@
                         </td>
                       </tr>
                  </table>
-                 <button class="button-registrar" type="button" name="button">Registrar</button>
+                 <p id="button-registrar">  <input id="button-iniciar" type="submit" value="Registrar"></p>
+  
                </form>
 
              </div>
