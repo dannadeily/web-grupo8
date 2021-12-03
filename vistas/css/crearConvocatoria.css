@@ -15,7 +15,6 @@
 
 .form_register{
   margin:auto;
-
   width: 900px;
 
 
@@ -45,6 +44,10 @@ form{
   text-align: center;
 }
 
+.form_register #input-fecha input{
+  width: 250px;
+
+}
 .form_register #button-convocatoria input{
   background-color: #aa1916;
   border-radius: 5px;

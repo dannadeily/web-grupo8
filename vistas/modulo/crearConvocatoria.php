@@ -47,12 +47,14 @@
         <tr>
           <td>
             <label for="FechaInicio">Fecha de Inicio:</label>
-         <input type="date" id="FechaInicio" name="fecha_inicio" class="form-control">
+            <p id="input-fecha"><input type="date" id="FechaInicio" name="fecha_inicio" class="form-control"></p>
+
          </td>
 
           <td>
             <label for="FechaCierre">Fecha de cierre:</label>
-          <input type="date" id="FechaCierre" name="fecha_fin" class="form-control">
+              <p id="input-fecha"><input type="date" id="FechaCierre" name="fecha_fin" class="form-control"></p>
+
         </td>
         </tr>
       </table>
