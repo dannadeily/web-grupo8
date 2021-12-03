@@ -1,15 +1,32 @@
-body{
+
+#container-historial{
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-right: 20%;
+  margin-left: 20%;
 
 }
 
-table, td, th {
+#customers {
 
-  border: 1px solid black;
-}
-
-table {
-  margin: auto;
-  width: 50%;
   border-collapse: collapse;
+  width: 100%;
+}
 
+#customers td, #customers th {
+  border: 1px solid #DEDBDB;
+  padding: 8px;
+}
+
+
+#customers tr:nth-child(even){background-color: #DEDBDB;}
+
+#customers tr:hover {background-color: #C2C2C2;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #FF3737;
+  color: white;
 }
