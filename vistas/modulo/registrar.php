@@ -65,18 +65,18 @@
                         </td>
                       </tr>
                  </table>
+                 <br>
                  <p id="button-registrar">  <input id="button-iniciar" type="submit" value="Registrar"></p>
-  
+
                </form>
 
              </div>
 
 
-</section>
+              </section>
 
-
-      <?php   require '../footer.php';?>
-    </footer>
+                <footer><?php   require '../footer.php';?></footer>
+  
 
   </body>
 </html>
