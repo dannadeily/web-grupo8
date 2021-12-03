@@ -31,12 +31,12 @@ else {
 
     <form class="form" action="../../controladores/?con=AdministradorControlador&fun=cambiarContrasena" method="post">
 
-        <h1>Cambiar contraseña</h1>
-    <p class="p-contraseña"> contraseña actual <br> <input  type="password" name="actual" placeholder="contraseña actual" required> </p>
+        <h2>Cambiar contraseña</h2>
+    <p id="p-contraseña"> contraseña actual <br> <input  type="password" name="actual" placeholder="contraseña actual" required> </p>
 
-    <p class="p-contraseña">  nueva contraseña <br><input  type="password" name="nueva1" placeholder="contraseña nueva" required>  </p>
+    <p id="p-contraseña">  nueva contraseña <br><input  type="password" name="nueva1" placeholder="contraseña nueva" required>  </p>
 
-    <p class="p-contraseña"> repetir nueva contraseña <br> <input  type="password" name="nueva2" placeholder="contraseña nueva" required> </p>
+    <p id="p-contraseña"> repetir nueva contraseña <br> <input  type="password" name="nueva2" placeholder="contraseña nueva" required> </p>
 
     <p id="ingresar"><input  type="submit" name="enviar" value="guardar"></p>
     </form>
