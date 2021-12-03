@@ -20,11 +20,12 @@ $listar=$categoria->listar($_GET["id"]);
 
       <section>
          <legend>Editar Categoria:</legend>
-        <form class="" action="" method="post">
+        <form class="" action="../../controladores/?con=CategoriaControlador&fun=editar" method="post">
+          <input type="hidden" name="id" value="  <?php echo $listar[0]->id_categoria; ?> ">
         <p> nombre: <input type="text" name="nombre" value=" <?php echo $listar[0]->nombre; ?> "></p>
 
         <p> descripcion: </p>
-        <textarea name="descripcion" rows="8" cols="80"> <?php echo $listar[0]->descripcion; ?> </textarea> <br>
+        <textarea name="descripcion" rows="8" cols="80"><?php echo $listar[0]->descripcion;?></textarea> <br>
 
         <input type="submit" name="continuar" value="actualizar">
         </form>
