@@ -8,7 +8,7 @@
 
     <title>Crear convocatoria</title>
 </head>
-<body>
+<body >
   <header>
     <?php include '../headerLogin.php'; ?>
   </header>
