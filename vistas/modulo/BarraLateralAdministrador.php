@@ -21,7 +21,7 @@
                 <li>
                   <a id="lista" class="linea" href="#dashboard-items" data-toggle="collapse" >
                     Informacion Convocatoria
-                  </a>
+                  </a><i class='fas fa-angle-right' style='margin-left: 10px;color:white'></i>
                 </li>
 
 
@@ -56,7 +56,7 @@
                 <li>
                   <a id="lista" class="linea" href="#profile-items" data-toggle="collapse" >
                     Categoria
-                  </a>
+                  </a> <i class='fas fa-angle-right' style='margin-left: 10px;color:white'></i>
                 </li>
 
                     <div id="profile-items" class="collapse" >
