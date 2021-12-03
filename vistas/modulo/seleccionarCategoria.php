@@ -37,15 +37,15 @@ $count=count($listar);
           <form class="" action="../../controladores/?con=CategoriaControlador&fun=estado&id=<?php echo $listar[$i]->id_categoria?>&estado=<?php echo $listar[$i]->estado?>" method="post">
           <?php if ($listar[$i]->estado>0){ ?>
 
-            <td> <a href=> <input style="background-color:green" type="submit" name="estado"   value="  activa    "> </a> </td>
+            <td> <a href=> <input style="background-color:#51FF00" type="submit" name="estado"   value="  activa    "> </a> </td>
           <?php } else{
             ?>
-              <td> <a href=> <input style="background-color:red" type="submit" name="estado" value="desactiva"> </a> </td>
+              <td> <a href=> <input style="background-color:#FF0000" type="submit" name="estado" value="desactiva"> </a> </td>
             <?php
           }  ?>
-          <td>   visualizar   </td>
-          <td> <a href="editarCategoria.php?id=<?php echo $listar[$i]->id_categoria ?>"> editar
-           </a> </td>
+            <td> <a <a href="DocumentosCategoria.php?id=<?php echo $listar[$i]->id_categoria ?>">visualizar</a>     </td>
+            <td> <a href="editarCategoria.php?id=<?php echo $listar[$i]->id_categoria ?>"> editar
+            </a> </td>
           </tr>
           </form>
         <?php } ?>
