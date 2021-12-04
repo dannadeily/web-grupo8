@@ -20,7 +20,7 @@
 
                 <li>
                   <a id="lista" class="linea" href="#dashboard-items" data-toggle="collapse" >
-                    Informacion Convocatoria
+                     Convocatoria
                   </a><i class='fas fa-angle-right' style='margin-left: 10px;color:white'></i>
                 </li>
 

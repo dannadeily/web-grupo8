@@ -46,9 +46,14 @@ class DocumentoModelo extends Conexion
    return $filas;
   }
 
-  public function borrar($id)
+  public function borrarDocumento($id)
   {
     $sql="delete * from documento where id_documento=:id_documento";
-    
+    $datos=$this->conectar()->prepare($sql);
+    $datos->execute(array('id_documento' => $id));
+    $afectadas=$datos->rowCount();
+    $datos=null;
+    return $afectadas;
+
   }
 }
