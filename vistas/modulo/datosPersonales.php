@@ -73,9 +73,6 @@ $datos=$usuario->listar($_SESSION['usuario']);
                       <button class="button" onclick="location.href='editarDatos.php'">Editar</button>
 
     </section>
-
-<br>
-<br>
 <br>
         <footer>
           <?php require '../footer.php'; ?>

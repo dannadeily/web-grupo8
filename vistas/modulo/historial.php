@@ -20,8 +20,10 @@ $count=count($historial);
       </aside>
 
 
-      <section>
-        <table>
+      <section id="container-historial">
+        <legend id="titulo-tabla">Historial de convocatorias</legend>
+        <br>
+        <table id="customers">
           <tr>
             <th>titulo</th>
             <th>descripcion</th>
@@ -39,14 +41,7 @@ $count=count($historial);
         <?php } ?>
         </table>
 
-
-
-
-
       </section>
-
-
-
 
       <footer>
           <?php include '../footer.php'; ?>

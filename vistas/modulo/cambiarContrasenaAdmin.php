@@ -16,31 +16,31 @@ else {
   <head>
     <meta charset="utf-8">
     <title> cambiar contraseña </title>
-    <link rel="stylesheet" href="../css/cambiarContrasena.css">
+    <link rel="stylesheet" href="../css/iniciar.css">
   </head>
   <body>
 <header>
 <?php include '../HeaderLogin.php'; ?>
 </header>
+
   <aside class="">
       <?php include 'BarraLateralAdministrador.php'; ?>
   </aside>
-  <section>
 
+  <section class="form-login" id="container">
 
     <form class="form" action="../../controladores/?con=AdministradorControlador&fun=cambiarContrasena" method="post">
-      <div class="box">
-    <p class="p"> contraseña actual</p>
-    <input type="password" name="actual" placeholder="contraseña actual" required>
-    <p class="p">  nueva contraseña   </p>
-    <input type="password" name="nueva1" placeholder="contraseña nueva" required>
-    <p class="p"> repetir nueva contraseña </p>
-    <input type="password" name="nueva2" placeholder="contraseña nueva" required>
-    <br>
-    <br>
-    <input type="submit" name="enviar" value="guardar">
+
+        <h2>Cambiar contraseña</h2>
+    <p id="p-contraseña"> contraseña actual <br> <input  type="password" name="actual" placeholder="contraseña actual" required> </p>
+
+    <p id="p-contraseña">  nueva contraseña <br><input  type="password" name="nueva1" placeholder="contraseña nueva" required>  </p>
+
+    <p id="p-contraseña"> repetir nueva contraseña <br> <input  type="password" name="nueva2" placeholder="contraseña nueva" required> </p>
+
+    <p id="ingresar"><input  type="submit" name="enviar" value="guardar"></p>
     </form>
-    </div>
+
   </section>
 <footer>
 <?php include '../footer.php'; ?>
