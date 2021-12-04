@@ -33,15 +33,12 @@ class DocumentoControlador
 
   public function borrarDocumento()
   {
-    echo "entra";
-    echo $_GET['id'];
-    echo $_GET['idDoc'];
-    if (!empty($_GET['idDoc'])) {
-      echo "aca entra";
-       $this->model->borrar($_GET['idDoc']);
-    //  header("location:../vistas/modulo/DocumentosCategoria.php?id=".$_GET['id']);
+
+    if (!empty($_GET['idDoc'])&&!empty($_GET['id'])) {
+       $this->model->borrarDocumento($_GET['idDoc']);
+       header("location:../vistas/modulo/DocumentosCategoria.php?id=".$_GET['id']);
     }else {
-    //  header("location:../vistas/modulo/DocumentosCategoria.php?id=");
+        header("location:../vistas/modulo/DocumentosCategoria.php?id=");
     }
 
   }
