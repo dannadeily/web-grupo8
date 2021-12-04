@@ -35,7 +35,7 @@ $count=count($listar);
          <legend>Seleccione categoria</legend>
          <table>
 
-           
+
          <?php
          for ($i=0; $i <$count-1 ; $i++) {
           ?>
@@ -63,7 +63,7 @@ $count=count($listar);
 
           <?php    }
             } ?>
-              <button type="button" onclick="location.href=''" name="button"> continuar </button>
+              <button type="button" onclick="location.href='subirDocumentos.php?id=<?php echo $_GET['cat'] ?>'" name="button"> continuar </button>
           </p>
         <?php } ?>
         </article>
