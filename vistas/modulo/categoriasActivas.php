@@ -1,9 +1,17 @@
 <?php
 require_once '../../controladores/ConvocatoriaCategoriaControlador.php';
 require_once '../../controladores/CategoriaControlador.php';
+require_once '../../controladores/DocumentoControlador.php';
+$documento=new DocumentoControlador();
 $categoriascon=new ConvocatoriaCategoriaControlador();
 $categoria=new CategoriaControlador();
-$lista=$categoria->listar($_GET["cat"]);
+if (isset($_GET['cat']) && !empty($_GET['cat'])) {
+  $lista=$categoria->listar($_GET["cat"]);
+  $documentos=$documento->listar();
+  $contarDocumentos=count($documentos);
+}
+
+
 $listar=$categoriascon->listar($_GET["id"]);
 $count=count($listar);
  ?>
@@ -27,16 +35,14 @@ $count=count($listar);
          <legend>Seleccione categoria</legend>
          <table>
 
-           <tr>
-             <th>nombre</th>
-          </tr>
+           
          <?php
          for ($i=0; $i <$count-1 ; $i++) {
           ?>
           <tr>
             <td> <a
               href="categoriasActivas.php?id=<?php echo $_GET["id"]; ?>&&cat=<?php echo $listar[$i]->id_categoria ?>">
-               <?php echo $listar[$i]->nombre; ?></a></td>
+               <?php  echo $listar[$i]->nombre; ?></a></td>
           </tr>
           <?php
 
@@ -44,9 +50,23 @@ $count=count($listar);
 
 
           </table>
+
+          <article class="">
+          <?php if(isset($_GET['cat']) && !empty($_GET['cat'])){ ?>
           <p>
-            <?php echo  $lista[0]->descripcion;?>
+            <?php ?> <h4> <?php echo  $lista[0]->descripcion;?> <h4> <?php?>
+            <?php for ($i=0; $i <$contarDocumentos-1 ; $i++) {
+              if($_GET['cat']==$documentos[$i]->id_categoria){  ?>
+                <h4> <?php echo $documentos[$i]->nombre ; ?> </h4>
+                <h5>   <?php echo $documentos[$i]->descripcion ; ?> </h5>
+
+
+          <?php    }
+            } ?>
+              <button type="button" onclick="location.href=''" name="button"> continuar </button>
           </p>
+        <?php } ?>
+        </article>
        </section>
        <footer>
          <?php include '../footer.php'; ?>

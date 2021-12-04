@@ -16,7 +16,6 @@ class DocumentoControlador
 
   public function listar($id='')
   {
-
     return $this->model->listar($id);
   }
 
