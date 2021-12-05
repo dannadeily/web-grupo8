@@ -21,14 +21,15 @@ $contarDocumentos=count($documentos);
       <br>
     <h2> Cargar documentos </h2>
 
-    <form class="" action="" method="post" enctype="multipart/form-data">
+    <form class="" action="../../controladores/?con=DocumentoControlador&fun=guardarArchivo" method="post" enctype="multipart/form-data">
       <?php for ($i=0; $i <$contarDocumentos-1 ; $i++) {?>
         <h3>  <?php echo $documentos[$i]->nombre ?> </h3>
-        <input type="file" name="<?php $documentos[$i]->nombre ?>"  accept="application/pdf">
+        <input type="file" name="documento"  accept="application/pdf " required>
+
     <?php  } ?>
 
     <h6>los archivos deben estar en formato pdf y no superar los 5mb de tamaño</h6>
-    <input type="submit" name="guardad" value="guardar">
+    <input type="submit" name="guardar" value="guardar">
     </form>
 
     </section>
