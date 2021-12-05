@@ -31,7 +31,7 @@
 
           <td>
             <label for="CargarImagen" class="form-label">Cargar Imagen</label>
-            <input name="imagen" type="file" id="CargarImagen" multiple  accept="image/*" required>
+            <input name="imagen" type="file" id="CargarImagen"  accept="image/*" required>
           </td>
         </tr>
 

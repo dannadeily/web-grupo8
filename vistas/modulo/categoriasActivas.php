@@ -63,8 +63,9 @@ $count=count($listar);
 
           <?php    }
             } ?>
-              <button type="button" onclick="location.href='subirDocumentos.php?id=<?php echo $_GET['cat'] ?>'" name="button"> continuar </button>
+
           </p>
+          <button type="button" onclick="location.href='subirDocumentos.php?id=<?php echo $_GET['cat'] ?>'" name="button"> continuar </button>
         <?php } ?>
         </article>
        </section>
