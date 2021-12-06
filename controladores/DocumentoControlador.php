@@ -43,7 +43,6 @@ class DocumentoControlador
   }
   public function guardarArchivo()
   {
-    var_dump($_FILES[0]);
     var_dump($_FILES);
     foreach ($_FILES as $archivo) {
       echo $archivo["name"];

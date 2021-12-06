@@ -2,6 +2,10 @@
 require_once '../../controladores/ConvocatoriaCategoriaControlador.php';
 require_once '../../controladores/CategoriaControlador.php';
 require_once '../../controladores/DocumentoControlador.php';
+session_start();
+if (!isset($_SESSION['usuario'])&&empty($_SESSION['usuario'])) {
+  header("location:iniciar.php");
+}
 $documento=new DocumentoControlador();
 $categoriascon=new ConvocatoriaCategoriaControlador();
 $categoria=new CategoriaControlador();

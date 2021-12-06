@@ -83,9 +83,6 @@ class UsuarioControlador
                   if (count($usuario)>1 &&  password_verify($_POST["contrasena"], $usuario[0]->contrasena)) {
                   session_start();
                   $_SESSION['usuario']=$_POST['codigo'];
-                  $_SESSION['nombre']=$usuario[0]->nombre;
-                  $_SESSION['apellidos']=$usuario[0]->apellidos;
-                  $_SESSION['contrasena']=$usuario[0]->contrasena;
                   header("location:../vistas/modulo/datosPersonales.php");
                 } else {
                   header("location:../vistas/modulo/iniciar.php?msg=datos incorrectos");

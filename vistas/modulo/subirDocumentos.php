@@ -1,5 +1,9 @@
 <?php
 require_once '../../controladores/DocumentoControlador.php';
+session_start();
+if (!isset($_SESSION['usuario'])&&empty($_SESSION['usuario'])) {
+  header("location:iniciar.php");
+}
 $documento=new DocumentoControlador();
 $documentos=$documento->listar();
 $contarDocumentos=count($documentos);
@@ -23,9 +27,10 @@ $contarDocumentos=count($documentos);
 
     <form class="" action="../../controladores/?con=DocumentoControlador&fun=guardarArchivo" method="post" enctype="multipart/form-data">
       <?php for ($i=0; $i <$contarDocumentos-1 ; $i++) {?>
-        <h3>  <?php echo $documentos[$i]->nombre ?> </h3>
-        <input type="file" name="documento"  accept="application/pdf " required>
-
+        <?php if ($documentos[$i]->id_categoria==$_GET["id"]): ?>
+          <h3>  <?php echo $documentos[$i]->nombre ?> </h3>
+        <input type="file" name="<?php echo $documentos[$i]->nombre ?>"  accept="application/pdf " required>
+      <?php endif; ?>
     <?php  } ?>
 
     <h6>los archivos deben estar en formato pdf y no superar los 5mb de tamaño</h6>

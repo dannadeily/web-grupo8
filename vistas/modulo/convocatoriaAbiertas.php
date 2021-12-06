@@ -3,6 +3,10 @@ require_once '../../controladores/ConvocatoriaControlador.php';
 $convocatoria=new ConvocatoriaControlador();
 $historial=$convocatoria->convocatoriasAbiertas();
 $count=count($historial);
+session_start();
+if (!isset($_SESSION['usuario'])&&empty($_SESSION['usuario'])) {
+  header("location:iniciar.php");
+}
  ?>
 
  <!DOCTYPE html>
