@@ -18,7 +18,6 @@ class CategoriaModelo extends Conexion
     }else {
         $sql="select * from categoria where id_categoria=:id" ;
     }
-
     $datos=$this->conectar()->prepare($sql);
     $datos->execute(array(
       ":id"=>$id
@@ -30,8 +29,6 @@ class CategoriaModelo extends Conexion
   }
 public function estado($id,$estado)
 {
-  echo "$estado <br>";
-  echo "$id <br>";
     $sql="update categoria set estado=:estado where id_categoria=:id";
     $datos=$this->conectar()->prepare($sql);
     $datos->execute(array(
