@@ -44,8 +44,8 @@ class DocumentoControlador
   public function guardarArchivo()
   {
     var_dump($_FILES);
-    foreach ($_FILES as $archivo) {
-      echo $archivo["name"];
+    foreach ($_FILES as $archivo=>$algo) {
+      echo "<br>".$archivo.$algo["name"]."<br>";
     }
   }
 }
