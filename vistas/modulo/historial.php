@@ -1,5 +1,9 @@
 <?php
 require_once '../../controladores/ConvocatoriaControlador.php';
+session_start();
+if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']!="administrador") {
+  header("location:iniciar.php");
+}
 $convocatoria=new ConvocatoriaControlador();
 $historial=$convocatoria->historial();
 $count=count($historial);
@@ -22,7 +26,7 @@ $count=count($historial);
 
       <section id="container-historial">
         <legend id="titulo-tabla">Historial de convocatorias</legend>
-        
+
         <hr>
         <table id="customers">
           <tr>

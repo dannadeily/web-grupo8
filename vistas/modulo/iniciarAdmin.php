@@ -1,3 +1,7 @@
+<?php
+session_start();
+session_destroy();
+ ?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">

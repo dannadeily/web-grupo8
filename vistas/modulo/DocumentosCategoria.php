@@ -1,5 +1,8 @@
 <?php
 require_once '../../controladores/DocumentoControlador.php';
+if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']!="administrador") {
+  header("location:iniciar.php");
+}
 $documento=new DocumentoControlador();
 $informacion=$documento->listar($_GET['id']);
 $count=count($informacion);

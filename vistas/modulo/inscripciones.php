@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])||$_SESSION['rol']!="usuario") {
+  header("location:iniciar.php");
+}
+ ?>
+
 <!DOCTYPE html>
   <head>
     <html lang="es" dir="ltr">
