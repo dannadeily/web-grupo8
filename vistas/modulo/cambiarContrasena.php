@@ -8,7 +8,6 @@ if (isset($_SESSION['usuario'])) {
 else {
   header("location:iniciar.php");
 }
-
  ?>
 
 <!DOCTYPE html>

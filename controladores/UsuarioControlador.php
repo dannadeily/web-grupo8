@@ -15,14 +15,13 @@ class UsuarioControlador
   }
 
   public function agregarUsuario()
-  {
-        if (isset($_POST["registrar"])) {
+  { if(!empty($_POST["codigo_usuario"])&&!empty($_POST["nombre"])&&!empty($_POST["apellidos"])
+    &&!empty($_POST["email"])&&!empty($_POST["numero_documento"])&&!empty($_POST["contrasena"])){
       $contrasena=password_hash($_POST["contrasena"],PASSWORD_DEFAULT);
       $usuario=array(
         'codigo_usuario' =>$_POST["codigo_usuario"]  ,
         'nombre' =>$_POST["nombre"],
         'apellidos' =>$_POST["apellidos"],
-        'email' =>$_POST["email"],
         'email' =>$_POST["email"],
         'tipoDocumento' =>$_POST["tipoDocumento"],
         'numero_documento' =>$_POST["numero_documento"],
@@ -31,14 +30,14 @@ class UsuarioControlador
 
 
         if ($this->model->agregarUsuario($usuario)>0) {
-         header("location:../vistas/modulo/registrar.php?msg=usuario registrado");
+        header("location:../vistas/modulo/registrar.php?msg=usuario registrado");
         }else {
         header("location:../vistas/modulo/registrar.php?msg=usuario ya existe");
       }
+    }else {
+        header("location:../vistas/modulo/registrar.php");
     }
-    else {
-      header("location:../vistas/modulo/registrar.php");
-    }
+
   }
 
   public function listar($codigo='')

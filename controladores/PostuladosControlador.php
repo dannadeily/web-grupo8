@@ -10,7 +10,7 @@ class PostuladosControlador
   }
   public function inscribir($cc)
   {
-    session_start();
+    
     $codigo=$_SESSION['usuario'];
     date_default_timezone_set('America/Bogota');
     $fecha=date("Y-m-d");

@@ -43,11 +43,28 @@ class DocumentoControlador
   }
   public function guardarArchivo( )
   {
-    $postulado=new PostuladosControlador();
-    $postulado->inscribir($_GET["cc"]);
-    foreach ($_FILES as $archivo=>$algo) {
-      echo "<br>".$archivo.$algo["name"]."<br>";
 
+    $postulado=new PostuladosControlador();
+    session_start();
+    $codigo=$_SESSION['usuario'];
+    $permitidos="application/pdf";
+    $limite_kb=5000;
+    foreach ($_FILES as $archivo=>$atributo) {
+      if($atributo["type"]==$permitidos && $atributo["size"]<$limite_kb*1024){
+      $ruta="../documentos/".$_GET["co"]."/".$_GET["cat"]."/".$codigo."/";
+      $extencion=strtolower(pathinfo($atributo["name"],PATHINFO_EXTENSION));
+      $archivo=$ruta.$archivo.".".$extencion;
+      echo "$archivo";
+      if (!file_exists($ruta)) {
+        mkdir($ruta);
+      }
+      if (!file_exists($archivo)) {
+        $resultado=move_uploaded_file($atributo["tmp_name"],$archivo);
     }
   }
+
+}
+  $postulado->inscribir($_GET["cc"]);
+  header("location:../vistas/modulo/inscripciones.php");
+}
 }
