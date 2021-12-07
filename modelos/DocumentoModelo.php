@@ -38,6 +38,7 @@ class DocumentoModelo extends Conexion
         $sql="select * from documento where id_categoria=:id";
     }
     $datos=$this->conectar()->prepare($sql);
+    //corregir, quedo asi para funcion de danna
     if ($id!='') {
       $datos->bindValue(':id', $id);
     }

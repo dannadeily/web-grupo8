@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD
+=======
+session_start();
+>>>>>>> c550dad45a407815012269975f3da370253a3b1a
 if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']!="administrador") {
   header("location:iniciar.php");
 }
