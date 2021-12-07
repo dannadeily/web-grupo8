@@ -50,7 +50,8 @@ class DocumentoModelo extends Conexion
   {
     $sql="delete  from documento where id_documento=:id_documento";
     $datos=$this->conectar()->prepare($sql);
-    $datos->execute(array('id_documento' => $id));
+    $datos->bindValue(':id_documento', $id);
+    $datos->execute();
     $afectadas=$datos->rowCount();
     $datos=null;
     return $afectadas;
