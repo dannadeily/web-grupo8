@@ -1,5 +1,6 @@
 <?php
 require_once '../../controladores/DocumentoControlador.php';
+session_start();
 if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']!="administrador") {
   header("location:iniciar.php");
 }
