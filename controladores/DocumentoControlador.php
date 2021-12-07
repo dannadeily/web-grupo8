@@ -1,6 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/modelos/DocumentoModelo.php';
-
+require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/controladores/PostuladosControlador.php';
 
 /**
  *
@@ -41,11 +41,13 @@ class DocumentoControlador
     }
 
   }
-  public function guardarArchivo()
+  public function guardarArchivo( )
   {
-    var_dump($_FILES);
+    $postulado=new PostuladosControlador();
+    $postulado->inscribir($_GET["cc"]);
     foreach ($_FILES as $archivo=>$algo) {
       echo "<br>".$archivo.$algo["name"]."<br>";
+
     }
   }
 }

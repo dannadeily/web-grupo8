@@ -66,7 +66,6 @@ class ConvocatoriaControlador
         for ($i=0; $i <$listaCount-1 ; $i++) {
           if ($lista[$i]->estado==1) {
             $convocatoriacategoria->agregar($lista[$i]->nombre,$id,$lista[$i]->id_categoria);
-            echo "no entra";
           }
 
 
@@ -81,7 +80,7 @@ class ConvocatoriaControlador
     }
     }
     else {
-    //   header("location:../vistas/modulo/crearConvocatoria?msg=complete los datos.php");
+       header("location:../vistas/modulo/crearConvocatoria?msg=complete los datos.php");
     }
   }
 

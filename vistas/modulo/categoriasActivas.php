@@ -14,8 +14,6 @@ if (isset($_GET['cat']) && !empty($_GET['cat'])) {
   $documentos=$documento->listar();
   $contarDocumentos=count($documentos);
 }
-
-
 $listar=$categoriascon->listar($_GET["id"]);
 $count=count($listar);
  ?>
@@ -45,7 +43,7 @@ $count=count($listar);
           ?>
           <tr>
             <td> <a
-              href="categoriasActivas.php?id=<?php echo $_GET["id"]; ?>&&cat=<?php echo $listar[$i]->id_categoria ?>">
+              href="categoriasActivas.php?cc=<?php echo $listar[0]->id; ?>&&id=<?php echo $_GET["id"]; ?>&&cat=<?php echo $listar[$i]->id_categoria ?>">
                <?php  echo $listar[$i]->nombre; ?></a></td>
           </tr>
           <?php
@@ -69,7 +67,7 @@ $count=count($listar);
             } ?>
 
           </p>
-          <button type="button" onclick="location.href='subirDocumentos.php?id=<?php echo $_GET['cat'] ?>'" name="button"> continuar </button>
+          <button type="button" onclick="location.href='subirDocumentos.php?cc=<?php echo $_GET['cc'] ?>&con=<?php echo $_GET['id'] ?>&id=<?php echo $_GET['cat'] ?>'" name="button"> continuar </button>
         <?php } ?>
         </article>
        </section>

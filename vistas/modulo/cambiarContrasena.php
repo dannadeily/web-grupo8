@@ -22,26 +22,28 @@ else {
 <header>
 <?php include '../HeaderLogin.php'; ?>
 </header>
+
   <aside class="">
       <?php include 'BarraLateralUsuario.php'; ?>
   </aside>
 
   <section class="form-login" id="container">
-          <form class="form" action="../../controladores/?con=UsuarioControlador&fun=cambiarContrasena" method="post">
 
-              <h2>Cambiar contraseña</h2>
-          <p id="p-contraseña"> contraseña actual <br> <input  type="password" name="actual" placeholder="contraseña actual" required> </p>
+    <form class="form" action="../../controladores/?con=AdministradorControlador&fun=cambiarContrasena" method="post">
 
-          <p id="p-contraseña">  nueva contraseña <br><input  type="password" name="nueva1" placeholder="contraseña nueva" required>  </p>
+        <h2>Cambiar contraseña</h2>
+    <p id="p-contraseña"> contraseña actual <br> <input  type="password" name="actual" placeholder="contraseña actual" required> </p>
 
-          <p id="p-contraseña"> repetir nueva contraseña <br> <input  type="password" name="nueva2" placeholder="contraseña nueva" required> </p>
-            <br>
-          <p id="ingresar"><input  type="submit" name="enviar" value="guardar"></p>
-          </form>
+    <p id="p-contraseña">  nueva contraseña <br><input  type="password" name="nueva1" placeholder="contraseña nueva" required>  </p>
 
-          </section>
-                <footer>
-                <?php include '../footer.php'; ?>
-                </footer>
+    <p id="p-contraseña"> repetir nueva contraseña <br> <input  type="password" name="nueva2" placeholder="contraseña nueva" required> </p>
+
+    <p id="ingresar"><input  type="submit" name="enviar" value="guardar"></p>
+    </form>
+
+  </section>
+<footer>
+<?php include '../footer.php'; ?>
+</footer>
   </body>
 </html>
