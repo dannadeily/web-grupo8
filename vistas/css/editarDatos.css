@@ -4,20 +4,37 @@
   box-sizing: border-box;
 }
 
-#container{
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+#container-editar{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
-table{
+#container-editar table{
   width: 100%;
 
 }
-tr{
+#container-editar tr{
   margin-left: 10px;
 }
 
-.form_register{
+.form_register-editar #button-datos input{
+  width: auto;
+  background-color: #aa1916;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 8px;
+  text-align: center;
+  font-size: 16px;
+  margin: 8px 8px;
+  cursor: pointer;
+
+}
+.form_register-editar #button-datos {
+  text-align: center;
+}
+.form_register-editar{
   margin-top:100px;
   border-radius: 20px;
   padding: 20px;
@@ -25,50 +42,51 @@ tr{
   width: 500px;
   margin: auto;
 }
-.form_register h2{
+.form_register-editar h2{
   text-align: center;
 
 }
-.form_register{
+
+.form_register-editar{
   color: ;
 }
 .btn_save{
   margin: auto;
   width: auto;
 }
-input[type=text] {
+.form_register-editar input[type=text] {
   width: 90%;
   padding: 8px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
-input[type=number] {
+.form_register-editar input[type=number] {
   width: 90%;
   padding: 8px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
-input[type=password] {
+.form_register-editar input[type=password] {
   width: 90%;
   padding: 8px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
-input[type=email] {
+.form_register-editar input[type=email] {
   width: 90%;
   padding: 8px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   width:auto;
 }
-.select{
+.select-editar{
   width: 90%;
   padding: 8px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
 
-hr{
+.form_register-editar hr{
    border: 0;
    background: #CCC;
    height: 1px;
@@ -76,22 +94,16 @@ hr{
    display:block;
 
 }
-form{
+.form_register-editar form{
   background: #FFF;
   margin: auto;
   padding: 20px 50px;
   border: 1px solid #d1d1d1;
 }
-label{
-  display: block;
-  font-size: 17px;
-  font-family: "GothanBook";
-  margin: 15px auto 5px auto;
-}
-input,select{
+
+.form_register-editar input,select{
 display: block;
 width: 100px;
-font-size: 11px;
 padding: 5px;
 border:1px solid #85929e;
 border-radius: 5px;

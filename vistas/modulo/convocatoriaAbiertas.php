@@ -13,6 +13,7 @@ if (!isset($_SESSION['usuario'])&&empty($_SESSION['usuario'])) {
  <html lang="es" dir="ltr">
    <head>
      <meta charset="utf-8">
+     <link rel="stylesheet" href="../css/convocatoriaAbiertas.css">
      <title>convocatorias</title>
    </head>
    <body>
@@ -23,16 +24,16 @@ if (!isset($_SESSION['usuario'])&&empty($_SESSION['usuario'])) {
          <?php include 'BarraLateralUsuario.php'; ?>
 
        </aside>
-       <table>
+
+       <section id="container-abierta">
+
+       <table id="customers-abierta">
          <tr>
            <th>Categoria</th>
            <th>descripcion</th>
            <th>fecha de cierre</th>
 
          </tr>
-
-       <section>
-
 
        <?php for ($i=0; $i <$count-1 ; $i++) {?>
          <tr>
@@ -42,7 +43,9 @@ if (!isset($_SESSION['usuario'])&&empty($_SESSION['usuario'])) {
           </tr>
       <?php } ?>
        </table>
+
         </section>
+
      <footer>
          <?php include '../footer.php'; ?>
        </footer>

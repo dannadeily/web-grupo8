@@ -11,7 +11,7 @@ $listar=$categoria->listar($_GET["id"]);
     <link rel="stylesheet" href="../css/editarCategoria.css">
     <title></title>
   </head>
-  
+
   <body>
     <header>
       <?php include '../headerLogin.php'; ?>
@@ -23,14 +23,16 @@ $listar=$categoria->listar($_GET["id"]);
       <section id="container-editarC">
 
          <legend>Editar Categoria:</legend>
+         <hr>
         <form class="" action="../../controladores/?con=CategoriaControlador&fun=editar" method="post">
           <input type="hidden" name="id" value="  <?php echo $listar[0]->id_categoria; ?> ">
         <p> nombre: <input type="text" name="nombre" value=" <?php echo $listar[0]->nombre; ?> "></p>
 
         <p> descripcion: </p>
-        <textarea name="descripcion" rows="8" cols="80"><?php echo $listar[0]->descripcion;?></textarea> <br>
+        <textarea style="resize: none" name="descripcion" rows="8" cols="80"><?php echo $listar[0]->descripcion;?></textarea> <br>
 
-        <input type="submit" name="continuar" value="actualizar">
+        <p id="button-categoria"><input type="submit" name="continuar" value="actualizar"></p>
+
         </form>
 
       </section>
