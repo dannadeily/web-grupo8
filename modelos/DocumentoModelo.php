@@ -38,13 +38,13 @@ class DocumentoModelo extends Conexion
         $sql="select * from documento where id_categoria=:id";
     }
     $datos=$this->conectar()->prepare($sql);
-<<<<<<< HEAD
+
     $datos->execute(array(':id' => $id
    ));
-=======
+
     $datos->bindValue(':id', $id);
     $datos->execute();
->>>>>>> 249c19cc643d46a0c265c2f6b2e40fe0d4eb7955
+
    while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) {
    }
    $datos=null;
