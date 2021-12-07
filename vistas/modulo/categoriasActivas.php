@@ -22,6 +22,7 @@ $count=count($listar);
  <html lang="es" dir="ltr">
    <head>
      <meta charset="utf-8">
+     <link rel="stylesheet" href="../css/categoriasActivas.css">
      <title>convocatorias vigentes</title>
    </head>
    <body>
@@ -32,11 +33,17 @@ $count=count($listar);
          <?php include 'barraLateralUsuario.php'; ?>
 
        </aside>
-       <section>
-         <br>
-         <legend>Seleccione categoria</legend>
-         <table>
 
+        <div class="div-activar">
+          <br>
+          <legend>Seleccione categoria</legend>
+           <hr>
+
+       <section id="container-activar">
+
+         <nav>
+
+         <table id="costumers-activar">
 
          <?php
          for ($i=0; $i <$count-1 ; $i++) {
@@ -44,33 +51,55 @@ $count=count($listar);
           <tr>
             <td> <a
               href="categoriasActivas.php?cc=<?php echo $listar[0]->id; ?>&&id=<?php echo $_GET["id"]; ?>&&cat=<?php echo $listar[$i]->id_categoria ?>">
-               <?php  echo $listar[$i]->nombre; ?></a></td>
+               <?php  echo $listar[$i]->nombre; ?> <i class="fas fa-angle-right"></i></a>
+             </td>
           </tr>
           <?php
 
          } ?>
 
-
           </table>
 
-          <article class="">
-          <?php if(isset($_GET['cat']) && !empty($_GET['cat'])){ ?>
-          <p>
-            <?php ?> <h4> <?php echo  $lista[0]->descripcion;?> <h4> <?php?>
-            <?php for ($i=0; $i <$contarDocumentos-1 ; $i++) {
-              if($_GET['cat']==$documentos[$i]->id_categoria){  ?>
-                <h4> <?php echo $documentos[$i]->nombre ; ?> </h4>
-                <h5>   <?php echo $documentos[$i]->descripcion ; ?> </h5>
+        </nav>
 
+
+          <article class="article-activar">
+
+          <?php if(isset($_GET['cat']) && !empty($_GET['cat'])){ ?>
+          <p class="p-activar">
+            <hr>
+              <h4>Descripcion:</h4>
+            <?php ?> <h6> <?php echo  $lista[0]->descripcion;?> <h6> <?php?>
+              <br>
+              <h4>Documentos Requeridos:</h4>
+            <?php for ($i=0; $i <$contarDocumentos-1 ; $i++) {
+
+              if($_GET['cat']==$documentos[$i]->id_categoria){  ?>
+
+                <ul>
+
+                  <li>
+                    <h6> <?php echo $documentos[$i]->nombre ; ?> : </h6>
+                    <h6>   <?php echo $documentos[$i]->descripcion ; ?> </h6>
+                  </li>
+
+                </ul>
 
           <?php    }
             } ?>
-
+              <hr>
           </p>
+
+
           <button type="button" onclick="location.href='subirDocumentos.php?cc=<?php echo $_GET['cc'] ?>&con=<?php echo $_GET['id'] ?>&id=<?php echo $_GET['cat'] ?>'" name="button"> continuar </button>
         <?php } ?>
+
+
         </article>
        </section>
+
+</div>
+
        <footer>
          <?php include '../footer.php'; ?>
        </footer>

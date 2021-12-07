@@ -1,0 +1,35 @@
+/* Container for flexboxes */
+.div-activar{
+  margin-bottom: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 2%;
+}
+
+#container-activar{
+  display:inline-flex ;
+
+
+}
+
+/* Style the navigation menu */
+ #container-activar nav {
+  padding: 20px;
+}
+
+#costumers-activar td {
+  padding: 13px;
+  width: 90%;
+  border-bottom: 1px solid #ddd;
+
+}
+
+
+/* Style the list inside the menu */
+
+/* Style the content */
+#container-activar article {
+ position: relative;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
