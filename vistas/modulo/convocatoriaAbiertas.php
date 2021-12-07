@@ -38,10 +38,10 @@ if (!isset($_SESSION['usuario'])&&empty($_SESSION['usuario'])) {
 
        <?php for ($i=0; $i <$count-1 ; $i++) {?>
          <tr>
-            <td>   <a href="categoriasActivas.php?id=<?php echo $historial[$i]->id_convocatoria ?>"> <?php echo $historial[$i]->titulo ?> </a> </td>
+            <td>    <?php echo $historial[$i]->titulo ?>  </td>
             <td> <?php echo $historial[$i]->descripcion ?>  </td>
             <td> <?php echo $historial[$i]->fecha_fin ?>  </td>
-            <td>      </td>
+            <td>  <a href="categoriasActivas.php?id=<?php echo $historial[$i]->id_convocatoria ?> "> seleccionar </a>  </td>
           </tr>
       <?php } ?>
        </table>
