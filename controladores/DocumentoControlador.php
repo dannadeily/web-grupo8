@@ -49,15 +49,26 @@ class DocumentoControlador
     $codigo=$_SESSION['usuario'];
     $permitidos="application/pdf";
     $limite_kb=5000;
+    $i=0;
     foreach ($_FILES as $archivo=>$atributo) {
       if($atributo["type"]==$permitidos && $atributo["size"]<$limite_kb*1024){
-      $ruta="../documentos/".$_GET["co"]."/".$_GET["cat"]."/".$codigo."/";
-      $extencion=strtolower(pathinfo($atributo["name"],PATHINFO_EXTENSION));
-      $archivo=$ruta.$archivo.".".$extencion;
-      echo "$archivo";
+        //usar los get para crear las carpetas en un while
+      $ruta="../documentos/".$_GET["co"]."/";
       if (!file_exists($ruta)) {
         mkdir($ruta);
       }
+      $ruta.=$_GET["cat"]."/";
+      if (!file_exists($ruta)) {
+          mkdir($ruta);
+        }
+        $ruta.=$codigo."/";
+        if (!file_exists($ruta)) {
+            mkdir($ruta);
+          }
+      $extencion=strtolower(pathinfo($atributo["name"],PATHINFO_EXTENSION));
+      $archivo=$ruta.$archivo.".".$extencion;
+      echo "$archivo";
+
       if (!file_exists($archivo)) {
         $resultado=move_uploaded_file($atributo["tmp_name"],$archivo);
     }
@@ -65,6 +76,6 @@ class DocumentoControlador
 
 }
   $postulado->inscribir($_GET["cc"]);
-  header("location:../vistas/modulo/inscripciones.php");
+  header("location:../vistas/modulo/inscripciones.php?msg=registrado correctamente");
 }
 }
