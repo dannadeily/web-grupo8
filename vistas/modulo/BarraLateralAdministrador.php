@@ -73,7 +73,7 @@
                             </a>
                           </li>
                     </div>
-                <li>   <i class="far fa-file-alt"></i> <a id="lista" class="linea" href="#">
+                <li>   <a id="lista" class="linea" href="#">
                   Generar Informe
                 </a>
                 </li>

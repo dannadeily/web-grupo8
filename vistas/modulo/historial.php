@@ -22,13 +22,14 @@ $count=count($historial);
 
       <section id="container-historial">
         <legend id="titulo-tabla">Historial de convocatorias</legend>
-        <br>
+        
+        <hr>
         <table id="customers">
           <tr>
-            <th>titulo</th>
-            <th>descripcion</th>
-            <th>fecha_inicio</th>
-            <th>fecha_fin</th>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Fecha de apertura</th>
+            <th>Fecha de cierre</th>
           </tr>
 
         <?php for ($i=0; $i < $count-1; $i++) { ?>

@@ -9,7 +9,8 @@ $count=count($historial);
  <html lang="es" dir="ltr">
    <head>
      <meta charset="utf-8">
-     <link rel="stylesheet" href="../css/tabla.css">
+     <link rel="stylesheet" href="../css/convocatoriaVigente.css">
+
      <title>convocatorias vigentes</title>
    </head>
    <body>
@@ -20,7 +21,12 @@ $count=count($historial);
          <?php include 'BarraLateralAdministrador.php'; ?>
 
        </aside>
-       <table>
+
+       <section id="container-Vigente">
+         <legend>Editar Convocatoria</legend>
+         <br>
+         <hr>
+       <table id="customers-Vigente">
          <tr>
            <th>titulo</th>
            <th>descripcion</th>
@@ -29,7 +35,7 @@ $count=count($historial);
            <th>editar</th>
          </tr>
 
-       <section>
+
 
 
        <?php for ($i=0; $i <$count-1 ; $i++) {?>
@@ -38,11 +44,12 @@ $count=count($historial);
             <td> <?php echo $historial[$i]->descripcion ?>  </td>
             <td> <?php echo $historial[$i]->fecha_inicio ?>  </td>
             <td> <?php echo $historial[$i]->fecha_fin ?>  </td>
-            <td>   <button onclick="location.href='editarConvocatoria.php?id=<?php echo $historial[$i]->id_convocatoria; ?>'">editar</button>                 </td>
+            <td>   <button onclick="location.href='editarConvocatoria.php?id=<?php echo $historial[$i]->id_convocatoria; ?>'"> <abbr title="Editar"><i class="fas fa-edit"></i></abbr> </button>                 </td>
           </tr>
       <?php } ?>
-       </table>
+         </table>
         </section>
+
      <footer>
          <?php include '../footer.php'; ?>
        </footer>

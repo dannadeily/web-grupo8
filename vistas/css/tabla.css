@@ -8,7 +8,6 @@
 }
 
 #customers {
-
   border-collapse: collapse;
   width: 100%;
 }
@@ -27,6 +26,6 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #FF3737;
+  background-color: #aa1916;
   color: white;
 }

@@ -16,13 +16,14 @@ class CategoriaModelo extends Conexion
     if ($id=="") {
         $sql="select * from categoria" ;
     }else {
+
         $sql="select * from categoria where id_categoria=:id" ;
     }
 
     $datos=$this->conectar()->prepare($sql);
-    $datos->execute(array(
-      ":id"=>$id
-    ));
+    $datos->execute(
+      array(":id"=>$id)
+    );
     while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) { }
     $datos->closeCursor();
     $datos=null;

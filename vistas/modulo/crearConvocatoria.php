@@ -18,7 +18,7 @@
 
     <section class="container">
 
-      <hr>
+
       <form class="form_register" action="../../controladores/?con=ConvocatoriaControlador&fun=crearConvocatoria"  method="post" enctype="multipart/form-data">
           <fieldset class="border p-2">
            <legend>Crear Convocatoria:</legend>

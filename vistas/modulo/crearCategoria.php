@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="../css/crearCategoria.css">
   </head>
   <body>
     <header>
@@ -13,15 +14,19 @@
         <?php include 'BarraLateralAdministrador.php'; ?>
       </aside>
 
-      <section>
+      <section  id="container-crearC">
+        <hr>
          <legend>Crear Categoria:</legend>
+         <br>
+         <br>
         <form class="" action="../../controladores/?con=CategoriaControlador&fun=crearCategoria" method="post">
-        <p> nombre: <input type="text" name="nombre" value=""></p>
+        <p> Nombre: <input type="text" name="nombre" value=""></p>
 
-        <p> descripcion:  <textarea name="descripcion" rows="8" cols="80"></textarea> </p>
+        <p> Descripcion:  <textarea name="descripcion" rows="8" cols="80"></textarea> </p>
 
         <input type="submit" name="continuar" value="continuar">
         </form>
+        <hr>
       </section>
 
 

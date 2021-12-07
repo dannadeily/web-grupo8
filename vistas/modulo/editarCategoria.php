@@ -8,8 +8,10 @@ $listar=$categoria->listar($_GET["id"]);
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/editarCategoria.css">
     <title></title>
   </head>
+  
   <body>
     <header>
       <?php include '../headerLogin.php'; ?>
@@ -18,7 +20,8 @@ $listar=$categoria->listar($_GET["id"]);
         <?php include 'BarraLateralAdministrador.php'; ?>
       </aside>
 
-      <section>
+      <section id="container-editarC">
+
          <legend>Editar Categoria:</legend>
         <form class="" action="../../controladores/?con=CategoriaControlador&fun=editar" method="post">
           <input type="hidden" name="id" value="  <?php echo $listar[0]->id_categoria; ?> ">
@@ -29,6 +32,7 @@ $listar=$categoria->listar($_GET["id"]);
 
         <input type="submit" name="continuar" value="actualizar">
         </form>
+
       </section>
 
 

@@ -9,6 +9,8 @@ $count=count($listar);
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/SeleccionarCategoria.css">
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title></title>
   </head>
   <body>
@@ -21,9 +23,9 @@ $count=count($listar);
       </aside>
 
 
-      <section>
+      <section id="container-seleccionarC">
         <legend> Seleccionar categorias </legend>
-        <table>
+        <table id="customers-seleccionarC">
           <tr>
             <th>nombre</th>
             <th>estado</th>
@@ -37,15 +39,14 @@ $count=count($listar);
           <form class="" action="../../controladores/?con=CategoriaControlador&fun=estado&id=<?php echo $listar[$i]->id_categoria?>&estado=<?php echo $listar[$i]->estado?>" method="post">
           <?php if ($listar[$i]->estado>0){ ?>
 
-            <td> <a href=> <input style="background-color:#51FF00" type="submit" name="estado"   value="  activa    "> </a> </td>
+            <td> <a href=> <abbr title="Desactivar"><input style="background-color:#51FF00" type="submit" name="estado"   value="A"></abbr> </a> </td>
           <?php } else{
             ?>
-              <td> <a href=> <input style="background-color:#FF0000" type="submit" name="estado" value="desactiva"> </a> </td>
+              <td> <a href=> <abbr title="Activar"><input class=" " style="background-color:#FF0000" type="submit" name="estado" value="D"> </abbr> </a> </td>
             <?php
           }  ?>
-            <td> <a <a href="DocumentosCategoria.php?id=<?php echo $listar[$i]->id_categoria ?>">visualizar</a>     </td>
-            <td> <a href="editarCategoria.php?id=<?php echo $listar[$i]->id_categoria ?>"> editar
-            </a> </td>
+            <td> <a href="DocumentosCategoria.php?id=<?php echo $listar[$i]->id_categoria ?>"> <abbr title="Visualizar"><i class="fas fa-eye"></i></abbr></a>     </td>
+            <td> <a href="editarCategoria.php?id=<?php echo $listar[$i]->id_categoria ?>"> <abbr title="Editar"><i class="fas fa-edit"></i></abbr></a> </td>
           </tr>
           </form>
         <?php } ?>
