@@ -38,9 +38,8 @@ class DocumentoModelo extends Conexion
         $sql="select * from documento where id_categoria=:id";
     }
     $datos=$this->conectar()->prepare($sql);
-
-    $datos->execute(array(':id' => $id
-   ));
+    $datos->bindValue(':id', $id);
+    $datos->execute();
 
     $datos->bindValue(':id', $id);
     $datos->execute();
