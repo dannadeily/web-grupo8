@@ -21,8 +21,7 @@ class CategoriaModelo extends Conexion
     }
     $datos=$this->conectar()->prepare($sql);
     $datos->execute(
-      array(":id"=>$id)
-    );
+      array(":id"=>$id));
     while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) { }
     $datos->closeCursor();
     $datos=null;
