@@ -45,13 +45,14 @@ class AdministradorControlador
   }
   public function cambiarContrasena()
   {
-      session_start();
-      if(password_verify($_POST['actual'],$_SESSION['contrasena']) && $_POST['nueva1']==$_POST['nueva2'] ){
-          $this->model->cambiarContrasena($_SESSION['usuario'],password_hash($_POST['nueva1'],PASSWORD_DEFAULT));
-          header("location:../vistas/modulo/cambiarContrasenaAdmin.php?msg=cambio exitoso");
-      }else {
+    session_start();
+    $usuario=$this->listar($_SESSION["usuario"]);
+    if(password_verify($_POST['actual'],$usuario[0]->contrasena) && $_POST['nueva1']==$_POST['nueva2'] ){
+        $this->model->cambiarContrasena($_SESSION['usuario'],password_hash($_POST['nueva1'],PASSWORD_DEFAULT));
+        header("location:../vistas/modulo/cambiarContrasenaAdmin.php?msg=cambio exitoso");
+    }else {
         header("location:../vistas/modulo/cambiarContrasenaAdmin.php?msg=datos incorrectos");
-      }
+    }
   }
   public function recuperarContrasena()
   {

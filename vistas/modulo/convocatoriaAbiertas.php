@@ -28,6 +28,7 @@ if (!isset($_SESSION['usuario'])&&empty($_SESSION['usuario'])) {
            <th>Categoria</th>
            <th>descripcion</th>
            <th>fecha de cierre</th>
+           <th>acciones</th>
 
          </tr>
 
@@ -39,6 +40,7 @@ if (!isset($_SESSION['usuario'])&&empty($_SESSION['usuario'])) {
             <td>   <a href="categoriasActivas.php?id=<?php echo $historial[$i]->id_convocatoria ?>"> <?php echo $historial[$i]->titulo ?> </a> </td>
             <td> <?php echo $historial[$i]->descripcion ?>  </td>
             <td> <?php echo $historial[$i]->fecha_fin ?>  </td>
+            <td>      </td>
           </tr>
       <?php } ?>
        </table>
