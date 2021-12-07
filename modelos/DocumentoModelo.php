@@ -38,7 +38,7 @@ class DocumentoModelo extends Conexion
         $sql="select * from documento where id_categoria=:id";
     }
     $datos=$this->conectar()->prepare($sql);
-    $datos->execute(array('id' => $id
+    $datos->execute(array(':id' => $id
    ));
    while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) {
    }
