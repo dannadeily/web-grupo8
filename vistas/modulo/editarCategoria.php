@@ -1,5 +1,8 @@
 <?php
 require_once '../../controladores/CategoriaControlador.php';
+if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']!="administrador") {
+  header("location:iniciar.php");
+}
 $categoria=new CategoriaControlador();
 $listar=$categoria->listar($_GET["id"]);
 
