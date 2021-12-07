@@ -19,8 +19,6 @@
               <h2>Registro usuario</h2>
 
               <hr>
-
-
                <form id="form-registrar" action="../../controladores/?con=UsuarioControlador&fun=agregarUsuario" method="post">
 
                       <table>
@@ -76,7 +74,7 @@
               </section>
 
                 <footer><?php   require '../footer.php';?></footer>
-  
+
 
   </body>
 </html>

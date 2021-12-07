@@ -9,14 +9,15 @@
     <title></title>
   </head>
   <body>
+
+
     <input type="checkbox" class="checkbox" id="check">
     <label class="menu" for="check" ><i class="fas fa-bars"></i></label>
       <div class="left-panel">
 
                   <ul>
-                    <li class="info">
-                      NAVEGADOR PRINCIPAL
-                    </li>
+                    <br>
+             <h6 id="h1-barra"  style="color:#FFFFFF">NAVEGADOR PRINCIPAL</h6>
 
                 <li>
                   <a id="lista" class="linea" href="#dashboard-items" data-toggle="collapse" >
