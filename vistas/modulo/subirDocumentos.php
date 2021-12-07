@@ -12,6 +12,7 @@ $contarDocumentos=count($documentos);
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/subirDocumento.css">
   </head>
   <title>subir documentos</title>
   <body>
@@ -21,18 +22,21 @@ $contarDocumentos=count($documentos);
     <aside >
       <?php include 'barraLateralUsuario.php '; ?>
     </aside>
-    <section>
+    <section id="container-subir">
       <br>
     <h2> Cargar documentos </h2>
+    <hr>
 
     <form class="" action="../../controladores/?con=DocumentoControlador&fun=guardarArchivo&cc=<?php echo $_GET["cc"]; ?>&co=<?php echo $_GET["con"]; ?>&cat=<?php echo $_GET["id"]; ?>" method="post" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?php echo $_GET["cc"]; ?>">
       <?php for ($i=0; $i <$contarDocumentos-1 ; $i++) {?>
         <?php if ($documentos[$i]->id_categoria==$_GET["id"]): ?>
-          <h3>  <?php echo $documentos[$i]->nombre ?> </h3>
-        <input type="file" name="<?php echo $documentos[$i]->nombre ?>"  accept="application/pdf" required>
+          <h3>  <?php echo $documentos[$i]->nombre ?> :  </h3>
+        <input type="file" name="<?php echo $documentos[$i]->nombre ?>"  accept="application/pdf" required><br><br>
       <?php endif; ?>
     <?php  } ?>
+
+      <br>
 
     <h6>los archivos deben estar en formato pdf y no superar los 5mb de tamaño</h6>
     <input type="submit" name="guardar" value="guardar">
