@@ -21,10 +21,10 @@ class DocumentoModelo extends Conexion
 
       $sql="insert into documento (nombre,descripcion,id_categoria) values (:nombre,:descripcion,:id_categoria)";
       $datos=$this->conectar()->prepare($sql);
-      $datos->execute(array('nombre' => $nombre,
-      'descripcion'=>$descripcion,
-      'id_categoria'=>$id_categoria
-     ));
+      $datos->bindValue(':descripcion', $descripcion);
+      $datos->bindValue(':nombre', $nombre);
+      $datos->bindValue(':id_categoria', $id_categoria);
+      $datos->execute();
      $afectadas=$datos->rowCount();
      $datos=null;
      return $afectadas;
@@ -38,8 +38,8 @@ class DocumentoModelo extends Conexion
         $sql="select * from documento where id_categoria=:id";
     }
     $datos=$this->conectar()->prepare($sql);
-    $datos->execute(array('id' => $id
-   ));
+    $datos->bindValue(':id', $id);
+    $datos->execute();
    while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) {
    }
    $datos=null;
