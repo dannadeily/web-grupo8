@@ -20,8 +20,13 @@ class CategoriaModelo extends Conexion
         $sql="select * from categoria where id_categoria=:id" ;
     }
     $datos=$this->conectar()->prepare($sql);
-    $datos->execute(
-      array(":id"=>$id));
+    //CORREGIR
+    if ($id!='') {
+      $datos->bindValue(':id', $id);
+    }
+
+    $datos->execute();
+
     while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) { }
     $datos->closeCursor();
     $datos=null;

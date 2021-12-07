@@ -13,6 +13,8 @@ $count=count($informacion);
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
+
+    <link rel="stylesheet" href="../css/DocumentosCategoria.css">
     <meta charset="utf-8">
 
     <title></title>
@@ -25,6 +27,9 @@ $count=count($informacion);
     <aside class="">
       <?php include 'barraLateralAdministrador.php'; ?>
     </aside>
+
+    <section id="container-categoria">
+
     <table>
       <tr>
 
@@ -57,6 +62,7 @@ $count=count($informacion);
 
 
     </table>
+  </section>
 
 
     <footer>
