@@ -1,5 +1,8 @@
 <?php
 require_once '../../controladores/ConvocatoriaControlador.php';
+if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']!="administrador") {
+  header("location:iniciar.php");
+}
 $convocatoria=new ConvocatoriaControlador();
 if (empty($_GET["id"])) {
   header("location:convocatoriaVigente.php");
@@ -27,7 +30,7 @@ $historial=$convocatoria->historial($_GET["id"]);
 
     <section class="container">
 
-       
+
         <form class="form_register" action="../../controladores/?con=ConvocatoriaControlador&fun=editarConvocatoria"  method="post" enctype="multipart/form-data">
             <fieldset class="border p-2">
              <legend>Editar Convocatoria:</legend>

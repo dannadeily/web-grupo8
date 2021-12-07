@@ -28,9 +28,7 @@ class AdministradorControlador
                   session_start();
                   echo "entra";
                   $_SESSION['usuario']=$_POST['codigo'];
-                  $_SESSION['nombre']=$administrador[0]->nombre;
-                  $_SESSION['apellidos']=$administrador[0]->apellidos;
-                  $_SESSION['contrasena']=$administrador[0]->contrasena;
+                  $_SESSION['rol']="administrador";
                   header("location:../vistas/modulo/historial.php");
                 } else {
                   header("location:../vistas/modulo/iniciarAdmin.php?msg=datos incorrectos");

@@ -2,7 +2,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/controladores/UsuarioControlador.php';
 $usuario=new UsuarioControlador();
 session_start();
- if(!isset($_SESSION['usuario'])){
+ if(!isset($_SESSION['usuario'])||$_SESSION['rol']!="usuario"){
     header("location:iniciar.php");
 }
 
@@ -16,7 +16,7 @@ $datos=$usuario->listar($_SESSION['usuario']);
     <meta charset="utf-8">
     <title>editar datos</title>
     <link rel="stylesheet" href="../css/datosPersonales.css">
-  
+
   </head>
   <header>
     <?php include '../HeaderLogin.php'?>
