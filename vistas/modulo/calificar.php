@@ -33,30 +33,20 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']
     </tr>
 
     <?php for ($i=0; $i <count($listaConvocatorias)-1 ; $i++) {
-
+      if (date('Y-m-d',strtotime($listaConvocatorias[$i]->fecha_fin.'+ 1 month'))>=date("Y-m-d")) {
       ?>
       <tr>
         <td><?php echo $listaConvocatorias[$i]->titulo ;?></td>
         <td><?php echo $listaConvocatorias[$i]->descripcion ;?></td>
-        <td><?php echo $listaConvocatorias[$i]->fecha_fin ;?></td>
+        <td><?php echo $listaConvocatorias[$i]->fecha_fin;?></td>
         <td><?php echo $convocatoria->diasRestantes($listaConvocatorias[$i]->fecha_fin);?></td>
-        <td>Calificar</td>
+        <td>  <a href="calificarCategoria.php?conv=<?php echo $listaConvocatorias[$i]->id_convocatoria; ?>"> Calificar </a></td>
       </tr>
 
-    <?php } ?>
+    <?php  }
+   } ?>
   </table>
 </section>
-    <?php
-    echo "<br> fecha de fin: ".$listaConvocatorias[0]->fecha_fin."<br>";
-    echo date(strtotime("d-m-Y"."+ 1 month"));
-    echo "metodo internet";
-
-    $fecha_actual = $listaConvocatorias[0]->fecha_fin;
-//sumo 1 mes
-echo date("d-m-Y",strtotime($fecha_actual."+ 1 year"));
-     ?>
-
-
     <footer>
       <?php include '../footer.php'; ?>
     </footer>

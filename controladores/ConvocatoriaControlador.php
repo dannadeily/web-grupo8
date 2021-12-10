@@ -161,7 +161,7 @@ public function editarConvocatoria()
   }
   public function diasRestantes($cierre)
   { date_default_timezone_set('America/Bogota');
-    $cierre= (String)date('Y-m-d',strtotime($cierre.'+ 1 month'));
+    $cierre=date('Y-m-d',strtotime($cierre.'+ 1 month'));
     $hoy= date("Y-m-d");
     $datetime1 = new DateTime("$cierre");
     $datetime2 = new DateTime("$hoy");
