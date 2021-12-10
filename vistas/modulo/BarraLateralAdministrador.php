@@ -40,7 +40,7 @@
                       </li>
 
                       <li>
-                        <a class="sub" id="lista" href="#" >
+                        <a class="sub" id="lista" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/calificar.php" >
                          Calificar
                       </a>
                       </li>

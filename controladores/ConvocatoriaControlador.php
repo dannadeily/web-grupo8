@@ -149,14 +149,24 @@ public function editarConvocatoria()
 
   public function convocatoriasAbiertas()
   {
+    date_default_timezone_set('America/Bogota');
     $hoy= date("Y-m-d");
     return ($this->model->convocatoriasAbiertas($hoy));
   }
   public function convocatoriaVigente()
   {
+    date_default_timezone_set('America/Bogota');
     $hoy= date("Y-m-d");
     return ($this->model->convocatoriaVigente($hoy));
   }
-
+  public function diasRestantes($cierre)
+  { date_default_timezone_set('America/Bogota');
+    $cierre= (String)date('Y-m-d',strtotime($cierre.'+ 1 month'));
+    $hoy= date("Y-m-d");
+    $datetime1 = new DateTime("$cierre");
+    $datetime2 = new DateTime("$hoy");
+    $interval = $datetime1->diff($datetime2);
+    return $interval->days . ' dias ';
+  }
 
 }

@@ -10,7 +10,7 @@ class PostuladosControlador
   }
   public function inscribir($cc)
   {
-    
+
     $codigo=$_SESSION['usuario'];
     date_default_timezone_set('America/Bogota');
     $fecha=date("Y-m-d");
@@ -20,7 +20,10 @@ class PostuladosControlador
    );
    return $this->model->inscribir($postulado);
   }
-
+public function listar($id='')
+{
+  return $this->model->listar($id);
+}
 
 
 }

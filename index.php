@@ -29,7 +29,7 @@ $count=count($historial);
         while ($archivo=readdir($carpeta)) {
           if(!is_dir($archivo)){
             ?>
-            <div class="carousel-item active" data-bs-interval="3000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img id="img-carrusel" src="<?php echo $path."/".$archivo ?>" class="d-block w-100" alt="tres">
             </div>
           <!--  '<?php  echo $path."/".$archivo ?>' </div>-->

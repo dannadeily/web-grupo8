@@ -35,6 +35,21 @@ class PostuladosModelo extends Conexion
       $datos=null;
       return $count;
   }
-
+  public function listar($id='')
+  {
+    if ($id=='') {
+      $sql="select * from postulacion";
+    }else {
+      $sql="select DISTINCT p.*,  cc.nombre,c.titulo from postulacion AS p join categoria_convocatoria as cc join convocatoria as c
+      WHERE p.id_convocatoria_categoria=cc.id and cc.id_convocatoria=c.id_convocatoria  AND p.codigo_usuario=:id";
+    }
+    $datos=$this->conectar()->prepare($sql);
+    $datos->bindValue(':id', $id);
+    $datos->execute();
+    while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) { }
+    $datos->closeCursor();
+    $datos=null;
+    return $filas;
+  }
   }
 ?>
