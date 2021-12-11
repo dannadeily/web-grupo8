@@ -47,12 +47,13 @@ public function crearCategoria($categoria=array())
     $$key=$datos;
     }
     $sql="insert into categoria
-    (nombre,descripcion,estado)values
-    (:nombre,:descripcion,1)";
+    (nombre,descripcion,estado,rol)values
+    (:nombre,:descripcion,1,:rol)";
     $datos=$this->conectar();
     $resultado=$datos->prepare($sql);
     $resultado->execute(array(":nombre"=>$nombre,
-    ":descripcion"=>$descripcion
+    ":descripcion"=>$descripcion,
+    ":rol"=>$rol
   ));
   $id=$datos->lastInsertId();
   $datos=null;

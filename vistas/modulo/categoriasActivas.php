@@ -47,7 +47,9 @@ $count=count($listar);
 
          <?php
          for ($i=0; $i <$count-1 ; $i++) {
+           
           ?>
+
           <tr>
             <td> <a
               href="categoriasActivas.php?cc=<?php echo $listar[0]->id; ?>&&id=<?php echo $_GET["id"]; ?>&&cat=<?php echo $listar[$i]->id_categoria ?>">

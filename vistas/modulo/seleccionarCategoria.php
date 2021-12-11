@@ -34,6 +34,7 @@ $count=count($listar);
           <tr>
             <th>nombre</th>
             <th>estado</th>
+            <th> Tipo de usuario </th>
             <th>documentos requeridos</th>
             <th>editar</th>
           </tr>
@@ -50,6 +51,7 @@ $count=count($listar);
               <td> <a href=> <abbr title="Activar"><input class=" " style="background-color:#FF0000" type="submit" name="estado" value="D"> </abbr> </a> </td>
             <?php
           }  ?>
+            <td><?php echo $listar[$i]->rol; ?></td>
             <td> <a href="DocumentosCategoria.php?id=<?php echo $listar[$i]->id_categoria ?>"> <abbr title="Visualizar"><i class="fas fa-eye"></i></abbr></a>     </td>
             <td> <a href="editarCategoria.php?id=<?php echo $listar[$i]->id_categoria ?>"> <abbr title="Editar"><i class="fas fa-edit"></i></abbr></a> </td>
           </tr>
