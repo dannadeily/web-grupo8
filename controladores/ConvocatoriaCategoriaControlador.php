@@ -14,9 +14,9 @@ class ConvocatoriaCategoriaControlador
     $this->model=new ConvocatoriaCategoriaModelo();
   }
 
-  public function agregar($nombre,$id_categoria,$id_convocatoria)
+  public function agregar($nombre,$id_categoria,$id_convocatoria,$rol)
   {
-      return $this->model->agregar($nombre,$id_categoria,$id_convocatoria);
+      return $this->model->agregar($nombre,$id_categoria,$id_convocatoria,$rol);
     }
 public function listar($id)
 {

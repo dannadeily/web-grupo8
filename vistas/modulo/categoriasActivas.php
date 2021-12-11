@@ -47,7 +47,9 @@ $count=count($listar);
 
          <?php
          for ($i=0; $i <$count-1 ; $i++) {
-           
+           if ($listar[$i]->rol==$_SESSION["rol"]) {
+             // code...
+
           ?>
 
           <tr>
@@ -58,7 +60,7 @@ $count=count($listar);
           </tr>
           <?php
 
-         } ?>
+       }   } ?>
 
           </table>
 

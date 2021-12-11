@@ -61,11 +61,11 @@ class ConvocatoriaControlador
         $categorias=new CategoriaControlador();
         $lista=$categorias->listar();
         $listaCount=count($lista);
-        echo "$listaCount";
+
         $convocatoriacategoria=new ConvocatoriaCategoriaControlador();
         for ($i=0; $i <$listaCount-1 ; $i++) {
           if ($lista[$i]->estado==1) {
-            $convocatoriacategoria->agregar($lista[$i]->nombre,$id,$lista[$i]->id_categoria);
+            $convocatoriacategoria->agregar($lista[$i]->nombre,$id,$lista[$i]->id_categoria,$lista[$i]->rol);
           }
 
 
@@ -76,11 +76,11 @@ class ConvocatoriaControlador
       }
     }
     else {
-      header("location:../vistas/modulo/crearConvocatoria?msg=fecha de inicio debe ser mayor a la de fin");
+      header("location:../vistas/modulo/crearConvocatoria.php?msg=fecha de inicio debe ser mayor a la de fin");
     }
     }
     else {
-       header("location:../vistas/modulo/crearConvocatoria?msg=complete los datos.php");
+       header("location:../vistas/modulo/crearConvocatoria.php?msg=complete los datos.php");
     }
   }
 
@@ -143,7 +143,7 @@ public function editarConvocatoria()
     }
   }
     else {
-     header("location:../vistas/modulo/editarConvocatoria?msg=complete los datos.php");
+     header("location:../vistas/modulo/editarConvocatoria.php?msg=complete los datos.php");
    }
  }
 

@@ -13,12 +13,12 @@ class ConvocatoriaCategoriaModelo extends Conexion
   {
   }
 
-  public function agregar($nombre,$id_convocatoria,$id_categoria)
+  public function agregar($nombre,$id_convocatoria,$id_categoria,$rol)
   {
       $sql="insert into categoria_convocatoria
-      (nombre,id_convocatoria,id_categoria)
+      (nombre,id_convocatoria,id_categoria,rol)
       SELECT
-      :nombre,:id_convocatoria,:id_categoria
+      :nombre,:id_convocatoria,:id_categoria,:rol
       FROM dual
       WHERE NOT EXISTS (select * from categoria_convocatoria
       where id_categoria=:id_categoria and id_convocatoria=:id_convocatoria)
@@ -28,7 +28,8 @@ class ConvocatoriaCategoriaModelo extends Conexion
       $resultado=$datos->prepare($sql);
       $resultado->execute(array(":nombre"=>$nombre,
       ":id_convocatoria"=>$id_convocatoria,
-      ":id_categoria"=>$id_categoria
+      ":id_categoria"=>$id_categoria,
+      ":rol"=>$rol
     ));
     $id=$datos->lastInsertId();
     $datos=null;
