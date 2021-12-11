@@ -14,9 +14,11 @@
     <section>
 
       <table>
+        <tr>
 
+        </tr>
       </table>
-      
+
     </section>
 
     <footer>

@@ -16,7 +16,7 @@ class UsuarioControlador
 
   public function agregarUsuario()
   { if(!empty($_POST["codigo_usuario"])&&!empty($_POST["nombre"])&&!empty($_POST["apellidos"])
-    &&!empty($_POST["email"])&&!empty($_POST["numero_documento"])&&!empty($_POST["contrasena"])){
+    &&!empty($_POST["email"])&&!empty($_POST["numero_documento"])&&!empty($_POST["contrasena"])&&!empty($_POST["rol"])) {
       $contrasena=password_hash($_POST["contrasena"],PASSWORD_DEFAULT);
       $usuario=array(
         'codigo_usuario' =>$_POST["codigo_usuario"]  ,
@@ -25,7 +25,8 @@ class UsuarioControlador
         'email' =>$_POST["email"],
         'tipoDocumento' =>$_POST["tipoDocumento"],
         'numero_documento' =>$_POST["numero_documento"],
-        'contrasena'=>$contrasena
+        'contrasena'=>$contrasena,
+        'rol'=>$_POST["rol"]
       );
 
 
@@ -82,10 +83,18 @@ class UsuarioControlador
                   if (count($usuario)>1 &&  password_verify($_POST["contrasena"], $usuario[0]->contrasena)) {
                   session_start();
                   $_SESSION['usuario']=$_POST['codigo'];
-                  $_SESSION['rol']="usuario";
-                  header("location:../vistas/modulo/datosPersonales.php");
+                  $_SESSION['rol']=$usuario[0]->rol;
+                  echo $_SESSION['rol'];
+                  if($_SESSION['rol']=="Estudiante"||$_SESSION['rol']=="Egresado")
+                  {
+                    header("location:../vistas/modulo/datosPersonales.php");
+                  }
+                  else {
+                    if($_SESSION['rol']=="administrador"){
+                      header("location:../vistas/modulo/historial.php");}
+                  }
                 } else {
-                  header("location:../vistas/modulo/iniciar.php?msg=datos incorrectos");
+                 header("location:../vistas/modulo/iniciar.php?msg=datos incorrectos");
                 }
 
 
@@ -122,9 +131,18 @@ public function cambiarContrasena()
     $usuario=$this->listar($_SESSION["usuario"]);
     if(password_verify($_POST['actual'],$usuario[0]->contrasena) && $_POST['nueva1']==$_POST['nueva2'] ){
         $this->model->cambiarContrasena($_SESSION['usuario'],password_hash($_POST['nueva1'],PASSWORD_DEFAULT));
-        header("location:../vistas/modulo/cambiarContrasena.php?msg=cambio exitoso");
+        if ($_SESSION['rol']!="administrador") {
+          header("location:../vistas/modulo/cambiarContrasena.php?msg=cambio exitoso");
+        }else {
+          header("location:../vistas/modulo/cambiarContrasenaAdmin.php?msg=cambio exitoso");
+        }
+
     }else {
+      if ($_SESSION['rol']!="administrador") {
         header("location:../vistas/modulo/cambiarContrasena.php?msg=datos incorrectos");
+      }else {
+        header("location:../vistas/modulo/cambiarContrasenaAdmin.php?msg=datos incorrectos");
+      }
     }
 }
 

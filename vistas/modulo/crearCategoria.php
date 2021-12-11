@@ -26,7 +26,7 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']
          <br>
         <form class="" action="../../controladores/?con=CategoriaControlador&fun=crearCategoria" method="post">
         <p> Nombre: <input type="text" name="nombre" value=""></p>
-
+        
         <p> Descripcion:  <textarea name="descripcion" rows="8" cols="80"></textarea> </p>
 
         <input type="submit" name="continuar" value="continuar">

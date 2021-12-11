@@ -29,7 +29,7 @@ else {
 
   <section class="form-login" id="container">
 
-    <form class="form" action="../../controladores/?con=AdministradorControlador&fun=cambiarContrasena" method="post">
+    <form class="form" action="../../controladores/?con=UsuarioControlador&fun=cambiarContrasena" method="post">
 
         <h2>Cambiar contraseña</h2>
     <p id="p-contraseña"> contraseña actual <br> <input  type="password" name="actual" placeholder="contraseña actual" required> </p>

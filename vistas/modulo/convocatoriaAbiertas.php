@@ -4,7 +4,7 @@ $convocatoria=new ConvocatoriaControlador();
 $historial=$convocatoria->convocatoriasAbiertas();
 $count=count($historial);
 session_start();
-if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']!="usuario") {
+if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| ($_SESSION['rol']!="Estudiante"&&$_SESSION['rol']!="Egresado")) {
   header("location:iniciar.php");
 }
  ?>

@@ -2,7 +2,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/controladores/UsuarioControlador.php';
 $usuario=new UsuarioControlador();
   session_start();
-if (isset($_SESSION['usuario'])&& $_SESSION['rol']=="usuario") {
+if (isset($_SESSION['usuario'])&& ($_SESSION['rol']=="Estudiante" ||$_SESSION['rol']=="Egresado"  )) {
   $datos=$usuario->listar($_SESSION['usuario']);
 }
 else {

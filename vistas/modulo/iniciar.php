@@ -31,12 +31,7 @@ session_destroy();
         <p id="link"><a href="registrar.php">registrarse</a></p>
 
       </form>
-
-      <div id="iniciar-admi">
-        <hr>
-        <p id="link"><a href="iniciarAdmin.php"><abbr title="administrador"><i class="fas fa-user-tie" style="font-size:40px;color:red"></i></abbr></a></p>
-
-      </div>
+      
       </section>
       <footer>
           <?php include '../footer.php'?>

@@ -1,7 +1,7 @@
 <?php
 require_once '../../controladores/DocumentoControlador.php';
 session_start();
-if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])||$_SESSION['rol']!="usuario") {
+if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])||($_SESSION['rol']!="Estudiante"&&$_SESSION['rol']!="Egresado")) {
   header("location:iniciar.php");
 }
 $documento=new DocumentoControlador();

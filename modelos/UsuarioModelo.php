@@ -19,9 +19,9 @@ class UsuarioModelo extends Conexion
 
       $sql="insert into usuario
       (codigo_usuario,nombre,apellidos,email,contrasena,
-      tipoDocumento,numero_documento) SELECT
+      tipoDocumento,numero_documento,rol) SELECT
       :codigo_usuario,:nombre,:apellidos,:email,:contrasena,
-      :tipoDocumento,:numero_documento
+      :tipoDocumento,:numero_documento,:rol
       FROM dual
       WHERE NOT EXISTS (select * from usuario
       where codigo_usuario=:codigo_usuario or email=:email or
@@ -35,7 +35,8 @@ class UsuarioModelo extends Conexion
       ":email"=>$email,
       ":contrasena"=>$contrasena,
       ":tipoDocumento"=>$tipoDocumento,
-      ":numero_documento"=>$numero_documento));
+      ":numero_documento"=>$numero_documento,
+      "rol"=>$rol));
       $datos->closeCursor();
       $count= $datos->rowcount();
       $datos=null;

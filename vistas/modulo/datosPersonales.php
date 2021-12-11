@@ -2,8 +2,10 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/web-grupo8/controladores/UsuarioControlador.php';
 $usuario=new UsuarioControlador();
 session_start();
- if(!isset($_SESSION['usuario'])||$_SESSION['rol']!="usuario"){
+ if(!isset($_SESSION['usuario'])||($_SESSION['rol']!="Estudiante"&&$_SESSION['rol']!="Egresado")){
     header("location:iniciar.php");
+  echo $_SESSION['usuario'];
+  echo $_SESSION['rol'];
 }
 
 $datos=$usuario->listar($_SESSION['usuario']);
@@ -63,6 +65,10 @@ $datos=$usuario->listar($_SESSION['usuario']);
                                     <h4>Correo electronico: </h4>
                                     <p class="datos"> <?php echo $datos[0]->email ?> </p>
                                   </td>
+                                  <td>
+                                      <h4>Tipo de usuario: </h4>
+                                      <p class="datos"> <?php echo $datos[0]->rol ?> </p>
+                                    </td>
 
               </tr>
 

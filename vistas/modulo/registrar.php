@@ -63,7 +63,13 @@ session_destroy();
                           <input type="password" name="contrasena"  placeholder="contraseña" required>
                         </td>
                         <td>
-                        </td>
+                          <label for="rol">Tipo de usuario</label>
+                          <select name="rol" id="tipoDocumento">
+                                   <option value="Estudiante">estudiante</option>
+                                   <option value="Egresado">Egresado</option>
+                                 </select>
+                         </td>
+
                       </tr>
                  </table>
                  <br>
