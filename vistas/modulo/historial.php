@@ -34,6 +34,7 @@ $count=count($historial);
             <th>Descripcion</th>
             <th>Fecha de apertura</th>
             <th>Fecha de cierre</th>
+            <th>Informe</th>
           </tr>
 
         <?php for ($i=0; $i < $count-1; $i++) { ?>
@@ -42,6 +43,7 @@ $count=count($historial);
             <td> <?php echo $historial[$i]->descripcion; ?> </td>
             <td> <?php echo $historial[$i]->fecha_inicio; ?> </td>
             <td> <?php echo $historial[$i]->fecha_fin; ?> </td>
+            <td>Generar</td>
           </tr>
         <?php } ?>
         </table>

@@ -10,6 +10,7 @@ $ruta="../../documentos/".$_GET["conv"]."/".$_GET["cat"]."/".$_GET["usuario"];
   <head>
     <meta charset="utf-8">
     <title></title>
+    
   </head>
   <body>
     <header>
