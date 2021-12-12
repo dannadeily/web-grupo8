@@ -38,11 +38,16 @@ $count=count($informacion);
           </header>
           <label for="button-editar">X</label>
             <div class="Contenido">
-              <form class="" action="../../controladores/?con=PostuladosControlador&fun=calificar" method="post">
-              <input type="hidden" name="codigo" value="<?php echo $_GET["usuario"] ?>">
-              <input type="text" name="nota" value="<?php echo $_GET["usuario"] ?>">
-              <br>
-              <input type="submit" name="calificar" value="calificar" >
+              <form class="" action="../../controladores/?con=DocumentoControlador&fun=guardarDocumento" method="post">
+              <input type="hidden" name="id" value="<?php echo $_GET["id"] ?>">
+              <p id="titulo">nombre:</p>
+              <p id="inModal">  <input id="inName" type="text" name="nombre" placeholder="Documento"> </p>
+              <p id="titulo"> Descripcion:</p>
+              <p id="inModal">
+              <textarea name="descripcion" id="txtDes"></textarea>
+            </p>
+
+            <p id="inModal"><input type="submit" name="guardar" value="guardar" ></p>
               </form>
             </div>
         </div>
