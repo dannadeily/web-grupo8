@@ -37,9 +37,7 @@ class ConvocatoriaCategoriaModelo extends Conexion
   }
   public function listar($id_convocatoria)
   {
-
-
-   $sql="select * from categoria_convocatoria
+ $sql="select * from categoria_convocatoria
       where id_convocatoria=:id_convocatoria" ;
     $datos=$this->conectar()->prepare($sql);
     $datos->execute(array(":id_convocatoria"=>$id_convocatoria));
@@ -49,5 +47,12 @@ class ConvocatoriaCategoriaModelo extends Conexion
     $datos->closeCursor();
     $datos=null;
     return $filas;
+  }
+  public function buscar($id)
+  {
+    $sql="select * from categoria_convocatoria where id=:id";
+    $datos=$this->conectar()->prepare($sql);
+    $datos->execute(array(":id"=>$id));
+    return $datos->fetch(PDO::FETCH_OBJ);
   }
 }
