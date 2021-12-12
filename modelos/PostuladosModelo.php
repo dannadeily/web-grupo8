@@ -51,5 +51,14 @@ class PostuladosModelo extends Conexion
     $datos=null;
     return $filas;
   }
+  public function calificar($nota,$codigo)
+  {
+    $sql="update postulacion set calificacion=:nota WHERE codigo_usuario=:codigo";
+    $datos=$this->conectar()->prepare($sql);
+    $datos->bindValue(':nota', $nota);
+    $datos->bindValue(':codigo', $codigo);
+    $datos->execute();
+    $datos=null;
+  }
   }
 ?>

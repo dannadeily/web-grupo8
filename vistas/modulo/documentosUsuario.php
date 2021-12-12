@@ -10,7 +10,7 @@ $ruta="../../documentos/".$_GET["conv"]."/".$_GET["cat"]."/".$_GET["usuario"];
   <head>
     <meta charset="utf-8">
     <title></title>
-    
+      <link rel="stylesheet" href="../css/modalNota.css">
   </head>
   <body>
     <header>
@@ -21,6 +21,25 @@ $ruta="../../documentos/".$_GET["conv"]."/".$_GET["cat"]."/".$_GET["usuario"];
     </aside>
     <section>
       <legend>Documentos</legend>
+
+        <input type="checkbox" id="button-editar">
+        <label for="button-editar" class="lbl-editar">Calificar</label>
+        <div class="modal">
+          <div class="contenedor">
+            <header>
+              Agregar nota
+            </header>
+            <label for="button-editar">X</label>
+              <div class="Contenido">
+                <form class="" action="../../controladores/?con=PostuladosControlador&fun=calificar" method="post">
+                <input type="hidden" name="codigo" value="<?php echo $_GET["usuario"] ?>">
+                <input type="text" name="nota" placeholder="Inserte la nota">
+                <br>
+                <input type="submit" name="calificar" value="calificar" >
+                </form>
+              </div>
+          </div>
+        </div>
 
     <table>
       <tr>

@@ -78,4 +78,5 @@ class DocumentoControlador
   $postulado->inscribir($_GET["cc"]);
   header("location:../vistas/modulo/inscripciones.php?msg=registrado correctamente");
 }
+
 }

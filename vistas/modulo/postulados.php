@@ -45,6 +45,7 @@ if (!empty($_GET["cc"])) {
     <?php for ($i=0; $i < count($lista)-1 ; $i++) {
       if ($lista[$i]->id_convocatoria_categoria==$_GET["cc"]) {
         ?>
+        <form class="" action="../../controladores/?con=PostuladosControlador&fun=calificar" method="post">
         <tr>
           <td> <?php echo $lista[$i]->codigo_usuario ?>  </td>
           <td> <?php echo $lista[$i]->fecha_postulacion ?>  </td>
@@ -59,16 +60,17 @@ if (!empty($_GET["cc"])) {
               </header>
               <label for="button-editar">X</label>
                 <div class="Contenido">
-                  <form class="" action="index.html" method="post">
+
+                  <input type="hidden" name="codigo" value="<?php echo $lista[$i]->codigo_usuario ?>">
                   <input type="text" name="nota" value="<?php echo $lista[$i]->codigo_usuario ?>">
                   <input type="submit" name="calificar" value="calificar" >
-                  </form>
+
                 </div>
             </div>
           </div>
         </td>
         </tr>
-
+        </form>
         <?php
       }
     } ?>

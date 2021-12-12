@@ -14,7 +14,7 @@ $count=count($informacion);
 <html lang="es" dir="ltr">
   <head>
 
-    <link rel="stylesheet" href="../css/DocumentosCategoria.css">
+    <link rel="stylesheet" href="../css/documentosCategoria.css">
     <meta charset="utf-8">
 
     <title></title>
@@ -29,7 +29,24 @@ $count=count($informacion);
     </aside>
 
     <section id="container-categoria">
-
+      <input type="checkbox" id="button-editar">
+      <label for="button-editar" class="lbl-editar">Agregar</label>
+      <div class="modal">
+        <div class="contenedor">
+          <header>
+            Añadir documento
+          </header>
+          <label for="button-editar">X</label>
+            <div class="Contenido">
+              <form class="" action="../../controladores/?con=PostuladosControlador&fun=calificar" method="post">
+              <input type="hidden" name="codigo" value="<?php echo $_GET["usuario"] ?>">
+              <input type="text" name="nota" value="<?php echo $_GET["usuario"] ?>">
+              <br>
+              <input type="submit" name="calificar" value="calificar" >
+              </form>
+            </div>
+        </div>
+      </div>
     <table>
       <tr>
 
@@ -37,17 +54,6 @@ $count=count($informacion);
         <th>Requisito</th>
         <th>Accion</th>
 
-      </tr>
-      <tr>
-        <td colspan="3">  <details agregar>
-            <summary> agregar </summary>
-          <form class="" action="../../controladores/?con=DocumentoControlador&fun=guardarDocumento" method="post">
-            <input type="hidden" name="id" value="<?php echo $_GET['id']?>">
-            <input type="text" name="nombre"  placeholder="nombre">
-            <textarea  name="descripcion"  placeholder="descripcion"></textarea>
-            <input type="submit" name="guardar" value="guardar">
-         </form>
-        </details> </td>
       </tr>
       <?php for ($i=0; $i <$count-1 ; $i++) {
         ?>
