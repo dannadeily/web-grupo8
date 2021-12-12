@@ -44,7 +44,7 @@ $count=count($informacion);
           <form class="" action="../../controladores/?con=DocumentoControlador&fun=guardarDocumento" method="post">
             <input type="hidden" name="id" value="<?php echo $_GET['id']?>">
             <input type="text" name="nombre"  placeholder="nombre">
-            <input type="text" name="descripcion"  placeholder="descripcion">
+            <textarea  name="descripcion"  placeholder="descripcion"></textarea>
             <input type="submit" name="guardar" value="guardar">
          </form>
         </details> </td>

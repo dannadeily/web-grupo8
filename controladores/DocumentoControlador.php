@@ -27,7 +27,7 @@ class DocumentoControlador
     'descripcion'=>$_POST['descripcion']
     );
    $this->model->guardarDocumento($documentos);
-    header("location:../vistas/modulo/DocumentosCategoria.php?id=$id_categoria");
+    header("location:../vistas/modulo/DocumentosCategoria.php?id=".$_POST['id']);
   }
 
   public function borrarDocumento()
