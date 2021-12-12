@@ -26,7 +26,7 @@ $contarDocumentos=count($documentos);
       <br>
     <h2> Cargar documentos </h2>
     <hr>
-
+    <p>  Descargue el formulario de inscripcion del siguiente enlace:   <a href="../../documentos/formulario de inscripcion.pdf" target="_blank">Formulario de inscripcion</a></p> 
     <form class="" action="../../controladores/?con=DocumentoControlador&fun=guardarArchivo&cc=<?php echo $_GET["cc"]; ?>&co=<?php echo $_GET["con"]; ?>&cat=<?php echo $_GET["id"]; ?>" method="post" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?php echo $_GET["cc"]; ?>">
       <?php for ($i=0; $i <$contarDocumentos-1 ; $i++) {?>

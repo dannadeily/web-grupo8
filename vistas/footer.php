@@ -7,7 +7,9 @@
   </head>
   <body>
     <footer>
-
+      <p id="logo-header" href="#">
+    		<span class="site-name"><img width="70" id="logo" src=<?php ruta?>"/web-grupo8/vistas/img/logoufps.png"  alt=""  ></span>
+    	</p>
     </footer>
   </body>
 </html>

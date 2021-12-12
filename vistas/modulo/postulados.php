@@ -21,6 +21,7 @@ $lista=$postulados->listar();
     <aside>
       <?php include 'barraLateralAdministrador.php'; ?>
     </aside>
+    <legend>Seleccione Usuario</legend>
     <table>
 
 
@@ -30,9 +31,17 @@ $lista=$postulados->listar();
         <th>calificacion </th>
         <th>acciones</th>
       </tr>
-    <?php for ($i=0; $i <count($listar)-1 ; $i++) {
-      if (condition) {
-      
+    <?php for ($i=0; $i < count($lista)-1 ; $i++) {
+      if ($lista[$i]->id_convocatoria_categoria==$_GET["cc"]) {
+        ?>
+        <tr>
+          <td> <?php echo $lista[$i]->codigo_usuario ?>  </td>
+          <td> <?php echo $lista[$i]->fecha_postulacion ?>  </td>
+          <td> <?php echo $lista[$i]->calificacion ?>  </td>
+          <td> <a href="#">revisar</a> </td>
+        </tr>
+
+        <?php
       }
     } ?>
 

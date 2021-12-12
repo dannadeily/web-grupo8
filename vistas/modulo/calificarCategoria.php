@@ -23,7 +23,7 @@ $activas=count($categoriasActivas);
       <?php include 'barraLateralAdministrador.php' ?>
     </aside>
     <section>
-
+      <legend>Seleccione categoria: </legend>
       <table>
         <tr>
           <th>Categoria</th>
