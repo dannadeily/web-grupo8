@@ -28,7 +28,7 @@
 }
 
 .a-class{
-  color: black;
+  color: #797474;
 }
 /* Style the list inside the menu */
 
@@ -37,4 +37,16 @@
  position: relative;
   background-color: #f1f1f1;
   padding: 10px;
+}
+
+ button {
+  background-color: #aa1916;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
 }

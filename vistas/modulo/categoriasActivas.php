@@ -83,8 +83,8 @@ $count=count($listar);
                 <ul>
 
                   <li>
-                    <h6> <?php echo $documentos[$i]->nombre ; ?> : </h6>
-                    <h6>   <?php echo $documentos[$i]->descripcion ; ?> </h6>
+                    <h6 class="h6-class" > <?php echo $documentos[$i]->nombre ; ?> : </h6>
+                    <h6 class="h6-class">   <?php echo $documentos[$i]->descripcion ; ?> </h6>
                   </li>
 
                 </ul>
@@ -95,7 +95,7 @@ $count=count($listar);
           </p>
 
 
-          <button type="button" onclick="location.href='subirDocumentos.php?cc=<?php echo $_GET['cc'] ?>&con=<?php echo $_GET['id'] ?>&id=<?php echo $_GET['cat'] ?>'" name="button"> continuar </button>
+          <button class="button-categoriasActivas" type="button" onclick="location.href='subirDocumentos.php?cc=<?php echo $_GET['cc'] ?>&con=<?php echo $_GET['id'] ?>&id=<?php echo $_GET['cat'] ?>'" name="button"> continuar </button>
         <?php } ?>
 
 
