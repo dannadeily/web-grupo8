@@ -1,8 +1,8 @@
 /* Container for flexboxes */
 .div-activar{
-  margin-bottom: 2%;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-bottom: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
   margin-top: 2%;
 }
 
@@ -17,18 +17,23 @@
   padding: 20px;
 }
 
+.h6-class {
+  text-align: justify;
+}
 #costumers-activar td {
   padding: 13px;
-  width: 90%;
-  border-bottom: 1px solid #ddd;
+  width: 80%;
+  border-bottom: 1px solid #F74444;
 
 }
 
-
+.a-class{
+  color: black;
+}
 /* Style the list inside the menu */
 
 /* Style the content */
-#container-activar article {
+.article-activar div {
  position: relative;
   background-color: #f1f1f1;
   padding: 10px;

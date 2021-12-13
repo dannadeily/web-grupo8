@@ -53,7 +53,7 @@ $count=count($listar);
           ?>
 
           <tr>
-            <td> <a
+            <td> <a class="a-class"
               href="categoriasActivas.php?cc=<?php echo $listar[0]->id; ?>&&id=<?php echo $_GET["id"]; ?>&&cat=<?php echo $listar[$i]->id_categoria ?>">
                <?php  echo $listar[$i]->nombre; ?> <i class="fas fa-angle-right"></i></a>
              </td>
@@ -67,13 +67,13 @@ $count=count($listar);
         </nav>
 
 
-          <article class="article-activar">
+          <div class="article-activar">
 
           <?php if(isset($_GET['cat']) && !empty($_GET['cat'])){ ?>
           <p class="p-activar">
             <hr>
               <h4>Descripcion:</h4>
-            <?php ?> <h6> <?php echo  $lista[0]->descripcion;?> <h6> <?php?>
+            <?php ?> <h6 class="h6-class"> <?php echo  $lista[0]->descripcion;?> <h6> <?php?>
               <br>
               <h4>Documentos Requeridos:</h4>
             <?php for ($i=0; $i <$contarDocumentos-1 ; $i++) {
@@ -99,7 +99,7 @@ $count=count($listar);
         <?php } ?>
 
 
-        </article>
+      </div>
        </section>
 
 </div>
