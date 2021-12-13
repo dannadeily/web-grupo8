@@ -43,7 +43,10 @@ $count=count($historial);
             <td> <?php echo $historial[$i]->descripcion; ?> </td>
             <td> <?php echo $historial[$i]->fecha_inicio; ?> </td>
             <td> <?php echo $historial[$i]->fecha_fin; ?> </td>
-            <td>Generar</td>
+            <td>Generar
+              
+
+            </td>
           </tr>
         <?php } ?>
         </table>

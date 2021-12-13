@@ -29,14 +29,14 @@ $count=count($postulaciones);
           <th>convocatoria</th>
           <th>categoria</th>
           <th>calificacion</th>
-          <th>acciones</th>
+
         </tr>
         <?php for ($i=0; $i <$count-1 ; $i++) {?>
           <tr>
             <td> <?php echo $postulaciones[$i]->titulo ?> </td>
             <td><?php echo $postulaciones[$i]->nombre ?></td>
             <td><?php echo $postulaciones[$i]->calificacion ?></td>
-            <td>revisar</td>
+            
           </tr>
         <?php } ?>
       </table>
