@@ -168,5 +168,9 @@ public function editarConvocatoria()
     $interval = $datetime1->diff($datetime2);
     return $interval->days . ' dias ';
   }
+  public function informe($id)
+  {
+     return $this->model->informe($id);
+    }
 
 }

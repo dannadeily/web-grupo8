@@ -40,7 +40,6 @@ if (!empty($_GET["cc"])) {
         <th>Fecha de postulacion</th>
         <th>calificacion </th>
         <th>documentos</th>
-        <th> Editar calificacion  </th>
       </tr>
     <?php for ($i=0; $i < count($lista)-1 ; $i++) {
       if ($lista[$i]->id_convocatoria_categoria==$_GET["cc"]) {
@@ -51,24 +50,7 @@ if (!empty($_GET["cc"])) {
           <td> <?php echo $lista[$i]->fecha_postulacion ?>  </td>
           <td> <?php echo $lista[$i]->calificacion ?>  </td>
           <td> <a href="documentosUsuario.php?conv=<?php echo $convocatoria->id_convocatoria ?>&&cat=<?php echo $convocatoria->id_categoria ?>&&usuario=<?php echo$lista[$i]->codigo_usuario ?>">revisar</a> </td>
-          <td> <input type="checkbox" id="button-editar">
-          <label for="button-editar" class="lbl-editar">Editar</label>
-          <div class="modal">
-            <div class="contenedor">
-              <header>
-                Agregar nota
-              </header>
-              <label for="button-editar">X</label>
-                <div class="Contenido">
 
-                  <input type="hidden" name="codigo" value="<?php echo $lista[$i]->codigo_usuario ?>">
-                  <input type="text" name="nota" value="<?php echo $lista[$i]->codigo_usuario ?>">
-                  <input type="submit" name="calificar" value="calificar" >
-
-                </div>
-            </div>
-          </div>
-        </td>
         </tr>
         </form>
         <?php

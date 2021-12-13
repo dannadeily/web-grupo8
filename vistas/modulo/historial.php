@@ -43,10 +43,7 @@ $count=count($historial);
             <td> <?php echo $historial[$i]->descripcion; ?> </td>
             <td> <?php echo $historial[$i]->fecha_inicio; ?> </td>
             <td> <?php echo $historial[$i]->fecha_fin; ?> </td>
-            <td>Generar
-              
-
-            </td>
+            <td> <a href="../../controladores/informe.php?conv=<?php echo $historial[$i]->id_convocatoria;  ?>" target="_blank">Generar informe</a></td>
           </tr>
         <?php } ?>
         </table>
