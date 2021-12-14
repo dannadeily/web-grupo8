@@ -31,8 +31,9 @@ $count=count($informacion);
     </aside>
 
     <section id="container-editarC">
-      <form class="" action="index.html" method="post">
+      <form class="" action="../../controladores/?con=DocumentoControlador&fun=editar" method="post">
         <p> Nombre </p>
+        <input type="hidden" name="id" value="<?php echo $informacion[0]->id_documento; ?>">
         <input class="input-nombre" type="text" name="nombre" value="<?php echo $informacion[0]->nombre; ?>">
         <br>
         <p>Descripcion</p>

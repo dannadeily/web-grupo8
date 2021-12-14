@@ -39,10 +39,10 @@ $ruta="../../documentos/".$_GET["conv"]."/".$_GET["cat"]."/".$_GET["usuario"];
             <label for="button-editar">X</label>
               <div class="Contenido">
                 <form class="" action="../../controladores/?con=PostuladosControlador&fun=calificar" method="post">
-                <input type="hidden" name="codigo" value="<?php echo $_GET["usuario"] ?>">
-                <input type="text" name="nota" placeholder="Inserte la nota">
-                <br>
-                <input type="submit" name="calificar" value="calificar" >
+                <input type="hidden" name="codigo" value="<?php echo $_GET["usuario"] ?>"></p>
+                <p id="notamodal">  <input type="number" name="nota" placeholder="Inserte la nota"  max="5.0" step="any"> </p>
+                <p id="inpmodal"> <input type="submit" name="calificar" value="calificar" id="inpmodal" ></p>
+
                 </form>
               </div>
           </div>

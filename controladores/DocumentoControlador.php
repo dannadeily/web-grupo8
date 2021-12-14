@@ -82,4 +82,17 @@ public function buscar($id)
 {
   return $this->model->buscar($id);
 }
+
+public function editar()
+{
+  if (!empty($_POST["id"]&&!empty($_POST["nombre"])&&!empty($_POST["descripcion"]))) {
+    $documento = array('nombre' => $_POST["nombre"],
+    'descripcion'=>$_POST["descripcion"],
+    'id'=>$_POST["id"]
+   );
+  echo $this->model->editar($documento);
+  }
+  header("location:../vistas/modulo/seleccionarCategoria.php");
+}
+
 }

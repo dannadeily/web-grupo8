@@ -73,4 +73,20 @@ class DocumentoModelo extends Conexion
     $datos=null;
     return $filas;
    }
+   public function editar($informacion=array())
+   {
+     foreach ($informacion as $key=>$datos) {
+       $$key=$datos;
+       }
+       $sql="update documento set nombre=:nombre,descripcion=:descripcion where id_documento=:id";
+         $datos=$this->conectar()->prepare($sql);
+          $datos->bindValue(':nombre', $nombre);
+           $datos->bindValue(':descripcion', $descripcion);
+         $datos->bindValue(':id', $id);
+         $datos->execute();
+         $afectadas=$datos->rowCount();
+
+         $datos=null;
+         return $afectadas;
+   }
   }

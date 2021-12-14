@@ -65,3 +65,17 @@ body .modal{
   color: white;
   font-weight: bold;
 }
+#notamodal{
+  text-align:center;
+}
+#notamodal input{
+  width: 80%;
+  text-align: center;
+}
+#inpmodal{
+  text-align:center;
+}
+#inpmodal input{
+  width: auto%;
+  text-align: center;
+}
