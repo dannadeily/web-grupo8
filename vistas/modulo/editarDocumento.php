@@ -14,12 +14,12 @@ $count=count($informacion);
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-<<<<<<< HEAD
+
     <title>Editar documento</title>
-=======
+
     <link rel="stylesheet" href="../css/editarCategoria.css">
     <title></title>
->>>>>>> 4378112999628e52599e8be6aebbf27c0e4464a2
+
   </head>
   <body>
     <header>
@@ -28,7 +28,7 @@ $count=count($informacion);
     <aside class="">
       <?php include 'barraLateralAdministrador.php'; ?>
     </aside>
-    
+
     <section id="container-editarC">
       <form class="" action="index.html" method="post">
         <p> Nombre </p>

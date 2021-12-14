@@ -45,7 +45,7 @@ $count=count($historial);
             <td> <?php echo $historial[$i]->descripcion; ?> </td>
             <td> <?php echo $historial[$i]->fecha_inicio; ?> </td>
             <td> <?php echo $historial[$i]->fecha_fin; ?> </td>
-            <td> <a href="participantes.php?conv=<?php echo $historial[$i]->id_convocatoria;  ?>">participantes</a></td>
+            <td> <a href="participantes.php?conv=<?php echo $historial[$i]->id_convocatoria;  ?>">Participantes</a></td>
             <td> <a href="ganadores.php?conv=<?php echo $historial[$i]->id_convocatoria;  ?>">Ganadores</a></td>
           </tr>
         <?php } ?>
