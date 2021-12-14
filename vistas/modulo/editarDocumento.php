@@ -14,6 +14,7 @@ $count=count($informacion);
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/editarCategoria.css">
     <title></title>
   </head>
   <body>
@@ -23,13 +24,14 @@ $count=count($informacion);
     <aside class="">
       <?php include 'barraLateralAdministrador.php'; ?>
     </aside>
-    <section>
+    <section id="container-editarC">
       <form class="" action="index.html" method="post">
         <p> Nombre </p>
-        <input type="text" name="nombre" value="<?php echo $informacion[0]->nombre; ?>">
+        <input class="input-nombre" type="text" name="nombre" value="<?php echo $informacion[0]->nombre; ?>">
         <br>
         <p>Descripcion</p>
-        <textarea name="descripcion"><?php echo $informacion[0]->descripcion; ?></textarea>
+        <textarea style="resize: none" name="descripcion" rows="8" cols="80" name="descripcion"><?php echo $informacion[0]->descripcion; ?></textarea>
+        <p id="button-categoria"><input type="submit" name="continuar" value="actualizar"></p>
       </form>
     </section>
 
