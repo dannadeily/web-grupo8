@@ -1,16 +1,7 @@
 <?php
-//include ($_SERVER['DOCUMENT_ROOT']'/proyecto/config/config.php')
-/**
- *
- */
 class Conexion
 {
-  /*$host=DB_HOST;
-  $nombre=DB_NOMBRE;
-  $usuario=DB_USUARIO;
-  $password=DB_PASSWORD;
-  $charset=DB_CHARSET;
-*/
+
   public  static  function conectar()
   {
     try {
@@ -22,7 +13,7 @@ class Conexion
 
     } catch (Exception $e) {
     echo ($e->getLine());
-    die($e->getMessage());
+   echo(  die($e->getMessage()));
 
     }
   return $base;
