@@ -172,5 +172,8 @@ public function editarConvocatoria()
   {
      return $this->model->informe($id);
     }
+  public function ganadores($convocatoria){
+    return $this->model->ganadores($convocatoria);
+  }
 
 }

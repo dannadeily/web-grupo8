@@ -54,7 +54,7 @@ $count=count($listar);
 
           <tr>
             <td> <a class="a-class"
-              href="categoriasActivas.php?cc=<?php echo $listar[0]->id; ?>&&id=<?php echo $_GET["id"]; ?>&&cat=<?php echo $listar[$i]->id_categoria ?>">
+              href="categoriasActivas.php?cc=<?php echo $listar[$i]->id; ?>&&id=<?php echo $_GET["id"]; ?>&&cat=<?php echo $listar[$i]->id_categoria ?>">
                <?php  echo $listar[$i]->nombre; ?> <i class="fas fa-angle-right"></i></a>
              </td>
           </tr>

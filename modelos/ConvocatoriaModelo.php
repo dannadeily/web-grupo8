@@ -107,6 +107,22 @@ class ConvocatoriaModelo extends Conexion
     $datos=null;
     return $filas;
   }
+  public function ganadores($convocatoria)
+  {
+    $sql="select  MAX(p.calificacion),p.*, u.nombre AS nombres, u.* , cc.nombre,c.titulo from postulacion AS p join categoria_convocatoria as cc join convocatoria as c join usuario as u
+    WHERE p.id_convocatoria_categoria=cc.id and cc.id_convocatoria=c.id_convocatoria  AND p.codigo_usuario=u.codigo_usuario and c.id_convocatoria=:id_convocatoria
+
+    GROUP BY p.id_convocatoria_categoria
+     ORDER BY `cc`.`id` ASC,u.nombre ASC, u.rol asc";
+     $datos=$this->conectar()->prepare($sql);
+     $datos->bindValue(":id_convocatoria",$convocatoria);
+     $datos->execute();
+     while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) {
+     }
+     $datos->closeCursor();
+     $datos=null;
+     return $filas;
+  }
 }
 
  ?>
