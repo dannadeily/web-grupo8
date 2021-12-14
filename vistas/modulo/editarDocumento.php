@@ -28,6 +28,7 @@ $count=count($informacion);
     <aside class="">
       <?php include 'barraLateralAdministrador.php'; ?>
     </aside>
+    
     <section id="container-editarC">
       <form class="" action="index.html" method="post">
         <p> Nombre </p>
