@@ -18,7 +18,8 @@ $count=count($informacion);
     <title>Editar documento</title>
 
     <link rel="stylesheet" href="../css/editarCategoria.css">
-    <title></title>
+    <title>Editar documento</title>
+
 
   </head>
   <body>
@@ -39,9 +40,6 @@ $count=count($informacion);
         <p id="button-categoria"><input type="submit" name="continuar" value="actualizar"></p>
       </form>
     </section>
-
-
-
 
     <footer>
       <?php include '../footer.php'; ?>
