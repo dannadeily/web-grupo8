@@ -43,7 +43,14 @@ $categoria="";
           </tr>
         <?php }  ?>
         <tr>
-          <td><?php echo $lista[$i]->nombres;</td>
+          <td><?php echo $lista[$i]->nombres ?> </td>
+          <td><?php echo $lista[$i]->apellidos ?> </td>
+          <td><?php echo $lista[$i]->codigo_usuario ?> </td>
+          <td><?php echo $lista[$i]->email ?> </td>
+          <td><?php echo $lista[$i]->rol ?> </td>
+          <td><?php echo $lista[$i]->fecha_postulacion ?> </td>
+          <td><?php echo $lista[$i]->calificacion ?> </td>
+
         </tr>
 
         </table>
