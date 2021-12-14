@@ -44,8 +44,11 @@ class PostuladosModelo extends Conexion
       WHERE p.id_convocatoria_categoria=cc.id and cc.id_convocatoria=c.id_convocatoria  AND p.codigo_usuario=:id";
     }
     $datos=$this->conectar()->prepare($sql);
+    if ($id!='') {
     $datos->bindValue(':id', $id);
+    }
     $datos->execute();
+
     while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) { }
     $datos->closeCursor();
     $datos=null;

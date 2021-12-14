@@ -16,6 +16,7 @@
 #customers td, #customers th {
   border: 1px solid #DEDBDB;
   padding: 8px;
+  text-align: center;
 
 }
 
@@ -30,5 +31,6 @@
   text-align: left;
   background-color: #aa1916;
   color: white;
-  
+
+text-align: center;
 }
