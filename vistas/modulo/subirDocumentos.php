@@ -26,12 +26,12 @@ $contarDocumentos=count($documentos);
       <br>
     <h2> Cargar documentos </h2>
     <hr>
-    <p>  Descargue el formulario de inscripcion del siguiente enlace:   <a href="../../documentos/formulario de inscripcion.pdf" target="_blank">Formulario de inscripcion</a></p> 
+    <p>  Descargue el formulario de inscripcion del siguiente enlace:   <a href="../../documentos/formulario de inscripcion.pdf" target="_blank">Formulario de inscripcion</a></p>
     <form class="" action="../../controladores/?con=DocumentoControlador&fun=guardarArchivo&cc=<?php echo $_GET["cc"]; ?>&co=<?php echo $_GET["con"]; ?>&cat=<?php echo $_GET["id"]; ?>" method="post" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?php echo $_GET["cc"]; ?>">
       <?php for ($i=0; $i <$contarDocumentos-1 ; $i++) {?>
         <?php if ($documentos[$i]->id_categoria==$_GET["id"]): ?>
-          <h3>  <?php echo $documentos[$i]->nombre ?> :  </h3>
+          <h4>  <?php echo $documentos[$i]->nombre ?> :  </h4>
         <input type="file" name="<?php echo $documentos[$i]->nombre ?>"  accept="application/pdf" required><br><br>
       <?php endif; ?>
     <?php  } ?>
@@ -39,7 +39,7 @@ $contarDocumentos=count($documentos);
       <br>
 
     <h6>los archivos deben estar en formato pdf y no superar los 5mb de tamaño</h6>
-    <input type="submit" name="guardar" value="guardar">
+    <p class="button-subir">  <input type="submit" name="guardar" value="guardar"></p>
     </form>
 
     </section>
