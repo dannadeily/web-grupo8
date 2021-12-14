@@ -15,6 +15,7 @@ $count=count($informacion);
   <head>
 
     <link rel="stylesheet" href="../css/documentosCategoria.css">
+    <link rel="stylesheet" href="../css/tabla.css">
     <meta charset="utf-8">
 
     <title></title>
@@ -28,9 +29,11 @@ $count=count($informacion);
       <?php include 'barraLateralAdministrador.php'; ?>
     </aside>
 
-    <section id="container-categoria">
+    <section id="container-historial">
       <input type="checkbox" id="button-editar">
       <label for="button-editar" class="lbl-editar">Agregar</label>
+      <br>
+      <br>
       <div class="modal">
         <div class="contenedor">
           <header>
@@ -52,7 +55,7 @@ $count=count($informacion);
             </div>
         </div>
       </div>
-    <table>
+    <table id="customers">
       <tr>
 
         <th>Documento</th>

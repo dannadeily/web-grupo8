@@ -35,7 +35,7 @@ $activas=count($categoriasActivas);
           <tr>
             <td> <?php echo $categoriasActivas[$i]->nombre ?> </td>
             <td> <?php echo $categoriasActivas[$i]->rol ?> </td>
-            <td> <a href="postulados.php?cc=<?php echo $categoriasActivas[$i]->id ?>">seleccionar</a></td>
+            <td> <abbr title="Seleccionar"><a href="postulados.php?cc=<?php echo $categoriasActivas[$i]->id ?>"> <i style="font-size:25px;" class="fas fa-check-circle"></i> </a></abbr> </td>
           </tr>
       <?php  } ?>
       </table>
