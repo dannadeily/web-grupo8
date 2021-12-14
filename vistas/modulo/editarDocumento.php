@@ -29,10 +29,7 @@ $count=count($informacion);
     <aside class="">
       <?php include 'barraLateralAdministrador.php'; ?>
     </aside>
-<<<<<<< HEAD
-=======
 
->>>>>>> 382bb06f59d2ca1a7e386c541c0b66b967ebcf97
     <section id="container-editarC">
       <form class="" action="index.html" method="post">
         <p> Nombre </p>
@@ -43,9 +40,6 @@ $count=count($informacion);
         <p id="button-categoria"><input type="submit" name="continuar" value="actualizar"></p>
       </form>
     </section>
-
-
-
 
     <footer>
       <?php include '../footer.php'; ?>
