@@ -14,7 +14,7 @@ $activas=count($categoriasActivas);
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/calificar.css">
-    <title>Convocatorias</title>
+    <title>Categorias</title>
   </head>
   <body>
     <header>

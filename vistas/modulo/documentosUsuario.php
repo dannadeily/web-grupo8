@@ -9,7 +9,7 @@ $ruta="../../documentos/".$_GET["conv"]."/".$_GET["cat"]."/".$_GET["usuario"];
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title> Documentos cargados </title>
 
       <link rel="stylesheet" href="../css/modalNota.css">
       <link rel="stylesheet" href="../css/tabla.css">

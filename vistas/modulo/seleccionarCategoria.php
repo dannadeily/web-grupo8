@@ -17,7 +17,7 @@ $count=count($listar);
     <link rel="stylesheet" href="../css/SeleccionarCategoria.css">
       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title></title>
+    <title> Categorias </title>
   </head>
   <body>
 
@@ -68,5 +68,5 @@ $count=count($listar);
 
 
   </body>
-  
+
 </html>

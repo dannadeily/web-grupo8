@@ -14,7 +14,7 @@ $count=count($informacion);
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Editar documento</title>
   </head>
   <body>
     <header>

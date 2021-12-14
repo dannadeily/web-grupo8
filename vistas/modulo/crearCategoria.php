@@ -8,7 +8,7 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Crear categoria</title>
     <link rel="stylesheet" href="../css/crearCategoria.css">
   </head>
   <body>

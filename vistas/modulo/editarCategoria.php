@@ -15,7 +15,7 @@ $listar=$categoria->listar($_GET["id"]);
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/editarCategoria.css">
-    <title></title>
+    <title>Editar categoria</title>
   </head>
 
   <body>

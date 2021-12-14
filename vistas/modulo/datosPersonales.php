@@ -16,7 +16,7 @@ $datos=$usuario->listar($_SESSION['usuario']);
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>editar datos</title>
+    <title>datos personales</title>
     <link rel="stylesheet" href="../css/datosPersonales.css">
 
   </head>

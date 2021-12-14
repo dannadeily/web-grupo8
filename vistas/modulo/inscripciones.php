@@ -14,7 +14,7 @@ $count=count($postulaciones);
     <html lang="es" dir="ltr">
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/inscripcion.css">
-    <title></title>
+    <title>INscripciones</title>
   </head>
   <body>
     <header>

@@ -18,7 +18,7 @@ $count=count($informacion);
     <link rel="stylesheet" href="../css/tabla.css">
     <meta charset="utf-8">
 
-    <title></title>
+    <title> requisitos </title>
   </head>
   <body>
 
