@@ -27,6 +27,8 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| ($_SESSION['rol'
        </aside>
 
        <section id="container-abierta">
+         <legend>Convocatorias:</legend>
+         <hr>
 
        <table id="customers-abierta">
          <tr>

@@ -25,11 +25,14 @@ $count=count($postulaciones);
     </aside>
 
     <section  id="container-inscripcion">
+
+      <legend>Inscripciones:</legend>
+      <hr>
       <table id="customers-inscripcion">
         <tr>
-          <th>convocatoria</th>
-          <th>categoria</th>
-          <th>calificacion</th>
+          <th>Convocatoria</th>
+          <th>Categoria</th>
+          <th>Calificacion</th>
 
         </tr>
         <?php for ($i=0; $i <$count-1 ; $i++) {?>
