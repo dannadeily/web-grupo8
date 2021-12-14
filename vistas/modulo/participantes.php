@@ -16,24 +16,22 @@ $categoria="";
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/tabla.css">
     <title>Participantes</title>
   </head>
   <body>
     <header>
-      
       <?php include '../HeaderLogin.php'; ?>
     </header>
     <aside class="">
       <?php include 'barraLateralAdministrador.php';  ?>
     </aside>
-    <section id="container-historial">
+    <section>
       <?php for ($i=0; $i <count($lista)-1 ; $i++) {
         if ($lista[$i]->nombre!=$categoria) {
           $categoria=$lista[$i]->nombre; ?>
           <legend> <?php echo $lista[$i]->nombre; ?> </legend>
 
-          <table id="customers">
+          <table>
           <tr>
             <th>Nombres</th>
             <th>Apellidos</th>
@@ -52,7 +50,7 @@ $categoria="";
           <td><?php echo $lista[$i]->email ?> </td>
           <td><?php echo $lista[$i]->rol ?> </td>
           <td><?php echo $lista[$i]->fecha_postulacion ?> </td>
-          <td><?php echo $lista[$i]->calificacion ?> </td>
+          <td><?php echo $lista[$i]->calificacion ?>  </td>
 
         </tr>
 
