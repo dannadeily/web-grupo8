@@ -13,6 +13,7 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/calificar.css">
     <title>Convocatorias</title>
   </head>
   <body>
@@ -22,14 +23,14 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']
     <aside class="">
       <?php include 'barraLateralAdministrador.php' ?>
     </aside>
-<section>
+<section id="container-calificar">
   <table>
     <tr>
       <th>Titulo</th>
       <th>descripcion</th>
       <th>Fecha de cierre</th>
       <th>Dias restantes</th>
-      <th>acciones</th>
+      <th>Acciones</th>
     </tr>
 
     <?php for ($i=0; $i <count($listaConvocatorias)-1 ; $i++) {

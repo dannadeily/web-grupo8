@@ -1,0 +1,32 @@
+#container-calificar{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+/*tabla*/
+#container-calificar {
+
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#container-calificar td, #container-calificar th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#container-calificar tr:nth-child(even){background-color: #f2f2f2;}
+
+#container-calificar tr:hover {background-color: #ddd;}
+
+#container-calificar th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #aa1916;
+  color: white;
+}

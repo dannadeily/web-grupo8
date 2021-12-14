@@ -31,9 +31,9 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| ($_SESSION['rol'
        <table id="customers-abierta">
          <tr>
            <th>Categoria</th>
-           <th>descripcion</th>
-           <th>fecha de cierre</th>
-           <th>acciones</th>
+           <th>Descripcion</th>
+           <th>Fecha de cierre</th>
+           <th>Incribir</th>
 
          </tr>
 

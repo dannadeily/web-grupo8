@@ -13,6 +13,7 @@ $activas=count($categoriasActivas);
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/calificar.css">
     <title>Convocatorias</title>
   </head>
   <body>
@@ -22,7 +23,7 @@ $activas=count($categoriasActivas);
     <aside class="">
       <?php include 'barraLateralAdministrador.php' ?>
     </aside>
-    <section>
+    <section id="container-calificar">
       <legend>Seleccione categoria: </legend>
       <table>
         <tr>
