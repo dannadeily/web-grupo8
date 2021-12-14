@@ -32,7 +32,7 @@ public function calificar()
   if (!empty($_POST["nota"])&&!empty($_POST["codigo"])) {
     $this->model->calificar($_POST["nota"],$_POST["codigo"]);
   }
-  header("location:../vistas/modulo/postulados.php");
+  header("location:../vistas/modulo/calificar.php");
 }
 
 }

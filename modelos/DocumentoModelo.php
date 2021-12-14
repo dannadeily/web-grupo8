@@ -62,4 +62,15 @@ class DocumentoModelo extends Conexion
     return $afectadas;
 
   }
-}
+  public function buscar($id)
+  {
+    $sql="select * from documento where id_documento=:id";
+    $datos=$this->conectar()->prepare($sql);
+    $datos->bindValue(':id', $id);
+    $datos->execute();
+    while ($filas[]=$datos->fetch(PDO::FETCH_OBJ)) {
+    }
+    $datos=null;
+    return $filas;
+   }
+  }
