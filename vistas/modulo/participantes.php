@@ -16,6 +16,7 @@ $categoria="";
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/tabla.css">
     <title>Participantes</title>
   </head>
   <body>
@@ -25,13 +26,13 @@ $categoria="";
     <aside class="">
       <?php include 'barraLateralAdministrador.php';  ?>
     </aside>
-    <section>
+    <section id="container-historial">
       <?php for ($i=0; $i <count($lista)-1 ; $i++) {
         if ($lista[$i]->nombre!=$categoria) {
           $categoria=$lista[$i]->nombre; ?>
           <legend> <?php echo $lista[$i]->nombre; ?> </legend>
 
-          <table>
+          <table id="customers">
           <tr>
             <th>Nombres</th>
             <th>Apellidos</th>
