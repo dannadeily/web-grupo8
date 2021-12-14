@@ -21,13 +21,13 @@ $categoria="";
   </head>
   <body>
     <header>
-      
+
       <?php include '../HeaderLogin.php'; ?>
     </header>
     <aside class="">
       <?php include 'barraLateralAdministrador.php';  ?>
     </aside>
-    <section id="container-historial">
+    <section >
       <?php for ($i=0; $i <count($lista)-1 ; $i++) {
         if ($lista[$i]->nombre!=$categoria) {
           $categoria=$lista[$i]->nombre; ?>

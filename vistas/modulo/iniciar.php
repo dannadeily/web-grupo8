@@ -32,6 +32,7 @@ session_destroy();
 
       </form>
       
+
       </section>
       <footer>
           <?php include '../footer.php'?>

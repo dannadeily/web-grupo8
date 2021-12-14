@@ -24,6 +24,7 @@ $count=count($historial);
       </aside>
 
 
+
       <section id="container-historial">
         <legend id="titulo-tabla">Historial de convocatorias</legend>
 

@@ -30,6 +30,7 @@ $count=count($postulaciones);
       <hr>
       <table id="customers-inscripcion">
         <tr>
+          
           <th>Convocatoria</th>
           <th>Categoria</th>
           <th>Calificacion</th>
