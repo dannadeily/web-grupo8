@@ -18,6 +18,7 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']
       <aside class="">
         <?php include 'BarraLateralAdministrador.php'; ?>
       </aside>
+      
 
       <section  id="container-crearC">
         <hr>

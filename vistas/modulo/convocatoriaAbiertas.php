@@ -18,6 +18,7 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| ($_SESSION['rol'
      <title>convocatorias</title>
    </head>
    <body>
+     
      <header>
        <?php include '../headerLogin.php'; ?>
      </header>

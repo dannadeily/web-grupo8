@@ -18,6 +18,7 @@ $listar=$categoriascon->listar($_GET["id"]);
 $count=count($listar);
  ?>
 
+
  <!DOCTYPE html>
  <html lang="es" dir="ltr">
    <head>
