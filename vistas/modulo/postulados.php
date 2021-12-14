@@ -33,7 +33,7 @@ if (!empty($_GET["cc"])) {
 
 
     <legend>Seleccione Usuario</legend>
-    <table id="customers">
+    <table  id="customers">
 
 
       <tr>
