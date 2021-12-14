@@ -1,0 +1,56 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']!="administrador") {
+  header("location:../vistas/modulo/iniciar.php");
+}
+if (empty($_GET["conv"])) {
+  header("location:../vistas/modulo/historial.php");
+}
+require '../../controladores/ConvocatoriaControlador.php';
+$convocatoria=new ConvocatoriaControlador();
+$lista=$convocatoria->informe($_GET["conv"]);
+$categoria="";
+
+?>
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Participantes</title>
+  </head>
+  <body>
+    <header>
+      <?php include '../HeaderLogin.php'; ?>
+    </header>
+    <aside class="">
+      <?php include 'barraLateralAdministrador.php';  ?>
+    </aside>
+    <section>
+      <?php for ($i=0; $i <count($lista)-1 ; $i++) {
+        if ($lista[$i]->nombre!=$categoria) {
+          $categoria=$lista[$i]->nombre; ?>
+          <legend> <?php echo $lista[$i]->nombre; ?> </legend>
+
+          <table>
+          <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Codigo</th>
+            <th>Email</th>
+            <th>Rol</th>
+            <th>Postulacion</th>
+            <th>Nota</th>
+          </tr>
+        <?php }  ?>
+        <tr>
+          <td><?php echo $lista[$i]->nombres;</td>
+        </tr>
+
+        </table>
+    <?php  } ?>
+
+    </section>
+
+    <footer>
+      <?php include '../footer.php'; ?>
+    </footer>
