@@ -74,7 +74,7 @@
                             </a>
                           </li>
                     </div>
-                <li>   <a id="lista" class="linea" href="#">
+                <li>   <a id="lista" class="linea" href=<?php $_SERVER["DOCUMENT_ROOT"]?>"/web-grupo8/vistas/modulo/informe.php">
                   Generar Informe
                 </a>
                 </li>
