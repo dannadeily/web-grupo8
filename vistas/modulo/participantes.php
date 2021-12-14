@@ -43,6 +43,7 @@ $categoria="";
           </tr>
         <?php }  ?>
         <tr>
+<<<<<<< HEAD
           <td><?php echo $lista[$i]->nombres ?> </td>
           <td><?php echo $lista[$i]->apellidos ?> </td>
           <td><?php echo $lista[$i]->codigo_usuario ?> </td>
@@ -51,6 +52,9 @@ $categoria="";
           <td><?php echo $lista[$i]->fecha_postulacion ?> </td>
           <td><?php echo $lista[$i]->calificacion ?> </td>
 
+=======
+        <td><?php echo $lista[$i]->nombres; ?></td>
+>>>>>>> 273a5c854b51b422843c548dd31443250b226473
         </tr>
 
         </table>
