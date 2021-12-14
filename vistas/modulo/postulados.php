@@ -18,7 +18,11 @@ if (!empty($_GET["cc"])) {
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/tabla.css">
+<<<<<<< HEAD
     <title> Postulados </title>
+=======
+    <title></title>
+>>>>>>> 799cb122e6cc070a69fa8a47fc5734a7aee90716
   </head>
   <body>
     <header>
