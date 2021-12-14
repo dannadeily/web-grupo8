@@ -10,7 +10,9 @@ $ruta="../../documentos/".$_GET["conv"]."/".$_GET["cat"]."/".$_GET["usuario"];
   <head>
     <meta charset="utf-8">
     <title></title>
+
       <link rel="stylesheet" href="../css/modalNota.css">
+      <link rel="stylesheet" href="../css/tabla.css">
   </head>
   <body>
     <header>
@@ -19,11 +21,16 @@ $ruta="../../documentos/".$_GET["conv"]."/".$_GET["cat"]."/".$_GET["usuario"];
     <aside>
       <?php include 'barraLateralAdministrador.php'; ?>
     </aside>
-    <section>
+    <section id="container-historial" >
       <legend>Documentos</legend>
+      <hr>
 
         <input type="checkbox" id="button-editar">
+
         <label for="button-editar" class="lbl-editar">Calificar</label>
+        <br>
+        <br>
+
         <div class="modal">
           <div class="contenedor">
             <header>
@@ -41,7 +48,7 @@ $ruta="../../documentos/".$_GET["conv"]."/".$_GET["cat"]."/".$_GET["usuario"];
           </div>
         </div>
 
-    <table>
+    <table id="customers">
       <tr>
         <th>Documento</th>
         <th>Visualizar</th>
@@ -58,8 +65,8 @@ $ruta="../../documentos/".$_GET["conv"]."/".$_GET["cat"]."/".$_GET["usuario"];
             ?>
             <tr>
               <td> <?php  echo $archivo ?> </td>
-              <td> <a href="<?php echo "$ruta"."/".$archivo;?>" target="_blank">vusualizar</a> </td>
-              <td> <a download href="<?php echo "$ruta"."/".$archivo;?>" >Descargar</a>  </td>
+              <td> <abbr title="Visualizar"><a href="<?php echo "$ruta"."/".$archivo;?>" target="_blank"> <i class="fas fa-eye"></i> </a> </abbr> </td>
+              <td> <abbr title="Descargar"> <a download href="<?php echo "$ruta"."/".$archivo;?>" > <i class="fas fa-file-download"></i> </a></abbr>  </td>
             </tr>
 
             <?php
