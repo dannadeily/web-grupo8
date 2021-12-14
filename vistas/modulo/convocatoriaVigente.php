@@ -18,6 +18,7 @@ $count=count($historial);
      <title>convocatorias vigentes</title>
    </head>
    <body>
+     
      <header>
        <?php include '../headerLogin.php'; ?>
      </header>

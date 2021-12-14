@@ -19,6 +19,7 @@ else {
     <link rel="stylesheet" href="../css/iniciar.css">
   </head>
   <body>
+    
 <header>
 <?php include '../HeaderLogin.php'; ?>
 </header>

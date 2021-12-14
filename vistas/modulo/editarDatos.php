@@ -28,6 +28,7 @@ else {
           </aside>
 
 
+
             <section id="container-editar"  >
 
                   <form class="form_register-editar" action="../../controladores/?con=UsuarioControlador&fun=editarDatos" method="post">

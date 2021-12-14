@@ -16,6 +16,7 @@ $activas=count($categoriasActivas);
     <link rel="stylesheet" href="../css/calificar.css">
     <title>Categorias</title>
   </head>
+  
   <body>
     <header>
       <?php include '../HeaderLogin.php'; ?>
