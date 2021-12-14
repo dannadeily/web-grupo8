@@ -27,7 +27,7 @@ $categoria="";
     <aside class="">
       <?php include 'barraLateralAdministrador.php';  ?>
     </aside>
-    <section >
+    <section id="container-historial">
       <?php for ($i=0; $i <count($lista)-1 ; $i++) {
         if ($lista[$i]->nombre!=$categoria) {
           $categoria=$lista[$i]->nombre; ?>
