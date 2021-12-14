@@ -14,6 +14,7 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| ($_SESSION['rol'
    <head>
      <meta charset="utf-8">
      <link rel="stylesheet" href="../css/convocatoriaAbiertas.css">
+     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
      <title>convocatorias</title>
    </head>
    <body>
@@ -41,7 +42,7 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| ($_SESSION['rol'
             <td>    <?php echo $historial[$i]->titulo ?>  </td>
             <td> <?php echo $historial[$i]->descripcion ?>  </td>
             <td> <?php echo $historial[$i]->fecha_fin ?>  </td>
-            <td>  <a href="categoriasActivas.php?id=<?php echo $historial[$i]->id_convocatoria ?> "> seleccionar </a>  </td>
+            <td>  <abbr title="Seleccionar"><a href="categoriasActivas.php?id=<?php echo $historial[$i]->id_convocatoria ?> "> <i class="fas fa-check-square"></i> </a> </abbr>  </td>
           </tr>
       <?php } ?>
        </table>
