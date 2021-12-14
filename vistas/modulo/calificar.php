@@ -24,7 +24,7 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']
       <?php include 'barraLateralAdministrador.php' ?>
     </aside>
 <section id="container-calificar">
-  <table>
+  <table id="customers-calificar">
     <tr>
       <th>Titulo</th>
       <th>descripcion</th>

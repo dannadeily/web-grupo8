@@ -6,24 +6,24 @@
 }
 
 /*tabla*/
-#container-calificar {
+#customers-calificar {
 
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-#container-calificar td, #container-calificar th {
+#customers-calificar td, #customers-calificar th {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
 }
 
-#container-calificar tr:nth-child(even){background-color: #f2f2f2;}
+#customers-calificar tr:nth-child(even){background-color: #f2f2f2;}
 
-#container-calificar tr:hover {background-color: #ddd;}
+#customers-calificar tr:hover {background-color: #ddd;}
 
-#container-calificar th {
+#customers-calificar th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;

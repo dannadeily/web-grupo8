@@ -25,7 +25,7 @@ $count=count($postulaciones);
     </aside>
 
     <section  id="container-inscripcion">
-      <table id="tabla-inscripcion">
+      <table id="customers-inscripcion">
         <tr>
           <th>convocatoria</th>
           <th>categoria</th>

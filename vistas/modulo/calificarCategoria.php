@@ -25,7 +25,7 @@ $activas=count($categoriasActivas);
     </aside>
     <section id="container-calificar">
       <legend>Seleccione categoria: </legend>
-      <table>
+      <table id="customers-calificar">
         <tr>
           <th>Categoria</th>
           <th>Rol</th>
