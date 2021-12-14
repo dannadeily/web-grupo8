@@ -68,7 +68,9 @@ $count=count($informacion);
         <tr>
           <td><?php echo $informacion[$i]->nombre ?></td>
           <td><?php echo $informacion[$i]->descripcion ?></td>
-          <td> <a href="editarDocumento.php?id=<?php echo $informacion[$i]->id_documento; ?>">Editar</a> <a href="../../controladores/?con=DocumentoControlador&fun=borrarDocumento&id=<?php echo $_GET['id']?>&idDoc=<?php echo $informacion[$i]->id_documento ?>" >borrar</a></td>
+          <td> <abbr title="Editar"> <a href="editarDocumento.php?id=<?php echo $informacion[$i]->id_documento; ?>">  <i style="font-size:25px;color:black" class="fas fa-edit"></i> </a> </abbr>
+
+          <abbr title="Borrar"> <a href="../../controladores/?con=DocumentoControlador&fun=borrarDocumento&id=<?php echo $_GET['id']?>&idDoc=<?php echo $informacion[$i]->id_documento ?>" > <i style="font-size:25px; color:red" class="fas fa-trash-alt"></i> </a></abbr></td>
         </tr>
 
         <?php

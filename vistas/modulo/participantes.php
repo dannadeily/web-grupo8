@@ -43,7 +43,7 @@ $categoria="";
           </tr>
         <?php }  ?>
         <tr>
-          <td><?php echo $lista[$i]->nombres;</td>
+        <td><?php echo $lista[$i]->nombres; ?></td>
         </tr>
 
         </table>
