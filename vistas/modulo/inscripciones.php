@@ -13,6 +13,7 @@ $count=count($postulaciones);
   <head>
     <html lang="es" dir="ltr">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/inscripcion.css">
     <title></title>
   </head>
   <body>
@@ -23,8 +24,8 @@ $count=count($postulaciones);
       <?php include 'BarraLateralUsuario.php' ?>
     </aside>
 
-    <section>
-      <table>
+    <section  id="container-inscripcion">
+      <table id="tabla-inscripcion">
         <tr>
           <th>convocatoria</th>
           <th>categoria</th>
@@ -36,7 +37,7 @@ $count=count($postulaciones);
             <td> <?php echo $postulaciones[$i]->titulo ?> </td>
             <td><?php echo $postulaciones[$i]->nombre ?></td>
             <td><?php echo $postulaciones[$i]->calificacion ?></td>
-            
+
           </tr>
         <?php } ?>
       </table>
