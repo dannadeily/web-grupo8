@@ -20,6 +20,7 @@ $categoria="";
   </head>
   <body>
     <header>
+
       <?php include '../HeaderLogin.php'; ?>
     </header>
     <aside class="">

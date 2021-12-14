@@ -22,6 +22,7 @@ $ganadores=$convocatoria->ganadores($_GET["conv"]);
       <?php include 'barraLateralAdministrador.php';  ?>
     </aside>
     <section id="container-historial">
+
       <table id="customers">
           <tr>
             <th>Codigo</th>

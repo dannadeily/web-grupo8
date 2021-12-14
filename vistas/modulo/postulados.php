@@ -16,6 +16,7 @@ if (!empty($_GET["cc"])) {
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
+
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/tabla.css">
 
