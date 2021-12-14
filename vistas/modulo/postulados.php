@@ -19,8 +19,6 @@ if (!empty($_GET["cc"])) {
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/tabla.css">
     <title></title>
-
-    <link rel="stylesheet" href="../css/postulados.css">
   </head>
   <body>
     <header>
