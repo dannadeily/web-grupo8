@@ -17,6 +17,7 @@ if (!empty($_GET["cc"])) {
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/tabla.css">
     <title></title>
 
     <link rel="stylesheet" href="../css/postulados.css">
@@ -28,11 +29,11 @@ if (!empty($_GET["cc"])) {
     <aside>
       <?php include 'barraLateralAdministrador.php'; ?>
     </aside>
-    <section>
+    <section id="container-historial">
 
 
     <legend>Seleccione Usuario</legend>
-    <table>
+    <table id="customers">
 
 
       <tr>

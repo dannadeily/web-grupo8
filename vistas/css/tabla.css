@@ -10,11 +10,13 @@
 #customers {
   border-collapse: collapse;
   width: 100%;
+
 }
 
 #customers td, #customers th {
   border: 1px solid #DEDBDB;
   padding: 8px;
+
 }
 
 
@@ -28,4 +30,5 @@
   text-align: left;
   background-color: #aa1916;
   color: white;
+  
 }
