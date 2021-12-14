@@ -6,6 +6,9 @@
 
 }
 
+#container-editarC .input-nombre{
+  width: 50%;
+}
 #button-categoria input{
   background-color: #aa1916;
   border-radius: 5px;

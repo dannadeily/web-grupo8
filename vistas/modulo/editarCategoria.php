@@ -31,8 +31,8 @@ $listar=$categoria->listar($_GET["id"]);
          <legend>Editar Categoria:</legend>
          <hr>
         <form class="" action="../../controladores/?con=CategoriaControlador&fun=editar" method="post">
-          <input type="hidden" name="id" value="  <?php echo $listar[0]->id_categoria; ?> ">
-        <p> nombre: <input type="text" name="nombre" value=" <?php echo $listar[0]->nombre; ?> "></p>
+          <input  type="hidden" name="id" value="  <?php echo $listar[0]->id_categoria; ?> ">
+        <p> nombre: <input class="input-nombre" type="text" name="nombre" value=" <?php echo $listar[0]->nombre; ?> "></p>
 
         <p> descripcion: </p>
         <textarea style="resize: none" name="descripcion" rows="8" cols="80"><?php echo $listar[0]->descripcion;?></textarea> <br>

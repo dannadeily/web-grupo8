@@ -41,7 +41,7 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']
         <td><?php echo $listaConvocatorias[$i]->descripcion ;?></td>
         <td><?php echo $listaConvocatorias[$i]->fecha_fin;?></td>
         <td><?php echo $convocatoria->diasRestantes($listaConvocatorias[$i]->fecha_fin);?></td>
-        <td>  <a href="calificarCategoria.php?conv=<?php echo $listaConvocatorias[$i]->id_convocatoria; ?>"> Calificar </a></td>
+        <td> <abbr title="Calificar"> <a href="calificarCategoria.php?conv=<?php echo $listaConvocatorias[$i]->id_convocatoria; ?>"> <i style="font-size:25px;" class="fas fa-clipboard-check"></i> </a></abbr></td>
       </tr>
 
     <?php  }

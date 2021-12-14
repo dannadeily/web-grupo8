@@ -50,7 +50,7 @@ if (!empty($_GET["cc"])) {
           <td> <?php echo $lista[$i]->codigo_usuario ?>  </td>
           <td> <?php echo $lista[$i]->fecha_postulacion ?>  </td>
           <td> <?php echo $lista[$i]->calificacion ?>  </td>
-          <td> <a href="documentosUsuario.php?conv=<?php echo $convocatoria->id_convocatoria ?>&&cat=<?php echo $convocatoria->id_categoria ?>&&usuario=<?php echo$lista[$i]->codigo_usuario ?>">revisar</a> </td>
+          <td> <abbr title="Revisar"> <a href="documentosUsuario.php?conv=<?php echo $convocatoria->id_convocatoria ?>&&cat=<?php echo $convocatoria->id_categoria ?>&&usuario=<?php echo$lista[$i]->codigo_usuario ?>">  <i style="font-size:25px;" class="fas fa-search"></i> </a> </abbr></td>
 
         </tr>
         </form>

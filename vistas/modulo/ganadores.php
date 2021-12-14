@@ -11,6 +11,7 @@ $ganadores=$convocatoria->ganadores($_GET["conv"]);
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/tabla.css">
     <title>Ganadores</title>
   </head>
   <body>
@@ -20,8 +21,8 @@ $ganadores=$convocatoria->ganadores($_GET["conv"]);
     <aside class="">
       <?php include 'barraLateralAdministrador.php';  ?>
     </aside>
-    <section>
-      <table>
+    <section id="container-historial">
+      <table id="customers">
           <tr>
             <th>Codigo</th>
             <th>Nombre</th>
@@ -37,7 +38,7 @@ $ganadores=$convocatoria->ganadores($_GET["conv"]);
             <td> <?php echo $ganadores[$i]->apellidos; ?> </td>
             <td> <?php echo $ganadores[$i]->nombre; ?> </td>
             <td> <?php echo $ganadores[$i]->rol; ?> </td>
-            <td> <?php echo $ganadores[$i]->calificacion; ?> </td>  
+            <td> <?php echo $ganadores[$i]->calificacion; ?> </td>
             </tr>
 
       <?php    } ?>

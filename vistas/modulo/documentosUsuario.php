@@ -65,8 +65,8 @@ $ruta="../../documentos/".$_GET["conv"]."/".$_GET["cat"]."/".$_GET["usuario"];
             ?>
             <tr>
               <td> <?php  echo $archivo ?> </td>
-              <td> <abbr title="Visualizar"><a href="<?php echo "$ruta"."/".$archivo;?>" target="_blank"> <i class="fas fa-eye"></i> </a> </abbr> </td>
-              <td> <abbr title="Descargar"> <a download href="<?php echo "$ruta"."/".$archivo;?>" > <i class="fas fa-file-download"></i> </a></abbr>  </td>
+              <td> <abbr title="Visualizar"><a href="<?php echo "$ruta"."/".$archivo;?>" target="_blank"> <i style="font-size:20px;"class="fas fa-eye"></i> </a> </abbr> </td>
+              <td> <abbr title="Descargar"> <a download href="<?php echo "$ruta"."/".$archivo;?>" > <i style="font-size:25px;" class="fas fa-file-download"></i> </a></abbr>  </td>
             </tr>
 
             <?php
