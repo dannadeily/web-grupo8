@@ -16,10 +16,11 @@ $count=count($listar);
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/SeleccionarCategoria.css">
       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title> Categorias </title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="../js/alertas.js"></script>
   </head>
-  <body>
+  <body onload="mensaje('<?php echo  $_GET["msg"] ?>')">
 
     <header>
       <?php include '../headerLogin.php'; ?>

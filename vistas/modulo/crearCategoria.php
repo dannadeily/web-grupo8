@@ -10,15 +10,17 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']
     <meta charset="utf-8">
     <title>Crear categoria</title>
     <link rel="stylesheet" href="../css/crearCategoria.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="../js/alertas.js"></script>
   </head>
-  <body>
+  <body  onload="mensaje('<?php echo  $_GET["msg"] ?>')">
     <header>
       <?php include '../headerLogin.php'; ?>
     </header>
       <aside class="">
         <?php include 'BarraLateralAdministrador.php'; ?>
       </aside>
-      
+
 
       <section  id="container-crearC">
         <hr>

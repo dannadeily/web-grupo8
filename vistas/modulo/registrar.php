@@ -8,17 +8,16 @@ session_destroy();
     <meta charset="utf-8">
     <title> Registro</title>
     <link rel="stylesheet" href="../css/registrar.css">
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../js/alertas.js"></script>
   </head>
-  <body>
+  <body  onload="mensaje('<?php echo  $_GET["msg"] ?>')">
     <header>
     <?php   require '../headerLogin.php';?>
     </header>
 
 <section id="container"  >
-  <?php  if(isset($_GET["msg"])) {  ?>
-    <h3><?php echo $_GET["msg"] ;?></h3>
-  <?php  } ?>
-          <div class="form_register">
+            <div class="form_register">
               <h2>Registro usuario</h2>
 
               <hr>

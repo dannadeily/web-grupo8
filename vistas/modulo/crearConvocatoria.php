@@ -13,11 +13,12 @@ if (!isset($_SESSION['usuario'])||empty($_SESSION['usuario'])|| $_SESSION['rol']
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../css/crearConvocatoria.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="../js/alertas.js"></script>
     <title>Crear convocatoria</title>
 </head>
-<body >
-  
+<body onload="mensaje('<?php echo  $_GET["msg"] ?>')">
+
   <header>
     <?php include '../headerLogin.php'; ?>
   </header>

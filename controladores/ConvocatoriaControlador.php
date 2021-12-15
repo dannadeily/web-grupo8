@@ -18,8 +18,12 @@ class ConvocatoriaControlador
 
   public function crearConvocatoria()
   {
-        if (isset($_POST["enviar"])) {
-        if($_POST["fecha_inicio"]<$_POST["fecha_fin"]){
+        if (!empty($_POST["titulo"])&&!empty($_FILES["imagen"])&&!empty($_POST["descripcion"])&&!empty($_POST["fecha_inicio"])&&!empty($_POST["fecha_fin"])) {
+
+          date_default_timezone_set('America/Bogota');
+          $fecha=date("Y-m-d");
+
+        if($_POST["fecha_inicio"]<$_POST["fecha_fin"] || $fecha>=$_POST["fecha_inicio"]){
 
         $convocatoria=array(
         'titulo' =>$_POST["titulo"]  ,
@@ -30,12 +34,14 @@ class ConvocatoriaControlador
       $id=$this->model->crearConvocatoria($convocatoria);
         if ($id>0) {
         if($_FILES["imagen"]["error"]){
-          echo "error";
+          header("location:../vistas/modulo/crearConvocatoria.php?msg=errorimagen");
+
         }else {
           $permitidos=array("image/png","image/jpg","image/jpeg","image/gif");
           $limite_kb=5000;
 
           if(in_array($_FILES["imagen"]["type"],$permitidos) && $_FILES["imagen"]["size"]<$limite_kb*1024){
+
             $ruta="../vistas/imgConvocatorias/";
             $extencion=strtolower(pathinfo($_FILES["imagen"]["name"],PATHINFO_EXTENSION));
             $archivo=$ruta.$id.".".$extencion;
@@ -44,16 +50,11 @@ class ConvocatoriaControlador
             }
             if (!file_exists($archivo)) {
               $resultado=@move_uploaded_file($_FILES["imagen"]["tmp_name"],$archivo);
-              if ($resultado) {
-
-              }else {
-                echo "error al guardar";
               }
-            }
 
           }
           else {
-            echo "archivo no permitido o excede el tamaño de 5mb";
+            header("location:../vistas/modulo/crearConvocatoria.php?msg=tamañomayor");
           }
 
         }
@@ -68,19 +69,22 @@ class ConvocatoriaControlador
             $convocatoriacategoria->agregar($lista[$i]->nombre,$id,$lista[$i]->id_categoria,$lista[$i]->rol);
           }
 
+          if ($i==$listaCount-2) {
+            header("location:../vistas/modulo/historial.php?msg=registrado");
+          }
 
         }
-         header("location:../vistas/modulo/historial.php?msg=creada con exito");
+
         }else {
-       header("location:../vistas/modulo/crearConvocatoria.php?msg=no se pudo crear");
+     header("location:../vistas/modulo/crearConvocatoria.php?msg=incompletos");
       }
     }
     else {
-      header("location:../vistas/modulo/crearConvocatoria.php?msg=fecha de inicio debe ser mayor a la de fin");
+      header("location:../vistas/modulo/crearConvocatoria.php?msg=fechamenor");
     }
     }
     else {
-       header("location:../vistas/modulo/crearConvocatoria.php?msg=complete los datos.php");
+       header("location:../vistas/modulo/crearConvocatoria.php?msg=incompletos");
     }
   }
 
@@ -102,12 +106,12 @@ public function editarConvocatoria()
       'fecha_fin' =>$_POST["fecha_fin"]
     );
     $this->model->editar($convocatoria);
-    if (!isset($_POST["imagen"])) {
-      header("location:../vistas/modulo/historial.php?msg=actualizada con exito 1");
+    if (!isset($_FILES["imagen"])) {
+      header("location:../vistas/modulo/historial.php?msg=actualizado");
     }
 
       if($_FILES["imagen"]["error"]){
-        echo "error";
+        header("location:../vistas/modulo/editarConvocatoria.php?msg=errorimagen");
       }else {
         $permitidos=array("image/png","image/jpg","image/jpeg","image/gif");
         $limite_kb=5000;
@@ -131,19 +135,19 @@ public function editarConvocatoria()
 
         }
         else {
-          echo "archivo no permitido o excede el tamaño de 5mb";
+           header("location:../vistas/modulo/editarConvocatoria.php?msg=tamañomayor");
         }
 
 
-        header("location:../vistas/modulo/historial.php?msg=actualizada con exito");
+        header("location:../vistas/modulo/historial.php?msg=actualizado");
 }
     }
     else {
-      header("location:../vistas/modulo/editarConvocatoria.php?msg=fecha de inicio debe ser mayor a la de fin");
+      header("location:../vistas/modulo/editarConvocatoria.php?msg=fechamenor");
     }
   }
     else {
-     header("location:../vistas/modulo/editarConvocatoria.php?msg=complete los datos.php");
+     header("location:../vistas/modulo/editarConvocatoria.php?msg=incompletos");
    }
  }
 

@@ -9,16 +9,14 @@ session_destroy();
     <title>Entrar</title>
     <link rel="stylesheet" href="../css/iniciar.css">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
   </head>
-    <body >
-
+    <body onload="mensaje('<?php echo  $_GET["msg"] ?>')">
       <header>
         <?php include '../HeaderLogin.php'?>
       </header>
-      <?php if (isset($_GET['msg'])): ?>
-        <h2>  <?php echo $_GET['msg'] ?> </h2>
-      <?php endif; ?>
       <section class="form-login" id="container">
       <form action="../../controladores/?con=UsuarioControlador&fun=iniciarSesion" method="post">
         <h1>Iniciar sesión</h1>
@@ -31,12 +29,13 @@ session_destroy();
         <p id="link"><a href="registrar.php">registrarse</a></p>
 
       </form>
-      
+
 
       </section>
       <footer>
           <?php include '../footer.php'?>
       </footer>
+      <script src="../js/alertas.js">   </script>
     </body>
 
 

@@ -30,25 +30,25 @@ class CategoriaControlador
   }
   public function crearCategoria()
   {
-        if (isset($_POST["continuar"])) {
+        if (!empty($_POST["nombre"])&&!empty($_POST["rol"])&&!empty($_POST["descripcion"])) {
       $categoria=array(
         'nombre' =>$_POST["nombre"]  ,
         'descripcion' =>$_POST["descripcion"],
         'rol'=>$_POST['rol']
       );
       if ($this->model->crearCategoria($categoria)>0) {
-         header("location:../vistas/modulo/seleccionarCategoria.php?msg=categoria registrada");
+         header("location:../vistas/modulo/seleccionarCategoria.php?msg=registrado");
         }else {
-        header("location:../vistas/modulo/crearCategoria.php?msg=categoria ya existe");
+        header("location:../vistas/modulo/crearCategoria.php?msg=existe");
       }
     }
     else {
-      header("location:../vistas/modulo/crearCategoria.php");
+      header("location:../vistas/modulo/crearCategoria.php?msg=incompletos");
     }
   }
   public function editar()
   {
-    if (isset($_POST["continuar"])) {
+    if (!empty($_POST["nombre"])&&!empty($_POST["descripcion"])) {
       $categoria=array(
         'id'=>$_POST["id"],
         'nombre' =>$_POST["nombre"]  ,
@@ -57,13 +57,13 @@ class CategoriaControlador
 
 
     if ($this->model->editar($categoria)>0) {
-      header("location:../vistas/modulo/seleccionarCategoria.php?msg=categoria actualizada");
+      header("location:../vistas/modulo/seleccionarCategoria.php?msg=actualizado");
     }else {
-      header("location:../vistas/modulo/crearCategoria.php?msg=categoria ya existe");
+      header("location:../vistas/modulo/crearCategoria.php?msg=existe");
   }
 }
 else {
-  header("location:../vistas/modulo/crearCategoria.php");
+  header("location:../vistas/modulo/crearCategoria.php?msg=incompletos");
 }
   }
 

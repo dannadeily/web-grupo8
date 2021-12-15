@@ -31,12 +31,12 @@ class UsuarioControlador
 
 
         if ($this->model->agregarUsuario($usuario)>0) {
-        header("location:../vistas/modulo/registrar.php?msg=usuario registrado");
+        header("location:../vistas/modulo/registrar.php?msg=registrado");
         }else {
-        header("location:../vistas/modulo/registrar.php?msg=usuario ya existe");
+        header("location:../vistas/modulo/registrar.php?msg=existe");
       }
     }else {
-        header("location:../vistas/modulo/registrar.php");
+        header("location:../vistas/modulo/registrar.php?msg=incompletos");
     }
 
   }
@@ -94,13 +94,13 @@ class UsuarioControlador
                       header("location:../vistas/modulo/historial.php");}
                   }
                 } else {
-                 header("location:../vistas/modulo/iniciar.php?msg=datos incorrectos");
+                 header("location:../vistas/modulo/iniciar.php?msg=incorrecto");
                 }
 
 
       }
         else {
-        header("location:../vistas/modulo/iniciar.php");
+        header("location:../vistas/modulo/iniciar.php?msg=incompletos");
     }
 
   }

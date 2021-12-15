@@ -16,9 +16,11 @@ $listar=$categoria->listar($_GET["id"]);
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/editarCategoria.css">
     <title>Editar categoria</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="../js/alertas.js"></script>
   </head>
 
-  <body>
+  <body onload="mensaje('<?php echo  $_GET["msg"] ?>')">
     <header>
       <?php include '../headerLogin.php'; ?>
     </header>
