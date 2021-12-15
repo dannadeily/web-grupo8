@@ -14,11 +14,12 @@ $count=count($historial);
    <head>
      <meta charset="utf-8">
      <link rel="stylesheet" href="../css/convocatoriaVigente.css">
-
      <title>convocatorias vigentes</title>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+       <script src="../js/alertas.js"></script>
    </head>
-   <body>
-     
+   <body  onload="mensaje('<?php echo  $_GET["msg"] ?>')">
+
      <header>
        <?php include '../headerLogin.php'; ?>
      </header>

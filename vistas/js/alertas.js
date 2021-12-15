@@ -56,4 +56,25 @@ function mensaje(alerta){
   dangerMode: true,
     });
   }
+  if( alerta=="borrado"){
+    swal({
+  text: "eliminado con exito",
+  icon: "success",
+  dangerMode: true,
+    });
+  }
+  if( alerta=="noborrado"){
+    swal({
+  text: "no se ha podido eliminar",
+  icon: "error",
+  dangerMode: true,
+    });
+  }
+  if( alerta=="tamañosmayores"){
+    swal({
+  text: "formato invalido o tamaño del archivo superior a 5mb",
+  icon: "error",
+  dangerMode: true,
+    });
+}
 }

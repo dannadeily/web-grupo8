@@ -13,9 +13,12 @@ $contarDocumentos=count($documentos);
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/subirDocumento.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="../js/alertas.js"></script>
+      <title>subir documentos</title>
   </head>
-  <title>subir documentos</title>
-  <body>
+
+  <body onload="mensaje('<?php echo  $_GET["msg"] ?>')">
 
       <?php include '../HeaderLogin.php'; ?>
 

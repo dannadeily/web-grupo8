@@ -93,11 +93,22 @@ class ConvocatoriaControlador
     return $this->model->historial($id);
   }
 
+
+
+
+
+
+
+
 //terminar editar convocatorias
 public function editarConvocatoria()
 {
-      if (isset($_POST["enviar"])) {
-      if($_POST["fecha_inicio"]<$_POST["fecha_fin"]){
+      if (!empty($_POST["titulo"])&&!empty($_POST["descripcion"])&&!empty($_POST["fecha_inicio"])&&!empty($_POST["fecha_fin"])) {
+        date_default_timezone_set('America/Bogota');
+        $fecha=date("Y-m-d");
+        echo "entra 1";
+      if($_POST["fecha_inicio"]<$_POST["fecha_fin"] || $fecha>=$_POST["fecha_inicio"]){
+        echo "entra 2";
       $convocatoria=array(
       'id_convocatoria'=>$_POST["id"],
       'titulo' =>$_POST["titulo"],
@@ -105,13 +116,16 @@ public function editarConvocatoria()
       'fecha_inicio' =>$_POST["fecha_inicio"],
       'fecha_fin' =>$_POST["fecha_fin"]
     );
-    $this->model->editar($convocatoria);
-    if (!isset($_FILES["imagen"])) {
+
+  $this->model->editar($convocatoria);
+
+    if (($_FILES["imagen"]["name"]=="")) {
+      echo "entra 3";
       header("location:../vistas/modulo/historial.php?msg=actualizado");
     }
 
       if($_FILES["imagen"]["error"]){
-        header("location:../vistas/modulo/editarConvocatoria.php?msg=errorimagen");
+        header("location:../vistas/modulo/editarConvocatoria.php?id=".$_POST['id']."&&msg=errorimagen");
       }else {
         $permitidos=array("image/png","image/jpg","image/jpeg","image/gif");
         $limite_kb=5000;
@@ -127,7 +141,7 @@ public function editarConvocatoria()
             $resultado=@move_uploaded_file($_FILES["imagen"]["tmp_name"],$archivo);
             if ($resultado) {
             }else {
-              echo "error al guardar";
+              header("location:../vistas/modulo/editarConvocatoria.php?id=".$_POST['id']."&&msg=errorimagen");
             }
           }else {
             $resultado=@move_uploaded_file($_FILES["imagen"]["tmp_name"],$archivo);
@@ -135,19 +149,19 @@ public function editarConvocatoria()
 
         }
         else {
-           header("location:../vistas/modulo/editarConvocatoria.php?msg=tamañomayor");
+           header("location:../vistas/modulo/editarConvocatoria.php?id=".$_POST['id']."&&msg=tamañomayor");
         }
 
 
-        header("location:../vistas/modulo/historial.php?msg=actualizado");
+       header("location:../vistas/modulo/convocatoriaVigente.php?msg=actualizado");
 }
     }
     else {
-      header("location:../vistas/modulo/editarConvocatoria.php?msg=fechamenor");
+     header("location:../vistas/modulo/editarConvocatoria.php?id=".$_POST['id']."&&msg=fechamenor");
     }
   }
     else {
-     header("location:../vistas/modulo/editarConvocatoria.php?msg=incompletos");
+  header("location:../vistas/modulo/editarConvocatoria.php?id=".$_POST['id']."&&msg=incompletos");
    }
  }
 

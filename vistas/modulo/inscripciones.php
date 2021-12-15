@@ -14,9 +14,11 @@ $count=count($postulaciones);
     <html lang="es" dir="ltr">
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/inscripcion.css">
-    <title>INscripciones</title>
+    <title>Inscripciones</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="../js/alertas.js"></script>
   </head>
-  <body>
+  <body onload="mensaje('<?php echo  $_GET["msg"] ?>')">
     <header>
       <?php include '../HeaderLogin.php'; ?>
     </header>
@@ -30,7 +32,7 @@ $count=count($postulaciones);
       <hr>
       <table id="customers-inscripcion">
         <tr>
-          
+
           <th>Convocatoria</th>
           <th>Categoria</th>
           <th>Calificacion</th>
