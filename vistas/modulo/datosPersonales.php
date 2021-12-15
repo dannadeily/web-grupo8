@@ -18,12 +18,14 @@ $datos=$usuario->listar($_SESSION['usuario']);
     <meta charset="utf-8">
     <title>datos personales</title>
     <link rel="stylesheet" href="../css/datosPersonales.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="../js/alertas.js"></script>
 
   </head>
   <header>
     <?php include '../HeaderLogin.php'?>
   </header>
-  <body >
+  <body  onload="mensaje('<?php echo  $_GET["msg"] ?>')">
 
             <aside class="barra-menu">
             <?php include 'BarraLateralUsuario.php'; ?>

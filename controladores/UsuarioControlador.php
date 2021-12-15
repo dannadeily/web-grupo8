@@ -63,17 +63,17 @@ class UsuarioControlador
 
         $exito=mail($destinatario,$asunto,$mensaje,$headers);
         if ($exito) {
-          header("location:../vistas/modulo/recuperar.php?msg=enviado correctamente");
+          header("location:../vistas/modulo/recuperar.php?msg=enviado");
         }else {
-        header("location:../vistas/modulo/recuperar.php?msg=por favor intenta mas tarde");
+        header("location:../vistas/modulo/recuperar.php?msg=tarde");
         }
       }
       else {
-        header("location:../vistas/modulo/recuperar.php?msg=datos incorrectos");
+        header("location:../vistas/modulo/recuperar.php?msg=incorrecto");
       }
     }
     else {
-      header("location:../vistas/modulo/recuperar.php");
+      header("location:../vistas/modulo/recuperar.php?incompletos");
   }
 }
   public function iniciarSesion()
@@ -123,7 +123,7 @@ class UsuarioControlador
       'tipoDocumento'=>$_POST['tipoDocumento']
     );
     $this->model->editarDatos($editar);
-    header("location:../vistas/modulo/datosPersonales.php");
+    header("location:../vistas/modulo/datosPersonales.php?msg=actualizado");
 }
 public function cambiarContrasena()
 {
@@ -132,16 +132,16 @@ public function cambiarContrasena()
     if(password_verify($_POST['actual'],$usuario[0]->contrasena) && $_POST['nueva1']==$_POST['nueva2'] ){
         $this->model->cambiarContrasena($_SESSION['usuario'],password_hash($_POST['nueva1'],PASSWORD_DEFAULT));
         if ($_SESSION['rol']!="administrador") {
-          header("location:../vistas/modulo/cambiarContrasena.php?msg=cambio exitoso");
+          header("location:../vistas/modulo/cambiarContrasena.php?msg=actualizado");
         }else {
-          header("location:../vistas/modulo/cambiarContrasenaAdmin.php?msg=cambio exitoso");
+          header("location:../vistas/modulo/cambiarContrasenaAdmin.php?msg=actualizado");
         }
 
     }else {
       if ($_SESSION['rol']!="administrador") {
-        header("location:../vistas/modulo/cambiarContrasena.php?msg=datos incorrectos");
+        header("location:../vistas/modulo/cambiarContrasena.php?msg=incorrecto");
       }else {
-        header("location:../vistas/modulo/cambiarContrasenaAdmin.php?msg=datos incorrectos");
+        header("location:../vistas/modulo/cambiarContrasenaAdmin.php?msg=incorrecto");
       }
     }
 }

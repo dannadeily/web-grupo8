@@ -8,15 +8,14 @@ session_destroy();
     <meta charset="utf-8">
     <title> Restablecer </title>
     <link rel="stylesheet" href="../css/iniciar.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="../js/alertas.js"></script>
   </head>
 
-  <body>
+  <body onload="mensaje('<?php echo  $_GET["msg"] ?>')">>
 
       <?php require '../headerLogin.php'; ?>
     </header>
-  <?php    if(isset($_GET['msg'])){?>
-      <h2> <?php echo $_GET['msg'] ?> </h2>
-    <?php } ?>
     <section class="form-login" id="container">
 
         <form class="" action="../../controladores/?con=UsuarioControlador&fun=recuperarContrasena"  method="post">

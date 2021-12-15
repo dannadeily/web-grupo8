@@ -1,35 +1,35 @@
 function mensaje(alerta){
   if( alerta=="incorrecto"){
     swal({
-  text: "Datos incorrectos",
+  title: "Datos incorrectos",
   icon: "error",
   dangerMode: true,
     });
   }
   if( alerta=="incompletos"){
     swal({
-  text: "Datos incompletos",
+  title: "Datos incompletos",
   icon: "error",
   dangerMode: true,
     });
   }
   if( alerta=="existe"){
     swal({
-  text: "el usuario ya existe",
+  title: "el usuario ya existe",
   icon: "warning",
   dangerMode: true,
     });
   }
   if( alerta=="registrado"){
     swal({
-  text: "registro realizado con exito",
+  title: "registro realizado con exito",
   icon: "success",
   dangerMode: true,
     });
   }
   if( alerta=="actualizado"){
     swal({
-  text: "actualización exitosa",
+  title: "actualización exitosa",
   icon: "success",
   dangerMode: true,
     });
@@ -44,37 +44,59 @@ function mensaje(alerta){
   }
   if( alerta=="errorimagen"){
     swal({
-  text: "ha ocurrido un error con la imagen",
+  title: "ha ocurrido un error con la imagen",
   icon: "error",
   dangerMode: true,
     });
   }
   if( alerta=="tamañomayor"){
     swal({
-  text: "formato invalido o tamaño del archivo superior a 5mb",
+  title: "formato invalido o tamaño del archivo superior a 5mb",
   icon: "error",
   dangerMode: true,
     });
   }
   if( alerta=="borrado"){
     swal({
-  text: "eliminado con exito",
+  title: "eliminado con exito",
   icon: "success",
   dangerMode: true,
     });
   }
   if( alerta=="noborrado"){
     swal({
-  text: "no se ha podido eliminar",
+  title: "no se ha podido eliminar",
   icon: "error",
   dangerMode: true,
     });
   }
   if( alerta=="tamañosmayores"){
     swal({
-  text: "formato invalido o tamaño del archivo superior a 5mb",
+  title: "formato invalido o tamaño del archivo superior a 5mb",
   icon: "error",
   dangerMode: true,
     });
+}
+if( alerta=="calificacion"){
+  swal({
+title: "calificacion añadida",
+icon: "success",
+dangerMode: true,
+  });
+}
+if( alerta=="tarde"){
+  swal({
+title: "intente mas tarde",
+icon: "error",
+dangerMode: true,
+  });
+}
+if( alerta=="enviado"){
+  swal({
+title: "enviado correctamente",
+text: "revise su email",
+icon: "success",
+dangerMode: true,
+  });
 }
 }

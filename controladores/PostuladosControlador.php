@@ -26,13 +26,10 @@ public function listar($id='')
 }
 public function calificar()
 {
-  echo "entra";
-  echo $_POST["codigo"];
-  echo $_POST["nota"];
   if (!empty($_POST["nota"])&&!empty($_POST["codigo"])) {
     $this->model->calificar($_POST["nota"],$_POST["codigo"]);
   }
-  header("location:../vistas/modulo/calificar.php");
+  header("location:../vistas/modulo/calificar.php?msg=calificacion");
 }
 
 }

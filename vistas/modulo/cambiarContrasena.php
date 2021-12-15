@@ -16,8 +16,10 @@ else {
     <meta charset="utf-8">
     <title> cambiar contraseña </title>
     <link rel="stylesheet" href="../css/iniciar.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="../js/alertas.js"></script>
   </head>
-  <body>
+  <body onload="mensaje('<?php echo  $_GET["msg"] ?>')">
 
 <header>
 <?php include '../HeaderLogin.php'; ?>
