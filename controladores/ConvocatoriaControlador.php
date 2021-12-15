@@ -108,7 +108,6 @@ public function editarConvocatoria()
         $fecha=date("Y-m-d");
         echo "entra 1";
       if($_POST["fecha_inicio"]<$_POST["fecha_fin"] || $fecha>=$_POST["fecha_inicio"]){
-        echo "entra 2";
       $convocatoria=array(
       'id_convocatoria'=>$_POST["id"],
       'titulo' =>$_POST["titulo"],
@@ -120,8 +119,8 @@ public function editarConvocatoria()
   $this->model->editar($convocatoria);
 
     if (($_FILES["imagen"]["name"]=="")) {
-      echo "entra 3";
       header("location:../vistas/modulo/historial.php?msg=actualizado");
+      return;
     }
 
       if($_FILES["imagen"]["error"]){
